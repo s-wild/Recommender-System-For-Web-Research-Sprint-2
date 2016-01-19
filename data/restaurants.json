@@ -1,12 +1,36 @@
 {
-	cuisine: {
-		0: 'Italian',
-		1: 'American'
-	}	
-
-
-	restaurants: {
-
-	}
-
+  "cuisines": {
+    "1": "Italian",
+    "2": "American",
+    "3": "Mexican",
+    "4": "Chinese",
+    "5": "Tapas"
+  },
+  "menu": {
+    "1": {
+      "Bur": {}
+    },
+    "2": {
+      "Pasta": {},
+      "Cheese": {}
+    }
+  },
+  "services": {
+    "1": "Takeaway",
+    "2": "Dine"
+  },
+  "restaurants": {
+    "1": {
+      "name": "Macdonalds",
+      "service_type": "[service.1, service.2]"
+    },
+    "2": {
+      "name": "Joes Pizza",
+      "service_type": "[service.2]"
+    },
+    "3": {
+      "name": "Del Taco",
+      "service_type": "[service.1, service.2]"
+    }
+  }
 }
