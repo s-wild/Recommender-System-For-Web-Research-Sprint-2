@@ -1,0 +1,36 @@
+{
+  "activity_types": {
+    "1": "Adventurous",
+    "2": "Thrill Seeker",
+    "3": "No Crowds"
+  },
+  "activities": {
+    "1": {
+      "name": "Skiing",
+      "type": "[activity_types.1, activity_types.2]",
+      "avg_rating": "4.4",
+      "avg_cost": "19",
+      "currency": "GDP",
+      "age_range": "16-45",
+      "min_age": "12"
+    },
+    "2": {
+      "name": "Jet Skiing",
+      "type": "[activity_types.1, activity_types.2]",
+      "avg_rating": "4.4",
+      "avg_cost": "16",
+      "currency": "GDP",
+      "age_range": "16-45",
+      "min_age": "12"
+    },
+    "3": {
+      "name": "Zip Lining",
+      "type": "[activity_types.1, activity_types.2]",
+      "avg_rating": "4.4",
+      "avg_cost": "18",
+      "currency": "GDP",
+      "age_range": "16-45",
+      "min_age": "12"
+    }
+  }
+}
