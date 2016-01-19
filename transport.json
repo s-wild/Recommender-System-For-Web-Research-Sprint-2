@@ -1,0 +1,14 @@
+{
+  "transport_mode": {
+    "1": "Car",
+    "2": "Minibus"
+  },
+  "transport": {
+    "1": {
+      "mode": "[transport_mode.1, transport_mode.2]",
+      "avg_rating": "3.2",
+      "avg_price": "22",
+      "currency": "EURO"
+    }
+  }
+}
