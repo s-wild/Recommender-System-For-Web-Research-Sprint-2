@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
+var calc = require('./group_modules/calc.js');
 
 // Data files
 var restaurants = require('./data/restaurants.json');
@@ -33,6 +34,17 @@ app.get('/api/:file', function(req, res) {
 	}
 
 });
+
+app.get('/api/cheapest/:file', function(req, res) {
+	if (req.params.file == 'undefined') {
+		res.end("File not recognised.");
+		return;
+	}
+
+	var file = req.params.file;
+	calc.cheapest(file, res);
+});
+
 
 // Start server
 var server = app.listen(3000, function() {

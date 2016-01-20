@@ -10,7 +10,7 @@
       "type": "[activity_types.1, activity_types.2]",
       "avg_rating": "4.4",
       "avg_cost": "19",
-      "currency": "GDP",
+      "currency": "GBP",
       "age_range": "16-45",
       "min_age": "12"
     },
@@ -19,7 +19,7 @@
       "type": "[activity_types.1, activity_types.2]",
       "avg_rating": "4.4",
       "avg_cost": "16",
-      "currency": "GDP",
+      "currency": "GBP",
       "age_range": "16-45",
       "min_age": "12"
     },
@@ -28,7 +28,7 @@
       "type": "[activity_types.1, activity_types.2]",
       "avg_rating": "4.4",
       "avg_cost": "18",
-      "currency": "GDP",
+      "currency": "GBP",
       "age_range": "16-45",
       "min_age": "12"
     }
