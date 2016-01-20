@@ -35,7 +35,6 @@ function getCheapest(file, res) {
 
 // Function to get data from type.
 function getCheapestType(res, type) {
-	var cheapest = getCheapestItem(type);
 	switch(type) {
 		case 'restaurants':
 			var r = util.getNestedObject(restaurants, "restaurants");
@@ -66,7 +65,6 @@ function getCheapestItem(obj) {
 	var cheapest = 10000;
 
 	Object.keys(obj).forEach(function(key) {
-
     	var item = obj[key];	// e.g. restaurant["1"]
 
     	if (item.avg_cost < cheapest) {
