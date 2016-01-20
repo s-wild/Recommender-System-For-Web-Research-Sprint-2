@@ -9,6 +9,7 @@ var calc = require('./group_modules/calc.js');
 var restaurants = require('./data/restaurants.json');
 var activities = require('./data/activities.json');
 var transport = require('./data/transport.json');
+var users = require('./data/users.json');
 
 // Routes
 app.get('/api/:file', function(req, res) {
@@ -28,9 +29,12 @@ app.get('/api/:file', function(req, res) {
 		case 'transport':
 			res.end(JSON.stringify(transport));
 			return;
+		case 'users':
+			res.end(JSON.stringify(users));
+			return;
 		default:
 			res.end("File not recognised");
-			return; 
+			return;
 	}
 
 });
@@ -43,6 +47,11 @@ app.get('/api/cheapest/:file', function(req, res) {
 
 	var file = req.params.file;
 	calc.cheapest(file, res);
+});
+
+app.get('/api/users/:uid', function(req, res) {
+	var uid = req.params.uid;
+	calc.users(uid, res);
 });
 
 

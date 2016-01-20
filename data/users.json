@@ -1,19 +1,18 @@
 {
   "user_attendance": {
     "1": {
-      "restaurants": "[1,2[]",
-      "activities": "[2[]",
+      "restaurants": "[1,2]",
+      "activities": "[2]",
       "transport": "[1]"
     }
   },
-  "user": {
+  "users": {
     "1": {
       "first_name": "John",
       "last_name": "Davie",
       "age": "25",
       "gender": "Male"
     },
-  "user": {
     "2": {
       "first_name": "Samantha",
       "last_name": "Martin",
