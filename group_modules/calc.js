@@ -1,6 +1,6 @@
 module.exports = {
 	cheapest : getCheapest
-}
+};
 
 
 // Data files
@@ -63,7 +63,7 @@ function getCheapestItem(obj) {
     		cheapestItems.push(item.name + " - " + item.avg_cost);
     		cheapest = item.avg_cost;
     	} else if (item.avg_cost == cheapest) {
-    		cheapestItems.push(item.name + " - " + item.avg_cost)
+    		cheapestItems.push(item.name + " - " + item.avg_cost);
     	}
 	});
 

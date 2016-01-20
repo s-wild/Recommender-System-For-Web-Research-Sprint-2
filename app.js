@@ -30,7 +30,7 @@ app.get('/api/:file', function(req, res) {
 			return;
 		default:
 			res.end("File not recognised");
-			return;
+			return; 
 	}
 
 });

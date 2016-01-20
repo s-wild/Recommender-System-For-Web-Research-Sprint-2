@@ -8,7 +8,7 @@ module.exports = {
 function getNestedObject(json, attrName) {
 	for(var attributename in json){
 		// If match
-    	if (attributename = attrName) {
+    	if (attributename == attrName) {
     		// Retrieve nested object, e.g. object.potato
     		var o = json[attributename];
     		return o;

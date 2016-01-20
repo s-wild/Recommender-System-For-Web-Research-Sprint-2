@@ -1,7 +1,8 @@
 {
   "transport_mode": {
     "1": "Car",
-    "2": "Minibus"
+    "2": "Minibus",
+    "3": "Train"
   },
   "transport": {
     "1": {
@@ -9,7 +10,21 @@
       "mode": "[transport_mode.1, transport_mode.2]",
       "avg_rating": "3.2",
       "avg_cost": "22",
-      "currency": "EURO"
+      "currency": "GDP"
+    },
+    "2": {
+      "name": "National Express",
+      "mode": "[transport_mode.1, transport_mode.2]",
+      "avg_rating": "3.2",
+      "avg_cost": "17",
+      "currency": "GDP"
+    },
+    "3": {
+      "name": "Southern Rail",
+      "mode": "[transport_mode.3]",
+      "avg_rating": "3.2",
+      "avg_cost": "15",
+      "currency": "GDP"
     }
   }
 }
