@@ -1,6 +1,7 @@
 module.exports = {
 	cheapest : getCheapest,
-	users : getUserId
+	users : getUserId,
+	userActivity : getUserActivity
 };
 
 // Data files
@@ -8,6 +9,7 @@ var restaurantsData = require('../data/restaurants.json');
 var activitiesData = require('../data/activities.json');
 var transportData = require('../data/transport.json');
 var userData = require('../data/users.json');
+var userAttendanceData = require('../data/user_attendances.json');
 
 // Other modules created by us
 var util = require('./util.js');
@@ -82,11 +84,37 @@ function getCheapestItem(obj) {
 }
 
 /*
-*	User Activity Functions
+*	User + User Activity Functions
 */
 // Get User Function.
 function getUserId(uid, res) {
 	var user= util.getNestedObject(userData, "users");
 	userItem = user[uid];
 	res.end(JSON.stringify(userItem));
+}
+
+// Get User Activity Type
+function getUserActivity(uid, file, res) {
+	var userAttendance = util.getNestedObject(userAttendanceData, "user_attendance");
+	size = util.objectLength(userAttendance);
+
+	for (var i = 0; i < size; i++) {
+		users = userAttendance[i];
+		user_ids = users.user_id;
+		//console.log(users.user_id);
+
+		if (user_ids == uid) {
+		//	objects = userAttendance[i]["user_id"];
+			console.log(users);
+
+		}
+
+  }
+	res.end(JSON.stringify(users));
+}
+
+function getUserActivityType(userData, user_id, type, res) {
+	var attendance = util.getNestedObject(userAttendanceData, "user_attendance");
+	//var cheapestRestaurant = getCheapestItem(r);
+	//res.end(JSON.stringify(attendance));
 }

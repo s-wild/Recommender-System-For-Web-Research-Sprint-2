@@ -54,6 +54,12 @@ app.get('/api/users/:uid', function(req, res) {
 	calc.users(uid, res);
 });
 
+app.get('/api/users/:uid/:file', function(req, res) {
+	var uid = req.params.uid;
+	var file = req.params.file;
+	calc.userActivity(uid, file, res);
+});
+
 
 // Start server
 var server = app.listen(3000, function() {
