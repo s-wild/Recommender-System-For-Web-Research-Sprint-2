@@ -95,22 +95,9 @@ function getUserId(uid, res) {
 
 // Get User Activity Type
 function getUserActivity(uid, file, res) {
-	var userAttendance = util.getNestedObject(userAttendanceData, "user_attendance");
-	size = util.objectLength(userAttendance);
-
-	for (var i = 0; i < size; i++) {
-		users = userAttendance[i];
-		user_ids = users.user_id;
-		//console.log(users.user_id);
-
-		if (user_ids == uid) {
-		//	objects = userAttendance[i]["user_id"];
-			console.log(users);
-
-		}
-
-  }
-	res.end(JSON.stringify(users));
+	var userAttendances = util.getNestedObject(userAttendanceData, "user_attendance");
+	var attendanceItems = util.findId(userAttendances, "user_id", uid);
+	res.end(JSON.stringify(attendanceItems));
 }
 
 function getUserActivityType(userData, user_id, type, res) {

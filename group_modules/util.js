@@ -21,17 +21,18 @@ function getNestedObject(json, attrName) {
 // Gets a objects from within JSON based on id
 function findId(json, fieldName, idToLookFor) {
 	size = objectLength(json);
+	var selected_objects = [];
 
   for (var i = 0; i < size; i++) {
 
 		field_id = json[i][fieldName];
 		if (field_id == idToLookFor) {
 			objects = json[i];
-			return objects;
-
+			selected_objects.push(objects);
 		}
 
   }
+	return selected_objects;
 
 }
 
