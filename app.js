@@ -34,9 +34,6 @@ app.get('/api/:file', function(req, res) {
 
 });
 
-
-
-
 // Start server
 var server = app.listen(3000, function() {
 	var host = server.address().address;
@@ -44,5 +41,3 @@ var server = app.listen(3000, function() {
 
 	console.log("Recommender System API listening at http://%s:%s", host, port);
 });
-
-
