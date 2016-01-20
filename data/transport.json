@@ -5,6 +5,7 @@
   },
   "transport": {
     "1": {
+      "name": "Johns Taxis",
       "mode": "[transport_mode.1, transport_mode.2]",
       "avg_rating": "3.2",
       "avg_cost": "22",

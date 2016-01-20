@@ -22,7 +22,7 @@ function getCheapest(file, res) {
 			getCheapestActivity();
 			break;
 		case 'transport':
-			getCheapestTransport();
+			getCheapestTransport(res);
 			break;
 		default:
 			res.end("File not recognised");
@@ -41,8 +41,10 @@ function getCheapestActivity() {
 
 }
 
-function getCheapestTransport() {
-
+function getCheapestTransport(res) {
+	var r = util.getNestedObject(transport, "transport");
+	var cheapest = getCheapestItem(r);
+	res.end(JSON.stringify(cheapest));
 }
 
 // Generic function for getting cheapest item, based on "avg_cost" field

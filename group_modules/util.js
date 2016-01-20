@@ -1,6 +1,6 @@
 module.exports = {
 	getNestedObject : getNestedObject
-}
+};
 
 
 
@@ -12,9 +12,8 @@ function getNestedObject(json, attrName) {
     		// Retrieve nested object, e.g. object.potato
     		var o = json[attributename];
     		return o;
-    	} 
+    	}
 	}
 
 	return undefined;
 }
-
