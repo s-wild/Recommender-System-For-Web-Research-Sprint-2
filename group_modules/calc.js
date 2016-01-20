@@ -19,7 +19,7 @@ function getCheapest(file, res) {
 			getCheapestRestaurant(res);
 			break;
 		case 'activities':
-			getCheapestActivity();
+			getCheapestActivity(res);
 			break;
 		case 'transport':
 			getCheapestTransport(res);
@@ -37,8 +37,10 @@ function getCheapestRestaurant(res) {
 	res.end(JSON.stringify(cheapest));
 }
 
-function getCheapestActivity() {
-
+function getCheapestActivity(res) {
+	var a = util.getNestedObject(activities, "activities");
+	var cheapest = getCheapestItem(a);
+	res.end(JSON.stringify(cheapest));
 }
 
 function getCheapestTransport(res) {
