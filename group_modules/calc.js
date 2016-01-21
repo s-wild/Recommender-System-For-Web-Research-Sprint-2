@@ -20,21 +20,6 @@ var errors = {
 	"file_not_found": "File not recognised"
 };
 
-
-function getCheapest(file, res) {
-
-	var object;
-
-	switch(file) {
-		case 'restaurants':
-			object = util.getNestedObject(restaurants, "restaurants");
-			break;
-		case 'activities':
-			object = util.getNestedObject(activities, "activities");
-			break;
-		case 'transport':
-			object = util.getNestedObject(transport, "transport");
-
 /*
 *	Cheapest Functions
 * @TODO - Maybe if you go to the url /api/cheapest it will combine all of the values.
@@ -60,7 +45,7 @@ function getCheapest(file, res) {
 	}
 
 	var cheapest = getCheapestItem(object);
-	res.end(JSON.stringify(cheapest));	
+	res.end(JSON.stringify(cheapest));
 }
 
 // Function to get data from type.
@@ -129,7 +114,7 @@ function getServiceMatch(file, service, res) {
 	}
 
 	var matched = findRestByServices(object, service);
-	res.end(JSON.stringify(matched));	
+	res.end(JSON.stringify(matched));
 }
 
 // Find restaurant by supplying a service
@@ -140,12 +125,12 @@ function findRestByServices(obj, service) {
 	// (a) Get number representing service from "services" object
     var services = restaurants.services;
     var servNum = getServiceValue(services, service);
-	
+
 	Object.keys(obj).forEach(function(key) {
 
 		// (b) Get restaurant object
     	var item = obj[key];	// e.g. restaurant["1"]
-    	
+
     	// (c) Iterate through services found in current restaurant
     	item.service_type.forEach(function(s) {
     		if (s == servNum) {
@@ -173,9 +158,6 @@ function getServiceValue(servicesObj, serviceToFind) {
 
 	return num;
 }
-
-
-
 
 
 /*
