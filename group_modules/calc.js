@@ -88,7 +88,7 @@ function getCheapestItem(obj) {
 */
 // Get User Function.
 function getUserId(uid, res) {
-	var user= util.getNestedObject(userData, "users");
+	var user = util.getNestedObject(userData, "users");
 	userItem = user[uid];
 	res.end(JSON.stringify(userItem));
 }
@@ -102,6 +102,5 @@ function getUserActivity(uid, file, res) {
 
 function getUserActivityType(userData, user_id, type, res) {
 	var attendance = util.getNestedObject(userAttendanceData, "user_attendance");
-	//var cheapestRestaurant = getCheapestItem(r);
 	//res.end(JSON.stringify(attendance));
 }

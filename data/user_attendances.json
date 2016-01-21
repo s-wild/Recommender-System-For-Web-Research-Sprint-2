@@ -17,6 +17,12 @@
       "service_type": "restaurants",
       "service_type_id": "3",
       "date": "1453304897795"
+    },
+    "3": {
+      "user_id": "2",
+      "service_type": "activities",
+      "service_type_id": "1",
+      "date": "1453304897795"
     }
   }
 }
