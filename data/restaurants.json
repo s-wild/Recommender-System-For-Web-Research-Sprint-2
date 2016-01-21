@@ -22,19 +22,19 @@
   "restaurants": {
     "1": {
       "name": "McDonalds",
-      "service_type": "[service.1, service.2]",
+      "service_type": [1, 2],
       "avg_cost": "14",
       "currency": "GBP"
     },
     "2": {
       "name": "Joes Pizza",
-      "service_type": "[service.2]",
+      "service_type": [2],
       "avg_cost": "19",
       "currency": "GBP"
     },
     "3": {
       "name": "Del Taco",
-      "service_type": "[service.1, service.2]",
+      "service_type": [1, 2],
       "avg_cost": "19",
       "currency": "GBP"
     }

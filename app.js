@@ -12,7 +12,7 @@ var transport = require('./data/transport.json');
 
 // Routes
 app.get('/api/:file', function(req, res) {
-	if (req.params.file == 'undefined') {
+	if (typeof(req.params.file) == 'undefined') {
 		res.end("File not recognised.");
 		return;
 	}
@@ -36,13 +36,24 @@ app.get('/api/:file', function(req, res) {
 });
 
 app.get('/api/cheapest/:file', function(req, res) {
-	if (req.params.file == 'undefined') {
+	if (typeof(req.params.file) == 'undefined') {
 		res.end("File not recognised.");
 		return;
 	}
 
 	var file = req.params.file;
 	calc.cheapest(file, res);
+});
+
+app.get('/api/services/:file/:service', function(req, res) {
+	if (typeof(req.params.file) == 'undefined' || typeof(req.params.service) == 'undefined') {
+		res.end("File not recognised.");
+		return;
+	}
+
+	var file = req.params.file;
+	var service = req.params.service;
+	calc.service_match(file, service, res);
 });
 
 

@@ -5,7 +5,8 @@
   },
   "transport": {
     "1": {
-      "mode": "[transport_mode.1, transport_mode.2]",
+      "name": "John's Taxis",
+      "service_type": "[transport_mode.1, transport_mode.2]",
       "avg_rating": "3.2",
       "avg_cost": "22",
       "currency": "EURO"
