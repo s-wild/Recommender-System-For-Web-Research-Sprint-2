@@ -18,13 +18,18 @@
     "3": {
       "user_id": "2",
       "service_type": "restaurants",
-      "service_type_id": "3",
+      "service_type": 1,
       "date": "1453304897795"
     },
     "4": {
       "user_id": "2",
       "service_type": "activities",
-      "service_type_id": "1",
+      "service_type": 2,
+      "date": "1453304897795"
+    },
+    "5": {
+      "user_id": "1",
+      "service_type": 3,
       "date": "1453304897795"
     }
   }

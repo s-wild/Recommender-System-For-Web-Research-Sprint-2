@@ -2,7 +2,7 @@ module.exports = {
 	cheapest : getCheapest,
 	service_match: getServiceMatch,
 	users : getUserId,
-	userActivity : getUserActivity
+	userActivity : getUserActivityByType
 };
 
 // Data files
@@ -10,7 +10,7 @@ var restaurantsData = require('../data/restaurants.json');
 var activitiesData = require('../data/activities.json');
 var transportData = require('../data/transport.json');
 var userData = require('../data/users.json');
-var userAttendanceData = require('../data/user_history.json');
+var userHistoryData = require('../data/user_history.json');
 
 // Other modules created by us
 var util = require('./util.js');
@@ -95,14 +95,16 @@ function getServiceMatch(file, service, res) {
 	}
 
 	var matched = findItemByService(object, service, dataFile);
-	res.end(JSON.stringify(matched));	
+	res.end(JSON.stringify(matched));
 }
 
 // Find item by supplying a service
 function findItemByService(obj, service, dataFile) {
+	console.log("fibs",dataFile);
 	var suitableItems = [];
 
 	// (a) Get number representing service from "services" object
+	// @ TODO - SW - this only works if services in defined in the JSON, may need to create a standard.
     var services = dataFile.services;
     var servNum = getServiceValue(services, service);
 
@@ -150,15 +152,18 @@ function getUserId(uid, res) {
 	res.end(JSON.stringify(userItem));
 }
 
-// Get User Activity Type
-function getUserActivity(uid, file, res) {
-	var userAttendances = util.getNestedObject(userAttendanceData, "user_attendance");
-	var attendanceItems = util.findId(userAttendances, "user_id", uid);
-	console.log("items att",attendanceItems);
-	res.end(JSON.stringify(attendanceItems));
-}
+// Get User And Filter Activity. @TODO Needs finishing.
+function getUserActivityByType(uid, file, res) {
+	console.log("User Activity, User ID: ",uid);
+	console.log("User Activity, Data: ",file);
+	var userAttendances = util.getNestedObject(userHistoryData, "user_attendance");
+	action_type = file;
+	dataFile = userHistoryData;
+	//var matched = findItemByService(userAttendances, action_type, dataFile);
+	//console.log("matched!",matched);
 
-function getUserActivityType(userData, user_id, type, res) {
-	var attendance = util.getNestedObject(userAttendanceData, "user_attendance");
-	//res.end(JSON.stringify(attendance));
+	// var attendanceItems = util.findId(userAttendances, "user_id", uid);
+	// var attendanceItemsFiltered = findItemByService(attendanceItems, 1, file);
+
+	res.end(JSON.stringify(userAttendances));
 }
