@@ -12,6 +12,8 @@ var transport = require('./data/transport.json');
 var users = require('./data/users.json');
 
 // Routes
+
+// GET FILES
 app.get('/api/:file', function(req, res) {
 	if (typeof(req.params.file) == 'undefined') {
 		res.end("File not recognised.");
@@ -39,6 +41,7 @@ app.get('/api/:file', function(req, res) {
 
 });
 
+// GET CHEAPEST
 app.get('/api/cheapest/:file', function(req, res) {
 	if (typeof(req.params.file) == 'undefined') {
 		res.end("File not recognised.");
@@ -49,7 +52,7 @@ app.get('/api/cheapest/:file', function(req, res) {
 	calc.cheapest(file, res);
 });
 
-<<<<<<< HEAD
+// GET ENTITY BY SERVICE
 app.get('/api/services/:file/:service', function(req, res) {
 	if (typeof(req.params.file) == 'undefined' || typeof(req.params.service) == 'undefined') {
 		res.end("File not recognised.");
@@ -61,12 +64,11 @@ app.get('/api/services/:file/:service', function(req, res) {
 	calc.service_match(file, service, res);
 });
 
-=======
 app.get('/api/users/:uid', function(req, res) {
 	var uid = req.params.uid;
 	calc.users(uid, res);
 });
->>>>>>> origin/master
+
 
 app.get('/api/users/:uid/:file', function(req, res) {
 	var uid = req.params.uid;
