@@ -74,50 +74,52 @@ function getCheapestItem(obj) {
 // Find results based on the services they offer
 function getServiceMatch(file, service, res) {
 
-	var object;
+	var object, dataFile;
 
 	switch(file) {
 		case 'restaurants':
 			object = util.getNestedObject(restaurantsData, "restaurants");
+			dataFile = restaurantsData;
 			break;
 		case 'activities':
 			object = util.getNestedObject(activitiesData, "activities");
+			dataFile = activitiesData;
 			break;
 		case 'transport':
 			object = util.getNestedObject(transportData, "transport");
+			dataFile = transportData;
 			break;
 		default:
 			res.end(errors.file_not_found);
 			return;
 	}
 
-	var matched = findRestByServices(object, service);
+	var matched = findItemByService(object, service, dataFile);
 	res.end(JSON.stringify(matched));	
 }
 
-// Find restaurant by supplying a service
-function findRestByServices(obj, service) {
-
-	var suitableRest = [];
+// Find item by supplying a service
+function findItemByService(obj, service, dataFile) {
+	var suitableItems = [];
 
 	// (a) Get number representing service from "services" object
-    var services = restaurantsData.services;
+    var services = dataFile.services;
     var servNum = getServiceValue(services, service);
 	
 	Object.keys(obj).forEach(function(key) {
 
-		// (b) Get restaurant object
+		// (b) Get object
     	var item = obj[key];	// e.g. restaurant["1"]
     	
-    	// (c) Iterate through services found in current restaurant
+    	// (c) Iterate through services found in current object
     	item.service_type.forEach(function(s) {
     		if (s == servNum) {
-    			suitableRest.push(item.name);
+    			suitableItems.push(item.name);
     		}
     	});
 	});
 
-	return suitableRest;
+	return suitableItems;
 }
 
 // Returns number representing matched service
