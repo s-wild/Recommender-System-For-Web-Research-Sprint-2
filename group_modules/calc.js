@@ -5,12 +5,12 @@ module.exports = {
 	userActivity : getUserActivity
 };
 
+
+
 // Data files
-var restaurantsData = require('../data/restaurants.json');
-var activitiesData = require('../data/activities.json');
-var transportData = require('../data/transport.json');
-var userData = require('../data/users.json');
-var userAttendanceData = require('../data/user_attendances.json');
+var restaurants = require('../data/restaurants.json');
+var activities = require('../data/activities.json');
+var transport = require('../data/transport.json');
 
 // Other modules created by us
 var util = require('./util.js');
@@ -45,6 +45,25 @@ function getCheapest(file, res) {
 
 }
 
+
+function getCheapestRestaurant(res) {
+	var r = util.getNestedObject(restaurants, "restaurants");
+	var cheapest = getCheapestItem(r);
+	res.end(JSON.stringify(cheapest));
+}
+
+function getCheapestActivity(res) {
+	var a = util.getNestedObject(activities, "activities");
+	var cheapest = getCheapestItem(a);
+	res.end(JSON.stringify(cheapest));
+}
+
+function getCheapestTransport(res) {
+	var t = util.getNestedObject(transport, "transport");
+	var cheapest = getCheapestItem(t);
+	res.end(JSON.stringify(cheapest));
+}
+
 /*
 *	Cheapest Functions
 * @TODO - Maybe if you go to the url /api/cheapest it will combine all of the values.
@@ -56,6 +75,7 @@ function getCheapestItem(obj) {
 	var cheapest = 10000;
 
 	Object.keys(obj).forEach(function(key) {
+
     	var item = obj[key];	// e.g. restaurant["1"]
 
     	if (item.avg_cost < cheapest) {
@@ -63,7 +83,7 @@ function getCheapestItem(obj) {
     		cheapestItems.push(item.name + " - " + item.avg_cost);
     		cheapest = item.avg_cost;
     	} else if (item.avg_cost == cheapest) {
-    		cheapestItems.push(item.name + " - " + item.avg_cost);
+    		cheapestItems.push(item.name + " - " + item.avg_cost)
     	}
 	});
 
