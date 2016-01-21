@@ -20,57 +20,35 @@ var errors = {
 	"file_not_found": "File not recognised"
 };
 
-/*
-*	Cheapest Functions
-* @TODO - Maybe if you go to the url /api/cheapest it will combine all of the values.
-*/
-// From URL, detect cheapest type request.
+
 function getCheapest(file, res) {
+
+	var object;
+
 	switch(file) {
 		case 'restaurants':
-			type = 'restaurants';
-			getCheapestType(res, type);
+			object = util.getNestedObject(restaurantsData, "restaurants");
 			break;
 		case 'activities':
-			type = 'activities';
-			getCheapestType(res, type);
+			object = util.getNestedObject(activitiesData, "activities");
 			break;
 		case 'transport':
-			type = 'transport';
-			getCheapestType(res, type);
+			object = util.getNestedObject(transportData, "transport");
 			break;
 		default:
 			res.end(errors.file_not_found);
 			return;
-	}
+		}
 
 	var cheapest = getCheapestItem(object);
 	res.end(JSON.stringify(cheapest));
+
 }
 
-// Function to get data from type.
-function getCheapestType(res, type) {
-	switch(type) {
-		case 'restaurants':
-			var r = util.getNestedObject(restaurantsData, "restaurants");
-			var cheapestRestaurant = getCheapestItem(r);
-			res.end(JSON.stringify(cheapestRestaurant));
-			break;
-		case 'activities':
-			var a = util.getNestedObject(activitiesData, "activities");
-			var cheapestActivity = getCheapestItem(a);
-			res.end(JSON.stringify(cheapestActivity));
-			break;
-		case 'transport':
-			var t = util.getNestedObject(transportData, "transport");
-			var cheapestTransport = getCheapestItem(t);
-			res.end(JSON.stringify(cheapestTransport));
-			break;
-		default:
-			res.end("Cheapest type not recognised.");
-			return;
-	}
-}
+/*
+*	Cheapest Functions
+* @TODO - Maybe if you go to the url /api/cheapest it will combine all of the values.
+*/
 
 // Generic function for getting cheapest item, based on "avg_cost" field
 function getCheapestItem(obj) {
@@ -100,13 +78,13 @@ function getServiceMatch(file, service, res) {
 
 	switch(file) {
 		case 'restaurants':
-			object = util.getNestedObject(restaurants, "restaurants");
+			object = util.getNestedObject(restaurantsData, "restaurants");
 			break;
 		case 'activities':
-			object = util.getNestedObject(activities, "activities");
+			object = util.getNestedObject(activitiesData, "activities");
 			break;
 		case 'transport':
-			object = util.getNestedObject(transport, "transport");
+			object = util.getNestedObject(transportData, "transport");
 			break;
 		default:
 			res.end(errors.file_not_found);
@@ -123,7 +101,7 @@ function findRestByServices(obj, service) {
 	var suitableRest = [];
 
 	// (a) Get number representing service from "services" object
-    var services = restaurants.services;
+    var services = restaurantsData.services;
     var servNum = getServiceValue(services, service);
 
 	Object.keys(obj).forEach(function(key) {
