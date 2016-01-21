@@ -1,16 +1,20 @@
 module.exports = {
 	cheapest : getCheapest,
-	service_match: getServiceMatch
-}
-
+	service_match: getServiceMatch,
+	users : getUserId,
+	userActivity : getUserActivity
+};
 
 // Data files
-var restaurants = require('../data/restaurants.json');
-var activities = require('../data/activities.json');
-var transport = require('../data/transport.json');
+var restaurantsData = require('../data/restaurants.json');
+var activitiesData = require('../data/activities.json');
+var transportData = require('../data/transport.json');
+var userData = require('../data/users.json');
+var userAttendanceData = require('../data/user_attendances.json');
 
 // Other modules created by us
 var util = require('./util.js');
+
 
 var errors = {
 	"file_not_found": "File not recognised"
@@ -30,6 +34,25 @@ function getCheapest(file, res) {
 			break;
 		case 'transport':
 			object = util.getNestedObject(transport, "transport");
+
+/*
+*	Cheapest Functions
+* @TODO - Maybe if you go to the url /api/cheapest it will combine all of the values.
+*/
+// From URL, detect cheapest type request.
+function getCheapest(file, res) {
+	switch(file) {
+		case 'restaurants':
+			type = 'restaurants';
+			getCheapestType(res, type);
+			break;
+		case 'activities':
+			type = 'activities';
+			getCheapestType(res, type);
+			break;
+		case 'transport':
+			type = 'transport';
+			getCheapestType(res, type);
 			break;
 		default:
 			res.end(errors.file_not_found);
@@ -38,7 +61,30 @@ function getCheapest(file, res) {
 
 	var cheapest = getCheapestItem(object);
 	res.end(JSON.stringify(cheapest));	
+}
 
+// Function to get data from type.
+function getCheapestType(res, type) {
+	switch(type) {
+		case 'restaurants':
+			var r = util.getNestedObject(restaurantsData, "restaurants");
+			var cheapestRestaurant = getCheapestItem(r);
+			res.end(JSON.stringify(cheapestRestaurant));
+			break;
+		case 'activities':
+			var a = util.getNestedObject(activitiesData, "activities");
+			var cheapestActivity = getCheapestItem(a);
+			res.end(JSON.stringify(cheapestActivity));
+			break;
+		case 'transport':
+			var t = util.getNestedObject(transportData, "transport");
+			var cheapestTransport = getCheapestItem(t);
+			res.end(JSON.stringify(cheapestTransport));
+			break;
+		default:
+			res.end("Cheapest type not recognised.");
+			return;
+	}
 }
 
 // Generic function for getting cheapest item, based on "avg_cost" field
@@ -47,7 +93,6 @@ function getCheapestItem(obj) {
 	var cheapest = 10000;
 
 	Object.keys(obj).forEach(function(key) {
-
     	var item = obj[key];	// e.g. restaurant["1"]
 
     	if (item.avg_cost < cheapest) {
@@ -55,13 +100,12 @@ function getCheapestItem(obj) {
     		cheapestItems.push(item.name + " - " + item.avg_cost);
     		cheapest = item.avg_cost;
     	} else if (item.avg_cost == cheapest) {
-    		cheapestItems.push(item.name + " - " + item.avg_cost)
+    		cheapestItems.push(item.name + " - " + item.avg_cost);
     	}
 	});
 
 	return cheapestItems;
 }
-
 
 
 // Find results based on the services they offer
@@ -88,6 +132,7 @@ function getServiceMatch(file, service, res) {
 	res.end(JSON.stringify(matched));	
 }
 
+// Find restaurant by supplying a service
 function findRestByServices(obj, service) {
 
 	var suitableRest = [];
@@ -133,11 +178,25 @@ function getServiceValue(servicesObj, serviceToFind) {
 
 
 
+/*
+*	User + User Activity Functions
+*/
+// Get User Function.
+function getUserId(uid, res) {
+	var user= util.getNestedObject(userData, "users");
+	userItem = user[uid];
+	res.end(JSON.stringify(userItem));
+}
 
+// Get User Activity Type
+function getUserActivity(uid, file, res) {
+	var userAttendances = util.getNestedObject(userAttendanceData, "user_attendance");
+	var attendanceItems = util.findId(userAttendances, "user_id", uid);
+	res.end(JSON.stringify(attendanceItems));
+}
 
-
-
-
-
-
-
+function getUserActivityType(userData, user_id, type, res) {
+	var attendance = util.getNestedObject(userAttendanceData, "user_attendance");
+	//var cheapestRestaurant = getCheapestItem(r);
+	//res.end(JSON.stringify(attendance));
+}
