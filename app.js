@@ -64,12 +64,13 @@ app.get('/api/services/:file/:service', function(req, res) {
 	calc.service_match(file, service, res);
 });
 
+// GET USER PROFILE
 app.get('/api/users/:uid', function(req, res) {
 	var uid = req.params.uid;
 	calc.users(uid, res);
 });
 
-
+// GET USER ACTIVITY
 app.get('/api/users/:uid/:file', function(req, res) {
 	var uid = req.params.uid;
 	var file = req.params.file;

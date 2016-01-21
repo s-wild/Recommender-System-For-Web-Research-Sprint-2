@@ -10,7 +10,7 @@ var restaurantsData = require('../data/restaurants.json');
 var activitiesData = require('../data/activities.json');
 var transportData = require('../data/transport.json');
 var userData = require('../data/users.json');
-var userAttendanceData = require('../data/user_attendances.json');
+var userAttendanceData = require('../data/user_history.json');
 
 // Other modules created by us
 var util = require('./util.js');
@@ -101,8 +101,8 @@ function findRestByServices(obj, service) {
 	var suitableRest = [];
 
 	// (a) Get number representing service from "services" object
-    var services = restaurantsData.services;
-    var servNum = getServiceValue(services, service);
+  var services = restaurantsData.services;
+  var servNum = getServiceValue(services, service);
 
 	Object.keys(obj).forEach(function(key) {
 
@@ -152,6 +152,7 @@ function getUserId(uid, res) {
 function getUserActivity(uid, file, res) {
 	var userAttendances = util.getNestedObject(userAttendanceData, "user_attendance");
 	var attendanceItems = util.findId(userAttendances, "user_id", uid);
+	console.log("items att",attendanceItems);
 	res.end(JSON.stringify(attendanceItems));
 }
 
