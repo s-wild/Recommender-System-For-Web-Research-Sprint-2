@@ -10,7 +10,7 @@ var restaurantsData = require('../data/restaurants.json');
 var activitiesData = require('../data/activities.json');
 var transportData = require('../data/transport.json');
 var userData = require('../data/users.json');
-var userAttendanceData = require('../data/user_attendances.json');
+var userAttendanceData = require('../data/user_history.json');
 
 // Other modules created by us
 var util = require('./util.js');
@@ -39,9 +39,9 @@ function getCheapest(file, res) {
 			res.end(errors.file_not_found);
 			return;
 		}
-		
+
 	var cheapest = getCheapestItem(object);
-	res.end(JSON.stringify(cheapest));	
+	res.end(JSON.stringify(cheapest));
 
 }
 
@@ -105,13 +105,13 @@ function findItemByService(obj, service, dataFile) {
 	// (a) Get number representing service from "services" object
     var services = dataFile.services;
     var servNum = getServiceValue(services, service);
-	
+
 	Object.keys(obj).forEach(function(key) {
 
 		// (b) Get object
     	var item = obj[key];	// e.g. restaurant["1"]
-    	
-    	// (c) Iterate through services found in current object
+
+    	// (c) Iterate through services found in current restaurant
     	item.service_type.forEach(function(s) {
     		if (s == servNum) {
     			suitableItems.push(item.name);
@@ -140,15 +140,12 @@ function getServiceValue(servicesObj, serviceToFind) {
 }
 
 
-
-
-
 /*
 *	User + User Activity Functions
 */
 // Get User Function.
 function getUserId(uid, res) {
-	var user= util.getNestedObject(userData, "users");
+	var user = util.getNestedObject(userData, "users");
 	userItem = user[uid];
 	res.end(JSON.stringify(userItem));
 }
@@ -157,11 +154,11 @@ function getUserId(uid, res) {
 function getUserActivity(uid, file, res) {
 	var userAttendances = util.getNestedObject(userAttendanceData, "user_attendance");
 	var attendanceItems = util.findId(userAttendances, "user_id", uid);
+	console.log("items att",attendanceItems);
 	res.end(JSON.stringify(attendanceItems));
 }
 
 function getUserActivityType(userData, user_id, type, res) {
 	var attendance = util.getNestedObject(userAttendanceData, "user_attendance");
-	//var cheapestRestaurant = getCheapestItem(r);
 	//res.end(JSON.stringify(attendance));
 }
