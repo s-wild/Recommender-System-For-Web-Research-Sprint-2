@@ -141,26 +141,19 @@ function getUserId(uid, res) {
 function getUserActivityByType(uid, file, res) {
 
 	var originID = util.getNameByValue(userHistoryData.action_origin, file);
-	console.log("Origin ID: %s",  originID);
 	var userAttendances = util.getNestedObject(userHistoryData, "user_attendance");
 	var matchedAttendenceItems = [];	// empty array
 
 	// loop through user attendances
 	Object.keys(userAttendances).forEach(function(key) {
 			var userAttendanceitem = userAttendances[key];	// e.g. restaurant["1"]
-			console.log("User attendance items: " + userAttendanceitem);
-
 			if (userAttendanceitem.origin_type == originID) {
-
-
 				matchedAttendenceItems.push(userAttendanceitem);
 				// cheapest = item.avg_cost;
 			}
 
-
 	});
 	return matchedAttendenceItems;
-
 }
 
 function getAllEntities(file, res){
