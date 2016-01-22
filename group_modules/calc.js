@@ -14,10 +14,12 @@ var userAttendanceData = require('../data/user_history.json');
 
 // Other modules created by us
 var util = require('./util.js');
+var check = require('./check.js');
 
 
 var errors = {
-	"file_not_found": "File not recognised"
+	"file_not_found": "File not recognised",
+	"service_not_found": "Service not recognised"
 };
 
 
@@ -94,49 +96,12 @@ function getServiceMatch(file, service, res) {
 			return;
 	}
 
-	var matched = findItemByService(object, service, dataFile);
+	if (!check.isValidService(dataFile.services, service)) {
+		res.end(errors.service_not_found);
+		return;
+	}
+	var matched = util.findItemByService(object, service, dataFile);
 	res.end(JSON.stringify(matched));	
-}
-
-// Find item by supplying a service
-function findItemByService(obj, service, dataFile) {
-	var suitableItems = [];
-
-	// (a) Get number representing service from "services" object
-    var services = dataFile.services;
-    var servNum = getServiceValue(services, service);
-
-	Object.keys(obj).forEach(function(key) {
-
-		// (b) Get object
-    	var item = obj[key];	// e.g. restaurant["1"]
-
-    	// (c) Iterate through services found in current restaurant
-    	item.service_type.forEach(function(s) {
-    		if (s == servNum) {
-    			suitableItems.push(item.name);
-    		}
-    	});
-	});
-
-	return suitableItems;
-}
-
-// Returns number representing matched service
-function getServiceValue(servicesObj, serviceToFind) {
-
-	var num = null;
-	Object.keys(servicesObj).forEach(function(key) {
-		var service = servicesObj[key];
-
-		// e.g. "Takeaway" is found, return its key
-		if (service == serviceToFind) {
-			num = Number(key);
-			return;
-		}
-	});
-
-	return num;
 }
 
 
