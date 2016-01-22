@@ -105,18 +105,27 @@ function getRecommendedEntities(uid, file) {
 	var history = info.userActivity(uid, file);
 
 	// get most frequent
-
+	var frequencyList = getMostFrequent(history, uid, file);
+	console.log("Sorted Brand Counts: ",frequencyList);
 }
 
-function getMostFrequent(historyArray) {
 
-	var foundItems;
+function getMostFrequent(historyArray, uid, file) {
+	var uniqueBrandIDs = util.getUniqueBrands(historyArray);
 
-	historyArray.forEach(function(item) {
-		// if item [1: {count: 25}, ]
+	var brandCounts = [];
+	uniqueBrandIDs.forEach(function (brandID) {
+		var count = getBrandCount(uid, file, brandID).length;
 
-		// USE SIMON'S IDEA
+
+		brandCounts.push({ "brand_id": brandID, "count": count });
 	});
+	console.log("Unsorted Brandcounts: ",brandCounts);
+
+	// Sort array based on descending frequency ( b - a )
+	brandCounts.sort(function(a, b) { return b.count - a.count; });
+
+	return brandCounts;
 }
 
 function getBrandCount(uid, file, brandid) {
