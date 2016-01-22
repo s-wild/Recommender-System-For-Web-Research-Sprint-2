@@ -101,7 +101,7 @@ function getServiceMatch(file, service, res) {
 		return;
 	}
 	var matched = util.findItemByService(object, service, dataFile);
-	res.end(JSON.stringify(matched)); 
+	res.end(JSON.stringify(matched));
 }
 
 /*
@@ -116,21 +116,24 @@ function getUserId(uid, res) {
 
 // Get User And Filter Activity. @TODO Needs finishing.
 function getUserActivityByType(uid, file, res) {
-	console.log("User Activity, User ID: ",uid);
-	console.log("User Activity, Data: ",file);
+
+	var originID = util.getNameByValue(userHistoryData.action_origin, file);
+	console.log("Origin ID: %s",  originID);
 	var userAttendances = util.getNestedObject(userHistoryData, "user_attendance");
-	action_type = file;
-	dataFile = userHistoryData;
+	var matchedAttendenceItems = [];	// empty array
 
 	// loop through user attendances
-	// when id == uid do..
-	// .. check origin
+	Object.keys(userAttendances).forEach(function(key) {
+			var userAttendanceitem = userAttendances[key];	// e.g. restaurant["1"]
+			console.log("User attendance items: " + userAttendanceitem);
 
-	//var matched = findItemByService(userAttendances, action_type, dataFile);
-	//console.log("matched!",matched);
+			if (userAttendanceitem.origin_type == originID) {
 
-	// var attendanceItems = util.findId(userAttendances, "user_id", uid);
-	// var attendanceItemsFiltered = findItemByService(attendanceItems, 1, file);
 
-	res.end(JSON.stringify(userAttendances));
+				matchedAttendenceItems.push(userAttendanceitem);
+				// cheapest = item.avg_cost;
+			}
+
+	});
+	return matchedAttendenceItems;
 }

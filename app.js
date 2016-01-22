@@ -74,7 +74,13 @@ app.get('/api/users/:uid', function(req, res) {
 app.get('/api/users/:uid/:file', function(req, res) {
 	var uid = req.params.uid;
 	var file = req.params.file;
-	calc.userActivity(uid, file, res);
+	var returnResults = calc.userActivity(uid, file, res);
+	if (returnResults.length) {
+		res.end(JSON.stringify(returnResults));
+	}
+	else {
+		res.end(JSON.stringify("No results found."));
+	}
 });
 
 
