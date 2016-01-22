@@ -1,30 +1,41 @@
 {
-  "transport_mode": {
+  "types": {
     "1": "Car",
     "2": "Minibus",
-    "3": "Train"
+    "3": "Coach",
+    "4": "Train"
   },
-  "transport": {
+  "services": {
+    "1": "Public",
+    "2": "Private"
+  },
+  "brands": {
     "1": {
       "name": "John's Taxis",
-      "service_type": "[transport_mode.1, transport_mode.2]",
+      "service_type": [1, 2],
+      "type_id": [2],
       "avg_rating": "3.2",
       "avg_cost": "22",
-      "currency": "GDP"
+      "currency": "GDP",
+      "keywords": ["Local","Direct","Experience", "Flexible"]
     },
     "2": {
       "name": "National Express",
-      "mode": "[transport_mode.1, transport_mode.2]",
+      "service_type": [1],
+      "type_id": [3],
       "avg_rating": "3.2",
       "avg_cost": "17",
-      "currency": "GDP"
+      "currency": "GDP",
+      "keywords": ["Crowded","Direct","Scheduled","Regular"]
     },
     "3": {
       "name": "Southern Rail",
-      "mode": "[transport_mode.3]",
+      "service_type": [1],
+      "type_id": [4],
       "avg_rating": "3.2",
       "avg_cost": "15",
-      "currency": "GDP"
+      "currency": "GDP",
+      "keywords": ["Crowded","Scheduled","Regular"]
     }
   }
 }

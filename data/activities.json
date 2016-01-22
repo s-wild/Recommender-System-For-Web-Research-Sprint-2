@@ -1,44 +1,46 @@
 {
-  "activity_types": {
+  "types": {
     "1": "Adventurous",
     "2": "Thrill Seeker",
     "3": "No Crowds"
   },
   "services": {
-    "1": "Practice Area",
-    "2": "Lessons",
-    "3": "Shop"
+    "1": "Supervised",
+    "2": "Unsupervised"
   },
-  "activities": {
+  "brands": {
     "1": {
-      "name": "Skiing",
-      "service_type": [1,2,3],
-      "type": "[activity_types.1, activity_types.2]",
+      "name": "Skidder's Skiing Resort",
+      "service_type": [1,2],
+      "type_id": [1,2],
       "avg_rating": "4.4",
       "avg_cost": "19",
       "currency": "GBP",
       "age_range": "16-45",
-      "min_age": "12"
+      "min_age": "12",
+      "keywords": ["Snow","Cold","Active", "Speed"]
     },
     "2": {
       "name": "Jet Skiing",
       "service_type": [3],
-      "type": "[activity_types.1, activity_types.2]",
+      "type_id": [1,2],
       "avg_rating": "4.4",
       "avg_cost": "16",
       "currency": "GBP",
       "age_range": "16-45",
-      "min_age": "12"
+      "min_age": "12",
+      "keywords": ["Swim","Wet"]
     },
     "3": {
       "name": "Zip Lining",
-      "service_type": [1,2,3],
-      "type": "[activity_types.1, activity_types.2]",
+      "service_type": [1,2],
+      "type_id": [1,2],
       "avg_rating": "4.4",
       "avg_cost": "18",
       "currency": "GBP",
       "age_range": "16-45",
-      "min_age": "12"
+      "min_age": "12",
+      "keywords": ["Speed","Fast"]
     }
   }
 }

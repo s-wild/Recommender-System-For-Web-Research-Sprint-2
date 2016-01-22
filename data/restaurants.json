@@ -1,42 +1,47 @@
 {
-  "cuisines": {
+  "types": {
     "1": "Italian",
     "2": "American",
     "3": "Mexican",
     "4": "Chinese",
     "5": "Tapas"
   },
-  "menu": {
-    "1": {
-      "Bur": {}
-    },
-    "2": {
-      "Pasta": {},
-      "Cheese": {}
-    }
-  },
   "services": {
     "1": "Takeaway",
     "2": "Dine"
   },
-  "restaurants": {
+  "brands": {
     "1": {
       "name": "McDonalds",
       "service_type": [1, 2],
+      "type_id": 2,
       "avg_cost": "14",
-      "currency": "GBP"
+      "currency": "GBP",
+      "keywords": ["Fast Food","Unhealthy","Burgers", "Fries", "Chips", "Beef", "Fried"]
     },
     "2": {
-      "name": "Joes Pizza",
+      "name": "KFC",
       "service_type": [2],
-      "avg_cost": "19",
-      "currency": "GBP"
+      "type_id": 2,
+      "avg_cost": "15",
+      "currency": "GBP",
+      "keywords": ["Fast Food","Unhealthy","Chicken", "Fries", "Chips", "Beef", "Fried"]
     },
     "3": {
+      "name": "Joes Pizza",
+      "service_type": [2],
+      "type_id": 2,
+      "avg_cost": "19",
+      "currency": "GBP",
+      "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomatoe"]
+    },
+    "4": {
       "name": "Del Taco",
       "service_type": [1, 2],
+      "type_id": 3,
       "avg_cost": "19",
-      "currency": "GBP"
+      "currency": "GBP",
+      "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomatoe"]
     }
   }
 }
