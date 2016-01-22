@@ -3,7 +3,8 @@ module.exports = {
 	findId : findId,
 	getNameByValue : getNameByValue,
 	findItemByService : findItemByService,
-	objectLength : objectLength
+	objectLength : objectLength,
+	listServiceTitles : listServiceTitles
 };
 
 // Gets a nested object from within JSON
@@ -59,6 +60,15 @@ function findItemByService(obj, serviceToFind, dataFile) {
 	});
 
 	return suitableItems;
+}
+
+function listServiceTitles(obj, service){
+	var outputArray = [];
+	 Object.keys(obj).forEach(function(key){
+		 var item = obj[key];
+		 outputArray.push(item.name);
+	 });
+	 return outputArray;
 }
 
 // Gets objects from within JSON based on id.

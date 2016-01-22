@@ -2,8 +2,11 @@ module.exports = {
 	cheapest : getCheapest,
 	service_match: getServiceMatch,
 	users : getUserId,
-	userActivity : getUserActivityByType
+	userActivity : getUserActivityByType,
+	allEntities: getAllEntities
 };
+
+
 
 // Data files
 var restaurantsData = require('../data/restaurants.json');
@@ -47,6 +50,25 @@ function getCheapest(file, res) {
 
 }
 
+
+function getCheapestRestaurant(res) {
+	var r = util.getNestedObject(restaurants, "restaurants");
+	var cheapest = getCheapestItem(r);
+	res.end(JSON.stringify(cheapest));
+}
+
+function getCheapestActivity(res) {
+	var a = util.getNestedObject(activities, "activities");
+	var cheapest = getCheapestItem(a);
+	res.end(JSON.stringify(cheapest));
+}
+
+function getCheapestTransport(res) {
+	var t = util.getNestedObject(transport, "transport");
+	var cheapest = getCheapestItem(t);
+	res.end(JSON.stringify(cheapest));
+}
+
 /*
 *	Cheapest Functions
 * @TODO - Maybe if you go to the url /api/cheapest it will combine all of the values.
@@ -58,6 +80,7 @@ function getCheapestItem(obj) {
 	var cheapest = 10000;
 
 	Object.keys(obj).forEach(function(key) {
+
     	var item = obj[key];	// e.g. restaurant["1"]
 
     	if (item.avg_cost < cheapest) {
@@ -134,6 +157,30 @@ function getUserActivityByType(uid, file, res) {
 				// cheapest = item.avg_cost;
 			}
 
+
 	});
 	return matchedAttendenceItems;
+
+}
+
+function getAllEntities(file, res){
+	var object, dataFile;
+
+	switch(file){
+		case 'restaurants':
+			object = util.getNestedObject(restaurantsData, 'restaurants');
+			dataFile = restaurantsData;
+			break;
+		case 'transport':
+			object = util.getNestedObject(transportData, 'transport');
+			dataFile = transportData;
+			break;
+		case 'activities':
+			object = util.getNestedObject(activitiesData, 'activities');
+			dataFile = activitiesData;
+			break;
+	}
+	var result = util.listServiceTitles(object, dataFile);
+	res.end(JSON.stringify(result));
+
 }

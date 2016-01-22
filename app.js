@@ -52,6 +52,16 @@ app.get('/api/cheapest/:file', function(req, res) {
 	calc.cheapest(file, res);
 });
 
+//LIST ALL ENTITIES IN FILE
+app.get('/api/services/:file', function(req, res){
+	if (typeof(req.params.file) == 'undefined'){
+		res.end("File not recognised");
+		return;
+	}
+	var file = req.params.file;
+	calc.allEntities(file, res);
+});
+
 // GET ENTITY BY SERVICE
 app.get('/api/services/:file/:service', function(req, res) {
 	if (typeof(req.params.file) == 'undefined' || typeof(req.params.service) == 'undefined') {
