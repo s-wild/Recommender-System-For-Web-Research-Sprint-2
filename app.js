@@ -126,6 +126,24 @@ app.get('/api/users/:uid/:file', function(req, res) {
 	}
 });
 
+// GET BRAND COUNT FOR USER.
+app.get('/api/users/:uid/:file/:brandid', function(req, res) {
+	if (!check.isDefined([req.params.uid, req.params.file, req.params.brandid])) {
+		res.end(messages.not_recognised + " " + messages.id_not_recognised);
+	}
+
+	var uid = req.params.uid;
+	var file = req.params.file;
+	var brandid = req.params.brandid;
+
+	var returnResults = calc.getBrandCount(uid, file, brandid);
+	if (returnResults.length) {
+		res.end(JSON.stringify(returnResults));
+	}
+	else {
+		res.end(JSON.stringify(messages.no_results));
+	}
+});
 
 
 

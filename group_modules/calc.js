@@ -1,7 +1,8 @@
 module.exports = {
 	cheapest : getCheapest,
 	service_match: getServiceMatch,
-	recommend : getRecommendedEntities
+	recommend : getRecommendedEntities,
+	getBrandCount: getBrandCount
 };
 
 // Data files
@@ -13,6 +14,7 @@ var transportData = require('../data/transport.json');
 var util = require('./util.js');
 var check = require('./check.js');
 var globals = require('./globals.js');
+var info = require('./info.js');
 
 
 function getCheapest(file, res) {
@@ -35,7 +37,7 @@ function getCheapest(file, res) {
 		}
 
 	return getCheapestItem(object);
-	
+
 
 }
 
@@ -115,7 +117,7 @@ function getRecommendedEntities(uid, file) {
 
 function getMostFrequent(historyArray) {
 
-	var foundItems
+	var foundItems;
 
 	historyArray.forEach(function(item) {
 		// if item [1: {count: 25}, ]
@@ -124,12 +126,14 @@ function getMostFrequent(historyArray) {
 	});
 }
 
+function getBrandCount(uid, file, brandid) {
+		var history = info.userActivity(uid, file);
+		var foundItems = [];
+		history.forEach(function(item) {
+			if (item.brand_id == brandid) {
+				foundItems.push(item);
+			}
 
-
-
-
-
-
-
-
-
+		});
+		return foundItems;
+}
