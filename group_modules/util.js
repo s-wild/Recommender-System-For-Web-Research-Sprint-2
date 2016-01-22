@@ -1,7 +1,7 @@
 module.exports = {
 	getNestedObject : getNestedObject,
 	findId : findId,
-	getServiceValue : getServiceValue,
+	getNameByValue : getNameByValue,
 	findItemByService : findItemByService,
 	objectLength : objectLength
 };
@@ -20,15 +20,15 @@ function getNestedObject(json, attrName) {
 	return undefined;
 }
 
-// Returns number representing matched service
-function getServiceValue(servicesObj, serviceToFind) {
+// Returns name representing matched value (in JSON terms)
+function getNameByValue(parentObj, valueToFind) {
 
 	var num = null;
-	Object.keys(servicesObj).forEach(function(key) {
-		var service = servicesObj[key];
+	Object.keys(parentObj).forEach(function(key) {
+		var value = parentObj[key];
 
 		// e.g. "Takeaway" is found, return its key
-		if (service == serviceToFind) {
+		if (value == valueToFind) {
 			num = Number(key);
 			return;
 		}
@@ -38,12 +38,12 @@ function getServiceValue(servicesObj, serviceToFind) {
 }
 
 // Find item by supplying a service
-function findItemByService(obj, service, dataFile) {
+function findItemByService(obj, serviceToFind, dataFile) {
 	var suitableItems = [];
 
 	// (a) Get number representing service from "services" object
     var services = dataFile.services;
-    var servNum = getServiceValue(services, service);
+    var servNum = getNameByValue(services, serviceToFind);
 
 	Object.keys(obj).forEach(function(key) {
 
