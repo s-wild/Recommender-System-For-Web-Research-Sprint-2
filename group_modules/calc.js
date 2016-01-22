@@ -8,9 +8,11 @@ module.exports = {
 
 
 // Data files
-var restaurants = require('../data/restaurants.json');
-var activities = require('../data/activities.json');
-var transport = require('../data/transport.json');
+var restaurantsData = require('../data/restaurants.json');
+var activitiesData = require('../data/activities.json');
+var transportData = require('../data/transport.json');
+var userData = require('../data/users.json');
+var userAttendanceData = require('../data/user_attendances.json');
 
 // Other modules created by us
 var util = require('./util.js');
@@ -177,5 +179,5 @@ function getUserActivity(uid, file, res) {
 
 function getUserActivityType(userData, user_id, type, res) {
 	var attendance = util.getNestedObject(userAttendanceData, "user_attendance");
-	//res.end(JSON.stringify(attendance));
+	res.end(JSON.stringify(attendance));
 }
