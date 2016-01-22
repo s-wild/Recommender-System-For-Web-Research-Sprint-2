@@ -1,5 +1,5 @@
 {
-  "action_type": {
+  "action_origin": {
     "1": "restaurants",
     "2": "activities",
     "3": "transport"
@@ -7,24 +7,27 @@
   "user_attendance": {
     "1": {
       "user_id": "1",
-      "service_type": 1,
+      "origin_type": 1,
       "date": "1453304897795"
     },
     "2": {
       "user_id": "1",
-      "service_type": 1,
+      "origin_type": 1,
       "date": "1453304897795"
     },
     "3": {
       "user_id": "2",
-      "service_type": "restaurants",
-      "service_type_id": "3",
+      "origin_type": 1,
       "date": "1453304897795"
     },
     "4": {
       "user_id": "2",
-      "service_type": "activities",
-      "service_type_id": "1",
+      "origin_type": 2,
+      "date": "1453304897795"
+    },
+    "5": {
+      "user_id": "1",
+      "origin_type": 3,
       "date": "1453304897795"
     }
   }
