@@ -99,10 +99,6 @@ function getServiceMatch(file, service, res) {
 }
 
 
-
-
-
-
 function getRecommendedEntities(uid, file) {
 
 	// look at user history
@@ -110,10 +106,7 @@ function getRecommendedEntities(uid, file) {
 
 	// get most frequent
 
-
-
 }
-
 
 function getMostFrequent(historyArray) {
 
@@ -127,13 +120,13 @@ function getMostFrequent(historyArray) {
 }
 
 function getBrandCount(uid, file, brandid) {
-		var history = info.userActivity(uid, file);
-		var foundItems = [];
-		history.forEach(function(item) {
-			if (item.brand_id == brandid) {
-				foundItems.push(item);
-			}
+	var history = info.userActivity(uid, file);
+	var foundItems = [];
+	history.forEach(function(item) {
+		if (item.brand_id == brandid) {
+			foundItems.push(item);
+		}
 
-		});
-		return foundItems;
+	});
+	return foundItems;
 }
