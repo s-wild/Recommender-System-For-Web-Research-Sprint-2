@@ -1,7 +1,8 @@
 module.exports = {
 	cheapest : getCheapest,
 	service_match: getServiceMatch,
-	users : getUserId,
+	getUser : getUserProfile,
+	getUsers : getAllUserProfiles,
 	userActivity : getUserActivityByType,
 	allEntities: getAllEntities
 };
@@ -130,11 +131,17 @@ function getServiceMatch(file, service, res) {
 /*
 *	User + User Activity Functions
 */
-// Get User Function.
-function getUserId(uid, res) {
-	var user = util.getNestedObject(userData, "users");
-	userItem = user[uid];
+// Get User.
+function getUserProfile(uid, res) {
+	var users = util.getNestedObject(userData, "users");
+	userItem = users[uid];
 	res.end(JSON.stringify(userItem));
+}
+
+// Get All Users Profile.
+function getAllUserProfiles(uid, res) {
+	var users = util.getNestedObject(userData, "users");
+	res.end(JSON.stringify(users));
 }
 
 // Get User And Filter Activity. @TODO Needs finishing.
