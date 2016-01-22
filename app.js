@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 // Our modules
 var calc = require('./group_modules/calc.js');
 var info = require('./group_modules/info.js');
-var check = require('./group_modules/check.js');
+var check = require('./group_modules/check.js');var globals = require('./group_modules/globals.js');
 
 // Data files
 var restaurants = require('./data/restaurants.json');
@@ -18,7 +18,8 @@ var users = require('./data/users.json');
 
 var messages = {
 	"no_results" : "No results found.",
-	"not_recognised" : "File not recognised"
+	"file_not_recognised" : "File not recognised",
+	"id_not_recognised" : "User ID not recognised"
 };
 
 // Routes
@@ -70,6 +71,7 @@ app.get('/api/cheapest/:file', function(req, res) {
 
 //LIST ALL ENTITIES IN FILE
 app.get('/api/entities/:file', function(req, res){
+
 	if (!check.isDefined([req.params.file])){
 		res.end(messages.not_recognised);
 		return;
@@ -109,19 +111,31 @@ app.get('/api/users/:uid', function(req, res) {
 // GET USER ACTIVITY
 app.get('/api/users/:uid/:file', function(req, res) {
 	if (!check.isDefined([req.params.uid, req.params.file])) {
-		res.end(messages.not_recognised + " User ID not recognised");
+		res.end(messages.not_recognised + " " + messages.id_not_recognised);
 	}
 
 	var uid = req.params.uid;
 	var file = req.params.file;
 
-	var returnResults = info.userActivity(uid, file, res);
+	var returnResults = info.userActivity(uid, file);
 	if (returnResults.length) {
 		res.end(JSON.stringify(returnResults));
 	}
 	else {
 		res.end(JSON.stringify(messages.no_results));
 	}
+});
+
+
+
+
+// RECOMMENDER ROUTES
+app.get('/api/recommend/:uid/:file', function(req, res) {
+	if (!check.isDefined(req.params.uid) || !check.isDefined(req.params.file)) {
+		res.end(messages.not_recognised + " " + messages.id_not_recognised);
+	}
+
+	var recommended = calc.recommend(req.params.ui, req.params.file);
 });
 
 

@@ -1,6 +1,7 @@
 module.exports = {
 	cheapest : getCheapest,
-	service_match: getServiceMatch
+	service_match: getServiceMatch,
+	recommend : getRecommendedEntities
 };
 
 // Data files
@@ -11,6 +12,7 @@ var transportData = require('../data/transport.json');
 // Other modules created by us
 var util = require('./util.js');
 var check = require('./check.js');
+var globals = require('./globals.js');
 
 
 function getCheapest(file, res) {
@@ -19,13 +21,13 @@ function getCheapest(file, res) {
 
 	switch(file) {
 		case 'restaurants':
-			object = util.getNestedObject(restaurantsData, "restaurants");
+			object = util.getNestedObject(restaurantsData, globals.BRANDS);
 			break;
 		case 'activities':
-			object = util.getNestedObject(activitiesData, "activities");
+			object = util.getNestedObject(activitiesData, globals.BRANDS);
 			break;
 		case 'transport':
-			object = util.getNestedObject(transportData, "transport");
+			object = util.getNestedObject(transportData, globals.BRANDS);
 			break;
 		default:
 			res.end(errors.file_not_found);
@@ -63,7 +65,6 @@ function getCheapestItem(obj) {
 	return cheapestItems;
 }
 
-
 // Find results based on the services they offer
 function getServiceMatch(file, service, res) {
 
@@ -71,15 +72,15 @@ function getServiceMatch(file, service, res) {
 
 	switch(file) {
 		case 'restaurants':
-			object = util.getNestedObject(restaurantsData, "restaurants");
+			object = util.getNestedObject(restaurantsData, globals.BRANDS);
 			dataFile = restaurantsData;
 			break;
 		case 'activities':
-			object = util.getNestedObject(activitiesData, "activities");
+			object = util.getNestedObject(activitiesData, globals.BRANDS);
 			dataFile = activitiesData;
 			break;
 		case 'transport':
-			object = util.getNestedObject(transportData, "transport");
+			object = util.getNestedObject(transportData, globals.BRANDS);
 			dataFile = transportData;
 			break;
 		default:
@@ -94,3 +95,41 @@ function getServiceMatch(file, service, res) {
 
 	return util.findItemByService(object, service, dataFile);
 }
+
+
+
+
+
+
+function getRecommendedEntities(uid, file) {
+
+	// look at user history
+	var history = info.userActivity(uid, file);
+
+	// get most frequent
+
+
+
+}
+
+
+function getMostFrequent(historyArray) {
+
+	var foundItems
+
+	historyArray.forEach(function(item) {
+		// if item [1: {count: 25}, ]
+
+		// USE SIMON'S IDEA
+	});
+}
+
+
+
+
+
+
+
+
+
+

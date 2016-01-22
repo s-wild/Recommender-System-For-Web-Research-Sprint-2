@@ -99,3 +99,13 @@ function objectLength(obj) {
   }
   return result;
 }
+
+
+function getEntityByOrigin(origin) {
+
+	var file = null;
+
+	
+
+
+}
