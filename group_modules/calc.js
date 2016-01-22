@@ -2,7 +2,8 @@ module.exports = {
 	cheapest : getCheapest,
 	service_match: getServiceMatch,
 	users : getUserId,
-	userActivity : getUserActivity
+	userActivity : getUserActivityByType,
+	allEntities: getAllEntities
 };
 
 
@@ -12,14 +13,16 @@ var restaurantsData = require('../data/restaurants.json');
 var activitiesData = require('../data/activities.json');
 var transportData = require('../data/transport.json');
 var userData = require('../data/users.json');
-var userAttendanceData = require('../data/user_attendances.json');
+var userHistoryData = require('../data/user_history.json');
 
 // Other modules created by us
 var util = require('./util.js');
+var check = require('./check.js');
 
 
 var errors = {
-	"file_not_found": "File not recognised"
+	"file_not_found": "File not recognised",
+	"service_not_found": "Service not recognised"
 };
 
 
@@ -96,69 +99,33 @@ function getCheapestItem(obj) {
 // Find results based on the services they offer
 function getServiceMatch(file, service, res) {
 
-	var object;
+	var object, dataFile;
 
 	switch(file) {
 		case 'restaurants':
 			object = util.getNestedObject(restaurantsData, "restaurants");
+			dataFile = restaurantsData;
 			break;
 		case 'activities':
 			object = util.getNestedObject(activitiesData, "activities");
+			dataFile = activitiesData;
 			break;
 		case 'transport':
 			object = util.getNestedObject(transportData, "transport");
+			dataFile = transportData;
 			break;
 		default:
 			res.end(errors.file_not_found);
 			return;
 	}
 
-	var matched = findRestByServices(object, service);
+	if (!check.isValidService(dataFile.services, service)) {
+		res.end(errors.service_not_found);
+		return;
+	}
+	var matched = util.findItemByService(object, service, dataFile);
 	res.end(JSON.stringify(matched));
 }
-
-// Find restaurant by supplying a service
-function findRestByServices(obj, service) {
-
-	var suitableRest = [];
-
-	// (a) Get number representing service from "services" object
-    var services = restaurantsData.services;
-    var servNum = getServiceValue(services, service);
-
-	Object.keys(obj).forEach(function(key) {
-
-		// (b) Get restaurant object
-    	var item = obj[key];	// e.g. restaurant["1"]
-
-    	// (c) Iterate through services found in current restaurant
-    	item.service_type.forEach(function(s) {
-    		if (s == servNum) {
-    			suitableRest.push(item.name);
-    		}
-    	});
-	});
-
-	return suitableRest;
-}
-
-// Returns number representing matched service
-function getServiceValue(servicesObj, serviceToFind) {
-
-	var num = null;
-	Object.keys(servicesObj).forEach(function(key) {
-		var service = servicesObj[key];
-
-		// e.g. "Takeaway" is found, return its key
-		if (service == serviceToFind) {
-			num = Number(key);
-			return;
-		}
-	});
-
-	return num;
-}
-
 
 /*
 *	User + User Activity Functions
@@ -170,14 +137,38 @@ function getUserId(uid, res) {
 	res.end(JSON.stringify(userItem));
 }
 
-// Get User Activity Type
-function getUserActivity(uid, file, res) {
-	var userAttendances = util.getNestedObject(userAttendanceData, "user_attendance");
-	var attendanceItems = util.findId(userAttendances, "user_id", uid);
-	res.end(JSON.stringify(attendanceItems));
+// Get User And Filter Activity. @TODO Needs finishing.
+function getUserActivityByType(uid, file, res) {
+	console.log("User Activity, User ID: ",uid);
+	console.log("User Activity, Data: ",file);
+	var userAttendances = util.getNestedObject(userHistoryData, "user_attendance");
+	action_type = file;
+	dataFile = userHistoryData;
+	//var matched = findItemByService(userAttendances, action_type, dataFile);
+	//console.log("matched!",matched);
+
+	// var attendanceItems = util.findId(userAttendances, "user_id", uid);
+	// var attendanceItemsFiltered = findItemByService(attendanceItems, 1, file);
+
 }
 
-function getUserActivityType(userData, user_id, type, res) {
-	var attendance = util.getNestedObject(userAttendanceData, "user_attendance");
-	res.end(JSON.stringify(attendance));
+function getAllEntities(file, res){
+	var object, dataFile;
+
+	switch(file){
+		case 'restaurants':
+			object = util.getNestedObject(restaurantsData, 'restaurants');
+			dataFile = restaurantsData;
+			break;
+		case 'transport':
+			object = util.getNestedObject(transportData, 'transport');
+			dataFile = transportData;
+			break;
+		case 'activities':
+			object = util.getNestedObject(activitiesData, 'activities');
+			dataFile = activitiesData;
+			break;
+	}
+	var result = util.listServiceTitles(object, dataFile);
+	res.end(JSON.stringify(result));
 }
