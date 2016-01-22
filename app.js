@@ -69,7 +69,7 @@ app.get('/api/cheapest/:file', function(req, res) {
 });
 
 //LIST ALL ENTITIES IN FILE
-app.get('/api/services/:file', function(req, res){
+app.get('/api/entities/:file', function(req, res){
 	if (!check.isDefined([req.params.file])){
 		res.end(messages.not_recognised);
 		return;

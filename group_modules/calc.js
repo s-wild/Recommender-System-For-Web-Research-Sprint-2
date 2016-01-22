@@ -8,6 +8,10 @@ var restaurantsData = require('../data/restaurants.json');
 var activitiesData = require('../data/activities.json');
 var transportData = require('../data/transport.json');
 
+// Other modules created by us
+var util = require('./util.js');
+var check = require('./check.js');
+
 
 function getCheapest(file, res) {
 
@@ -87,6 +91,6 @@ function getServiceMatch(file, service, res) {
 		res.end(errors.service_not_found);
 		return;
 	}
-	
+
 	return util.findItemByService(object, service, dataFile);
 }
