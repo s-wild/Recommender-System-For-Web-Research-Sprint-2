@@ -6,6 +6,7 @@ app.use(bodyParser.json());
 
 // Our modules
 var calc = require('./group_modules/calc.js');
+var info = require('./group_modules/info.js');
 var check = require('./group_modules/check.js');
 
 // Data files
@@ -74,7 +75,7 @@ app.get('/api/services/:file', function(req, res){
 		return;
 	}
 	var file = req.params.file;
-	var entities = calc.allEntities(file, res);
+	var entities = info.allEntities(file, res);
 
 	if (entities.length) {
 		res.end(JSON.stringify(entities));
@@ -92,17 +93,17 @@ app.get('/api/services/:file/:service', function(req, res) {
 
 	var file = req.params.file;
 	var service = req.params.service;
-	calc.service_match(file, service, res);
+	res.end(JSON.stringify(calc.service_match(file, service, res)));
 });
 
 // GET USER PROFILE
 app.get('/api/users/:uid', function(req, res) {
 	var uid = req.params.uid;
-	if (!check.isDefined(uid)) {
-		res.end(JSON.stringify(calc.getUsers()));
+	if (!check.isDefined([uid])) {
+		res.end(JSON.stringify(info.getUsers()));
 	}
 
-	res.end(JSON.stringify(calc.getUser(uid)));
+	res.end(JSON.stringify(info.getUser(uid)));
 });
 
 // GET USER ACTIVITY
@@ -114,7 +115,7 @@ app.get('/api/users/:uid/:file', function(req, res) {
 	var uid = req.params.uid;
 	var file = req.params.file;
 
-	var returnResults = calc.userActivity(uid, file, res);
+	var returnResults = info.userActivity(uid, file, res);
 	if (returnResults.length) {
 		res.end(JSON.stringify(returnResults));
 	}
