@@ -99,10 +99,6 @@ function getServiceMatch(file, service, res) {
 }
 
 
-
-
-
-
 function getRecommendedEntities(uid, file) {
 
 	// look at user history
@@ -121,25 +117,24 @@ function getMostFrequent(historyArray, uid, file) {
 	var brandCounts = [];
 	uniqueBrandIDs.forEach(function (brandID) {
 		var count = getBrandCount(uid, file, brandID).length;
-		brandCounts.push({ "brand_id": brandID, "count": count }); 
+		brandCounts.push({ "brand_id": brandID, "count": count });
 	});
-	console.log(brandCounts);
-
+	console.log("Unsorted Brandcounts: ", brandCounts);
 
 	// Sort array based on descending frequency ( b - a )
-	brandCounts.sort(function(a, b) { return b.count - a.count });
+	brandCounts.sort(function(a, b) { return b.count - a.count; });
 
 	return brandCounts;
 }
 
 function getBrandCount(uid, file, brandid) {
-		var history = info.userActivity(uid, file);
-		var foundItems = [];
-		history.forEach(function(item) {
-			if (item.brand_id == brandid) {
-				foundItems.push(item);
-			}
+	var history = info.userActivity(uid, file);
+	var foundItems = [];
+	history.forEach(function(item) {
+		if (item.brand_id == brandid) {
+			foundItems.push(item);
+		}
 
-		});
-		return foundItems;
+	});
+	return foundItems;
 }
