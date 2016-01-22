@@ -110,6 +110,8 @@ function getRecommendedEntities(uid, file) {
 
 	// get most frequent
 	var frequencyList = getMostFrequent(history, uid, file);
+
+	console.log(frequencyList);
 }
 
 
@@ -119,8 +121,6 @@ function getMostFrequent(historyArray, uid, file) {
 	var brandCounts = [];
 	uniqueBrandIDs.forEach(function (brandID) {
 		var count = getBrandCount(uid, file, brandID).length;
-
-
 		brandCounts.push({ "brand_id": brandID, "count": count }); 
 	});
 	console.log(brandCounts);
