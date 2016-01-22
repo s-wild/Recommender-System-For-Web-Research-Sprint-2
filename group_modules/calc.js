@@ -120,9 +120,7 @@ function getMostFrequent(historyArray) {
 	var foundItems;
 
 	historyArray.forEach(function(item) {
-		// if item [1: {count: 25}, ]
-
-		// USE SIMON'S IDEA
+		
 	});
 }
 
