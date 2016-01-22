@@ -144,6 +144,11 @@ function getUserActivityByType(uid, file, res) {
 	var userAttendances = util.getNestedObject(userHistoryData, "user_attendance");
 	action_type = file;
 	dataFile = userHistoryData;
+
+	// loop through user attendances
+	// when id == uid do..
+	// .. check origin
+
 	//var matched = findItemByService(userAttendances, action_type, dataFile);
 	//console.log("matched!",matched);
 
