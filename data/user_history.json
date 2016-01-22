@@ -34,6 +34,24 @@
       "origin": 3,
       "brand_id": 1,
       "date": "1453304897795"
+    },
+    "6": {
+      "user_id": "1",
+      "origin": 1,
+      "brand_id": 1,
+      "date": "1453304897795"
+    },
+    "7": {
+      "user_id": "1",
+      "origin": 1,
+      "brand_id": 2,
+      "date": "1453304897795"
+    },
+    "8": {
+      "user_id": "1",
+      "origin": 1,
+      "brand_id": 2,
+      "date": "1453304897795"
     }
   }
 }

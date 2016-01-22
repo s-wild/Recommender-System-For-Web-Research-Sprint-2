@@ -109,19 +109,27 @@ function getRecommendedEntities(uid, file) {
 	var history = info.userActivity(uid, file);
 
 	// get most frequent
-
-
-
+	var frequencyList = getMostFrequent(history, uid, file);
 }
 
 
-function getMostFrequent(historyArray) {
+function getMostFrequent(historyArray, uid, file) {
+	var uniqueBrandIDs = util.getUniqueBrands(historyArray);
 
-	var foundItems;
+	var brandCounts = [];
+	uniqueBrandIDs.forEach(function (brandID) {
+		var count = getBrandCount(uid, file, brandID).length;
 
-	historyArray.forEach(function(item) {
-		
+
+		brandCounts.push({ "brand_id": brandID, "count": count }); 
 	});
+	console.log(brandCounts);
+
+
+	// Sort array based on descending frequency ( b - a )
+	brandCounts.sort(function(a, b) { return b.count - a.count });
+
+	return brandCounts;
 }
 
 function getBrandCount(uid, file, brandid) {

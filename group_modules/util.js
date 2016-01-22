@@ -4,7 +4,8 @@ module.exports = {
 	getNameByValue : getNameByValue,
 	findItemByService : findItemByService,
 	objectLength : objectLength,
-	listServiceTitles : listServiceTitles
+	listServiceTitles : listServiceTitles,
+	getUniqueBrands : getUniqueBrands
 };
 
 // Gets a nested object from within JSON
@@ -108,5 +109,30 @@ function getEntityByOrigin(origin) {
 
 
 }
+
+function getUniqueBrands(history) {
+
+	var brandIDs = [];
+
+	history.forEach(function(item) {
+		brandIDs.push(item.brand_id);
+	});
+
+
+	var unique = [];
+	brandIDs.forEach(function(e) {
+		if (unique.indexOf(e) == -1) {
+			unique.push(e);
+		}
+	});
+
+
+	return unique;
+} 
+
+
+
+
+
 
 
