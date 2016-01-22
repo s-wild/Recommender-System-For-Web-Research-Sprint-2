@@ -3,7 +3,10 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
+
+// Our modules
 var calc = require('./group_modules/calc.js');
+var check = require('./group_modules/check.js');
 
 // Data files
 var restaurants = require('./data/restaurants.json');
@@ -11,12 +14,18 @@ var activities = require('./data/activities.json');
 var transport = require('./data/transport.json');
 var users = require('./data/users.json');
 
+
+var messages = {
+	"no_results" : "No results found.",
+	"not_recognised" : "File not recognised"
+};
+
 // Routes
 
 // GET FILES
 app.get('/api/:file', function(req, res) {
-	if (typeof(req.params.file) == 'undefined') {
-		res.end("File not recognised.");
+	if (!check.isDefined([req.params.file])) {
+		res.end(messages.not_recognised);
 		return;
 	}
 	var file = req.params.file;
@@ -35,7 +44,7 @@ app.get('/api/:file', function(req, res) {
 			res.end(JSON.stringify(users));
 			return;
 		default:
-			res.end("File not recognised");
+			res.end(messages.not_recognised);
 			return;
 	}
 
@@ -43,29 +52,41 @@ app.get('/api/:file', function(req, res) {
 
 // GET CHEAPEST
 app.get('/api/cheapest/:file', function(req, res) {
-	if (typeof(req.params.file) == 'undefined') {
-		res.end("File not recognised.");
+	if (!check.isDefined([req.params.file])) {
+		res.end(messages.not_recognised);
 		return;
 	}
 
 	var file = req.params.file;
-	calc.cheapest(file, res);
+	var cheapest = calc.cheapest(file, res);
+
+	if (cheapest.length) {
+		res.end(JSON.stringify(cheapest));
+	}
+
+	res.end(messages.not_found);
 });
 
 //LIST ALL ENTITIES IN FILE
 app.get('/api/services/:file', function(req, res){
-	if (typeof(req.params.file) == 'undefined'){
-		res.end("File not recognised");
+	if (!check.isDefined([req.params.file])){
+		res.end(messages.not_recognised);
 		return;
 	}
 	var file = req.params.file;
-	calc.allEntities(file, res);
+	var entities = calc.allEntities(file, res);
+
+	if (entities.length) {
+		res.end(JSON.stringify(entities));
+	}
+
+	res.end(messages.not_found);
 });
 
 // GET ENTITY BY SERVICE
 app.get('/api/services/:file/:service', function(req, res) {
-	if (typeof(req.params.file) == 'undefined' || typeof(req.params.service) == 'undefined') {
-		res.end("File not recognised.");
+	if (!check.isDefined([req.params.file, req.params.service])) {
+		res.end(messages.not_recognised);
 		return;
 	}
 
@@ -77,19 +98,28 @@ app.get('/api/services/:file/:service', function(req, res) {
 // GET USER PROFILE
 app.get('/api/users/:uid', function(req, res) {
 	var uid = req.params.uid;
-	calc.users(uid, res);
+	if (!check.isDefined(uid)) {
+		res.end(JSON.stringify(calc.getUsers()));
+	}
+
+	res.end(JSON.stringify(calc.getUser(uid)));
 });
 
 // GET USER ACTIVITY
 app.get('/api/users/:uid/:file', function(req, res) {
+	if (!check.isDefined([req.params.uid, req.params.file])) {
+		res.end(messages.not_recognised + " User ID not recognised");
+	}
+
 	var uid = req.params.uid;
 	var file = req.params.file;
+
 	var returnResults = calc.userActivity(uid, file, res);
 	if (returnResults.length) {
 		res.end(JSON.stringify(returnResults));
 	}
 	else {
-		res.end(JSON.stringify("No results found."));
+		res.end(JSON.stringify(messages.no_results));
 	}
 });
 

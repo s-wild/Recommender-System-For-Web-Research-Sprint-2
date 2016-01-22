@@ -1,5 +1,6 @@
 module.exports = {
-	isValidService : isValidService
+	isValidService : isValidService,
+	isDefined : checkIsDefined
 };
 
 
@@ -17,4 +18,20 @@ function isValidService(servicesObj, serviceToFind) {
 	});
 
 	return isValid;
+}
+
+// Checks if elements are defined
+function checkIsDefined(array) {
+
+	var isUndefined = true;
+
+	// Loop through array checking for empty value
+	array.forEach(function(e) {
+		if (typeof(e) == 'undefined'){
+			isUndefined = false;
+			return;
+		}
+	});
+
+	return isUndefined;
 }

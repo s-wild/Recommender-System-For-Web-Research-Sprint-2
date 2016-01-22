@@ -3,7 +3,7 @@ module.exports = {
 	service_match: getServiceMatch,
 	users : getUserId,
 	userActivity : getUserActivityByType,
-	allEntities: getAllEntities
+	allEntities : getAllEntities
 };
 
 
@@ -45,28 +45,9 @@ function getCheapest(file, res) {
 			return;
 		}
 
-	var cheapest = getCheapestItem(object);
-	res.end(JSON.stringify(cheapest));
+	return getCheapestItem(object);
+	
 
-}
-
-
-function getCheapestRestaurant(res) {
-	var r = util.getNestedObject(restaurants, "restaurants");
-	var cheapest = getCheapestItem(r);
-	res.end(JSON.stringify(cheapest));
-}
-
-function getCheapestActivity(res) {
-	var a = util.getNestedObject(activities, "activities");
-	var cheapest = getCheapestItem(a);
-	res.end(JSON.stringify(cheapest));
-}
-
-function getCheapestTransport(res) {
-	var t = util.getNestedObject(transport, "transport");
-	var cheapest = getCheapestItem(t);
-	res.end(JSON.stringify(cheapest));
 }
 
 /*
@@ -133,6 +114,8 @@ function getServiceMatch(file, service, res) {
 // Get User Function.
 function getUserId(uid, res) {
 	var user = util.getNestedObject(userData, "users");
+	console.log("blah: ", uid);
+	console.log(user[2]);
 	userItem = user[uid];
 	res.end(JSON.stringify(userItem));
 }
@@ -173,7 +156,6 @@ function getAllEntities(file, res){
 			dataFile = activitiesData;
 			break;
 	}
-	var result = util.listServiceTitles(object, dataFile);
-	res.end(JSON.stringify(result));
 
+	return util.listServiceTitles(object, dataFile);
 }
