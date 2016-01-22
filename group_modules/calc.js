@@ -101,7 +101,7 @@ function getServiceMatch(file, service, res) {
 		return;
 	}
 	var matched = util.findItemByService(object, service, dataFile);
-	res.end(JSON.stringify(matched));	
+	res.end(JSON.stringify(matched)); 
 }
 
 /*
