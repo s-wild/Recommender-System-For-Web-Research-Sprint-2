@@ -5,8 +5,17 @@ module.exports = {
 	findItemByService : findItemByService,
 	objectLength : objectLength,
 	listServiceTitles : listServiceTitles,
-	getUniqueBrands : getUniqueBrands
+	getUniqueBrands : getUniqueBrands,
+	getAverageRating : getAverageRating
 };
+
+// Data files
+var restaurantsData = require('../data/restaurants.json');
+var activitiesData = require('../data/activities.json');
+var transportData = require('../data/transport.json');
+
+// Other modules created by us
+var globals = require('./globals.js');
 
 // Gets a nested object from within JSON
 function getNestedObject(json, attrName) {
@@ -130,7 +139,36 @@ function getUniqueBrands(history) {
 	return unique;
 } 
 
+// Get average rating
+function getAverageRating(file, brandID) {
+	
+	var avgRating = null;
 
+	var object;
+	switch(file) {
+		case 'restaurants':
+			object = getNestedObject(restaurantsData, globals.BRANDS);
+			break;
+		case 'activities':
+			object = getNestedObject(activitiesData, globals.BRANDS);
+			break;
+		case 'transport':
+			object = getNestedObject(transportData, globals.BRANDS);
+			break;
+	}
+
+
+	// Find desired brand object
+	Object.keys(object).forEach(function(brand) {
+
+		if (brand == brandID) {
+			avgRating = object[brand].avg_rating;
+			return;
+		}
+	});
+
+	return avgRating;
+}
 
 
 

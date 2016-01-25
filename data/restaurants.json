@@ -15,6 +15,7 @@
       "name": "McDonalds",
       "service_type": [1, 2],
       "type_id": 2,
+      "avg_rating": 3.4,
       "avg_cost": "14",
       "currency": "GBP",
       "keywords": ["Fast Food","Unhealthy","Burgers", "Fries", "Chips", "Beef", "Fried"]
@@ -23,6 +24,7 @@
       "name": "KFC",
       "service_type": [2],
       "type_id": 2,
+      "avg_rating": 3.5,
       "avg_cost": "15",
       "currency": "GBP",
       "keywords": ["Fast Food","Unhealthy","Chicken", "Fries", "Chips", "Beef", "Fried"]
@@ -31,6 +33,7 @@
       "name": "Joes Pizza",
       "service_type": [2],
       "type_id": 2,
+      "avg_rating": 3.2,
       "avg_cost": "19",
       "currency": "GBP",
       "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomatoe"]
@@ -39,9 +42,19 @@
       "name": "Del Taco",
       "service_type": [1, 2],
       "type_id": 3,
+      "avg_rating": 4,
       "avg_cost": "19",
       "currency": "GBP",
       "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomatoe"]
+    },
+    "5": {
+      "name": "The New Restaurant",
+      "service_type": [1, 2],
+      "type_id": 3,
+      "avg_rating": 0,
+      "avg_cost": "19",
+      "currency": "GBP",
+      "keywords": ["New", "Different", "Special", "Mesmerising"]
     }
   }
 }

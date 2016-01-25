@@ -9,24 +9,28 @@
       "user_id": "1",
       "origin": 1,
       "brand_id": 1,
+      "rating": 3,
       "date": "1453304897795"
     },
     "2": {
       "user_id": "1",
       "origin": 1,
       "brand_id": 2,
+      "rating": 2,
       "date": "1453304897795"
     },
     "3": {
       "user_id": "2",
       "origin": 1,
       "brand_id": 1,
+      "rating": 3,
       "date": "1453304897795"
     },
     "4": {
       "user_id": "2",
       "origin": 1,
       "brand_id": 1,
+      "rating": 4,
       "date": "1453304897795"
     },
     "5": {
@@ -39,18 +43,35 @@
       "user_id": "1",
       "origin": 1,
       "brand_id": 1,
+      "rating": 3,
       "date": "1453304897795"
     },
     "7": {
       "user_id": "1",
       "origin": 1,
       "brand_id": 2,
+      "rating": 4,
       "date": "1453304897795"
     },
     "8": {
       "user_id": "1",
       "origin": 1,
       "brand_id": 2,
+      "rating": 3,
+      "date": "1453304897795"
+    },
+    "9": {
+      "user_id": "1",
+      "origin": 1,
+      "brand_id": 3,
+      "rating": 0,
+      "date": "1453304897795"
+    },
+    "10": {
+      "user_id": "1",
+      "origin": 1,
+      "brand_id": 5,
+      "rating": 0,
       "date": "1453304897795"
     }
   }

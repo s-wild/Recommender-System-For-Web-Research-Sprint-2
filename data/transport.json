@@ -14,7 +14,7 @@
       "name": "John's Taxis",
       "service_type": [1, 2],
       "type_id": [2],
-      "avg_rating": "3.2",
+      "avg_rating": 3.2,
       "avg_cost": "22",
       "currency": "GDP",
       "keywords": ["Local","Direct","Experience", "Flexible"]
@@ -23,7 +23,7 @@
       "name": "National Express",
       "service_type": [1],
       "type_id": [3],
-      "avg_rating": "3.2",
+      "avg_rating": 3.2,
       "avg_cost": "17",
       "currency": "GDP",
       "keywords": ["Crowded","Direct","Scheduled","Regular"]
@@ -32,7 +32,7 @@
       "name": "Southern Rail",
       "service_type": [1],
       "type_id": [4],
-      "avg_rating": "3.2",
+      "avg_rating": 3.2,
       "avg_cost": "15",
       "currency": "GDP",
       "keywords": ["Crowded","Scheduled","Regular"]
