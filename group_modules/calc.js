@@ -114,13 +114,13 @@ function getRecommendedEntities(uid, file) {
 	var ratings = getAvUserRatings(history, visitShare, file);
 
 	// Check for any empty ratings
-	var newRatings = rankBrands(ratings); 
+	var rankings = rankBrands(ratings); 
 
 
 	//console.log(frequencyList);
 	//console.log(visitShare);
 	//console.log(ratings);
-	console.log(newRatings);
+	//console.log(newRatings);
 
 	// extra checks depending on file
 	/* 
@@ -128,6 +128,9 @@ function getRecommendedEntities(uid, file) {
 		# [TRANSPORT] if transport, consider whether they can drive
 		# [ACTIVITY+TRANSPORT] consider disability
 	*/
+
+
+	return rankings;
 }
 
 // Gets list of frequencies for each brand within a sector

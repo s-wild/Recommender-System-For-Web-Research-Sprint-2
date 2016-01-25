@@ -154,6 +154,7 @@ app.get('/api/recommend/:uid/:file', function(req, res) {
 	}
 
 	var recommended = calc.recommend(req.params.uid, req.params.file);
+	res.end(JSON.stringify(recommended));
 });
 
 
