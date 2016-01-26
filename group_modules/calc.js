@@ -128,6 +128,7 @@ function getMostFrequent(historyArray, uid, file) {
 	return brandCounts;
 }
 
+// @TODO - Rename function.
 function getBrandCount(uid, file, brandid) {
 	var history = info.userActivity(uid, file);
 	var foundItems = [];
