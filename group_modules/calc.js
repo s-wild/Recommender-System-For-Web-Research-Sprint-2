@@ -133,7 +133,7 @@ function getRecommendedEntities(uid, file, location) {
 	//console.log(ratings);
 	//console.log(newRatings);
 	//console.log(commonKeywords);
-	console.log(targetBrands);
+	//console.log(targetBrands);
 
 	// extra checks depending on file
 	/*

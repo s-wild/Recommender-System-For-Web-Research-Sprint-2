@@ -223,13 +223,14 @@ function getBrandsByLocation(file, location) {
 		var lowercaseLocations = [];
 
 		// Convert all locations to lowercase, for comparison
-		brand.locations.forEach(function(word) {
-			lowercaseLocations.push(word.toLowerCase());
+		brand.locations.forEach(function(location) {
+			lowercaseLocations.push(location.name.toLowerCase());
 		});
 
 		// If brand resides in location
 		if (lowercaseLocations.indexOf(location.toLowerCase()) != -1) {
 			brand.brand_id = brandID;	// Add brand id, so it can be used later on
+			brand.brand_location = location;
 			localBrands.push(brand);
 		}
 
@@ -240,21 +241,53 @@ function getBrandsByLocation(file, location) {
 
 // Get newest brand
 function getNewestBrand(file, brands) {
-
+	
 	var newest = {};
 	for (var i = 0; i < brands.length; i++) {
 		var brand = brands[i];
+
+
+		// Get brand location
+		var brandLocation = brand.brand_location;
+		console.log(brand.locations);
+
+		// Get specific store opening time
+		var opening_date;
+		brand.locations.forEach(function(location) {
+			
+			// Check for same location
+			if (location.name.toLowerCase() == brandLocation.toLowerCase()) {
+
+				opening_date = location.opening_date;
+			}
+			
+		});
+
+
+
+
 		// First is youngest by default
 		if (i == 0) {
 			newest.brand_id = brand.brand_id;
-			return;
+			newest.age = getAge(opening_date);
+			break;
 		}
 
 		
 
+		// Compare to see if brand location is newer
+		if (opening_date < newest.age) {
+
+		}
+
 	}
 
 
+}
+
+// Get age of a particular store
+function getAge(date) {
+	
 }
 
 
