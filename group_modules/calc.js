@@ -136,7 +136,7 @@ function getRecommendedEntities(uid, file, location) {
 	console.log(targetBrands);
 
 	// extra checks depending on file
-	/* 
+	/*
 		# [ACTIVITY] if activity, consider age limit
 		# [TRANSPORT] if transport, consider whether they can drive
 		# [ACTIVITY+TRANSPORT] consider disability
@@ -185,7 +185,7 @@ function getTotalVisitShare(totalVisits, frequencyList) {
 		brand.share = share;
 	});
 
-	return frequencyList; 
+	return frequencyList;
 }
 
 
@@ -228,7 +228,7 @@ function getAvUserRatings(historyArray, visitShare, file) {
 		} else {
 			item.avg_rating = avg;
 		}
-		
+
 
 	});
 
@@ -236,7 +236,7 @@ function getAvUserRatings(historyArray, visitShare, file) {
 }
 
 
-// Rank brands using star system 
+// Rank brands using star system
 function rankBrands(ratings) {
 
 	ratings.forEach(function(item) {
@@ -269,7 +269,7 @@ function getRating(brand) {
 
 }
 
-// Convert percentage of overall visits to a star / 5 
+// Convert percentage of overall visits to a star / 5
 function convertShareToStar(share) {
 	if (share > 0 && share <= 20) {
 		return 1;
@@ -315,10 +315,3 @@ function getCommonKeywords(rankedBrands, file) {
 
 	return commonKeywords;
 }
-
-
-
-
-
-
-
