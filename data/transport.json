@@ -17,7 +17,10 @@
       "avg_rating": 3.2,
       "avg_cost": "22",
       "currency": "GDP",
-      "locations": ["Venice"],
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "	1372496400"
+        }],
       "keywords": ["Local","Direct","Experience", "Flexible"]
     },
     "2": {
@@ -27,7 +30,10 @@
       "avg_rating": 3.2,
       "avg_cost": "17",
       "currency": "GDP",
-      "locations": ["Portsmouth"],
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "	1374483600"
+        }],
       "keywords": ["Value", "Bus", "Coach", "Flexible"]
     },
     "3": {
@@ -37,7 +43,10 @@
       "avg_rating": 3.2,
       "avg_cost": "15",
       "currency": "GDP",
-      "locations": "Portsmouth",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "1372496400"
+        }],
       "keywords": ["Crowds","Scheduled","Regular"]
     },
     "4": {
@@ -47,7 +56,10 @@
       "avg_rating": 3.1,
       "avg_cost": "18",
       "currency": "GDP",
-      "locations": "Venice",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "1374483600"
+        }],
       "keywords": ["Crowds","Scheduled","Regular"]
     },
     "5": {
@@ -57,7 +69,10 @@
       "avg_rating": 3.1,
       "avg_cost": "15",
       "currency": "GDP",
-      "locations": "San Bernardino",
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "1374483600"
+        }],
       "keywords": ["Crowds","Scheduled","Regular"]
     }
   }

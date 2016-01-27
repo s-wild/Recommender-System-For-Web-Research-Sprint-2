@@ -20,13 +20,13 @@
       "currency": "GBP",
       "locations": [{
           "name": "Portsmouth",
-          "opening_date": "date to go here"
+          "opening_date": "1453539600"
         }, {
           "name": "Maidstone",
-          "opening_date": "date to go here"
+          "opening_date": "1453280400"
         }, {
           "name": "Maidstone",
-          "opening_date": "date to go here"
+          "opening_date": "1452589200"
         }],
       "keywords": ["Fast Food","Unhealthy","Burgers", "Fries", "Chips", "Beef", "Fried"]
     },
@@ -39,13 +39,13 @@
       "currency": "GBP",
       "locations": [{
           "name": "Portsmouth",
-          "opening_date": "date to go here"
+          "opening_date": "1421053200"
         }, {
           "name": "Maidstone",
-          "opening_date": "date to go here"
+          "opening_date": "1434099600"
         }, {
           "name": "Cheltenham",
-          "opening_date": "date to go here"
+          "opening_date": "1434790800"
         }],
       "keywords": ["Fast Food","Unhealthy","Chicken", "Fries", "Chips", "Beef", "Fried"]
     },
@@ -56,10 +56,9 @@
       "avg_rating": 3.2,
       "avg_cost": "19",
       "currency": "GBP",
-      "locations": ["Portsmouth"],
       "locations": [{
           "name": "Portsmouth",
-          "opening_date": "date to go here"
+          "opening_date": "1434877200"
         }],
       "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomatoe"]
     },
@@ -72,7 +71,7 @@
       "currency": "GBP",
       "locations": [{
           "name": "Yucaipa",
-          "opening_date": "date to go here"
+          "opening_date": "1308560400"
         }],
       "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomatoe"]
     },
@@ -85,7 +84,7 @@
       "currency": "GBP",
       "locations": [{
           "name": "Portsmouth",
-          "opening_date": "date to go here"
+          "opening_date": "1311152400"
         }],
       "keywords": ["Tapas"]
     }

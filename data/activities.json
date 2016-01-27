@@ -20,7 +20,10 @@
       "currency": "GBP",
       "age_range": "16-45",
       "min_age": "12",
-      "locations": ["San Bernardino"],
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "1453539600"
+        }],
       "keywords": ["Sport", "Winter", "Speed", "Thrill", "Active", "Snow", "Outdoors"]
     },
     "2": {
@@ -32,7 +35,10 @@
       "currency": "GBP",
       "age_range": "16-45",
       "min_age": "12",
-      "locations": ["Venice"],
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "	1309165200"
+        }],
       "keywords": ["Water", "Speed", "Thrill", "Active", "Outdoors"]
     },
     "3": {
@@ -44,7 +50,10 @@
       "currency": "GBP",
       "age_range": "16-45",
       "min_age": "12",
-      "locations": ["San Bernardino"],
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "1308646800"
+        }],
       "keywords": ["Thrill","Height","Forest", "Trees", "Outdoors", "Beef", "Fried"]
     },
     "4": {
@@ -56,7 +65,10 @@
       "currency": "GBP",
       "age_range": "18-65",
       "min_age": "18",
-      "locations": ["San Bernardino"],
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "1309338000"
+        }],
       "keywords": ["Relax", "Message", "Health", "Deep Tissue", "Thai", "Back Massage"]
     },
     "5": {
@@ -68,7 +80,10 @@
       "currency": "GBP",
       "age_range": "18-65",
       "min_age": "18",
-      "locations": ["San Bernardino"],
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "1371891600"
+        }],
       "keywords": ["Relax", "Message", "Health", "Swedish", "Hot Stone"]
     },
     "6": {
@@ -80,7 +95,10 @@
       "currency": "GBP",
       "age_range": "18-65",
       "min_age": "18",
-      "locations": ["San Bernardino"],
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "1374483600"
+        }],
       "keywords": ["Golf", "Sport", "Relax", "Chill"]
     }
   }
