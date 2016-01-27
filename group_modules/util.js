@@ -6,7 +6,8 @@ module.exports = {
 	objectLength : objectLength,
 	listServiceTitles : listServiceTitles,
 	getUniqueBrands : getUniqueBrands,
-	getAverageRating : getAverageRating
+	getAverageRating : getAverageRating,
+	getFrequencyOfKeyword : getFrequencyOfKeyword
 };
 
 // Data files
@@ -144,7 +145,24 @@ function getAverageRating(file, brandID) {
 	
 	var avgRating = null;
 
+	var brands = getBrands(file);
+
+	// Find desired brand object
+	Object.keys(brands).forEach(function(brand) {
+
+		if (brand == brandID) {
+			avgRating = brands[brand].avg_rating;
+			return;
+		}
+	});
+
+	return avgRating;
+}
+
+// Get all brands found in a specified file
+function getBrands(file) {
 	var object;
+
 	switch(file) {
 		case 'restaurants':
 			object = getNestedObject(restaurantsData, globals.BRANDS);
@@ -157,17 +175,30 @@ function getAverageRating(file, brandID) {
 			break;
 	}
 
+	return object;
+}
 
-	// Find desired brand object
-	Object.keys(object).forEach(function(brand) {
 
-		if (brand == brandID) {
-			avgRating = object[brand].avg_rating;
-			return;
-		}
+// Get frequency of keyword
+function getFrequencyOfKeyword(file, keyword) {
+	var brands = getBrands(file);
+	var count = 0;
+
+	Object.keys(brands).forEach(function(brandID) {
+		var brand = brands[brandID];
+		var keywords = brand.keywords;
+
+		// Get frequency
+		keywords.forEach(function(word) {
+			if (word.toLowerCase() == keyword.toLowerCase()) {
+				count += 1;
+				return;
+			}
+		});
+		console.log(brand.keywords);
 	});
 
-	return avgRating;
+	return count;
 }
 
 

@@ -9,6 +9,7 @@
       "user_id": "1",
       "origin": 1,
       "brand_id": 1,
+      "brand_location": "Portsmouth",
       "rating": 3,
       "date": "1453304897795"
     },
@@ -16,6 +17,7 @@
       "user_id": "1",
       "origin": 1,
       "brand_id": 2,
+      "brand_location": "Portsmouth",
       "rating": 2,
       "date": "1453304897795"
     },
@@ -23,6 +25,7 @@
       "user_id": "2",
       "origin": 1,
       "brand_id": 1,
+      "brand_location": "Portsmouth",
       "rating": 3,
       "date": "1453304897795"
     },
@@ -30,6 +33,7 @@
       "user_id": "2",
       "origin": 1,
       "brand_id": 1,
+      "brand_location": "Portsmouth",
       "rating": 4,
       "date": "1453304897795"
     },
@@ -37,12 +41,15 @@
       "user_id": "1",
       "origin": 3,
       "brand_id": 1,
+      "brand_location": "Portsmouth",
+      "rating": 4,
       "date": "1453304897795"
     },
     "6": {
       "user_id": "1",
       "origin": 1,
       "brand_id": 1,
+      "brand_location": "Portsmouth",
       "rating": 3,
       "date": "1453304897795"
     },
@@ -50,6 +57,7 @@
       "user_id": "1",
       "origin": 1,
       "brand_id": 2,
+      "brand_location": "Portsmouth",
       "rating": 4,
       "date": "1453304897795"
     },
@@ -57,6 +65,7 @@
       "user_id": "1",
       "origin": 1,
       "brand_id": 2,
+      "brand_location": "Portsmouth",
       "rating": 3,
       "date": "1453304897795"
     },
@@ -64,6 +73,7 @@
       "user_id": "1",
       "origin": 1,
       "brand_id": 3,
+      "brand_location": "Portsmouth",
       "rating": 0,
       "date": "1453304897795"
     },
@@ -71,6 +81,7 @@
       "user_id": "1",
       "origin": 1,
       "brand_id": 5,
+      "brand_location": "Portsmouth",
       "rating": 0,
       "date": "1453304897795"
     }

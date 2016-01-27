@@ -148,7 +148,7 @@ app.get('/api/users/:uid/:file/:brandid', function(req, res) {
 
 
 // RECOMMENDER ROUTES
-app.get('/api/recommend/:uid/:file', function(req, res) {
+app.get('/api/recommend/:uid/:location/:file', function(req, res) {
 	if (!check.isDefined([req.params.uid, req.params.file])) {
 		res.end(messages.not_recognised + " " + messages.id_not_recognised);
 	}

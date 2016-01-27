@@ -117,10 +117,16 @@ function getRecommendedEntities(uid, file) {
 	var rankings = rankBrands(ratings); 
 
 
+	// Loop through rankings, looking for common keywords
+	var commonKeywords = [];
+
+	var freq = util.getFrequencyOfKeyword(file, "chips");
+
 	//console.log(frequencyList);
 	//console.log(visitShare);
 	//console.log(ratings);
 	//console.log(newRatings);
+	console.log("Frequency of keyword %s is %d", "chips", freq);
 
 	// extra checks depending on file
 	/* 
