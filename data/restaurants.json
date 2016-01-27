@@ -20,13 +20,13 @@
       "currency": "GBP",
       "locations": [{
           "name": "Portsmouth",
-          "opening_date": "1453539600"
+          "opening_date": "March 22, 2012"
         }, {
           "name": "Maidstone",
-          "opening_date": "1453280400"
+          "opening_date": "March 20, 2012"
         }, {
           "name": "Maidstone",
-          "opening_date": "1452589200"
+          "opening_date": "March 19, 2012"
         }],
       "keywords": ["Fast Food","Unhealthy","Burgers", "Fries", "Chips", "Beef", "Fried"]
     },
@@ -39,13 +39,13 @@
       "currency": "GBP",
       "locations": [{
           "name": "Portsmouth",
-          "opening_date": "1421053200"
+          "opening_date": "March 22, 2014"
         }, {
           "name": "Maidstone",
-          "opening_date": "1434099600"
+          "opening_date": "March 22, 2015"
         }, {
           "name": "Cheltenham",
-          "opening_date": "1434790800"
+          "opening_date": "January 22, 2012"
         }],
       "keywords": ["Fast Food","Unhealthy","Chicken", "Fries", "Chips", "Beef", "Fried"]
     },
@@ -58,7 +58,7 @@
       "currency": "GBP",
       "locations": [{
           "name": "Portsmouth",
-          "opening_date": "1434877200"
+          "opening_date": "March 1, 2012"
         }],
       "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomatoe"]
     },
@@ -71,7 +71,7 @@
       "currency": "GBP",
       "locations": [{
           "name": "Yucaipa",
-          "opening_date": "1308560400"
+          "opening_date": "March 26, 2011"
         }],
       "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomatoe"]
     },
@@ -84,7 +84,7 @@
       "currency": "GBP",
       "locations": [{
           "name": "Portsmouth",
-          "opening_date": "1311152400"
+          "opening_date": "April 22, 2012"
         }],
       "keywords": ["Tapas"]
     }

@@ -264,36 +264,31 @@ function getNewestBrand(file, brands) {
 		});
 
 
-
-
 		// First is youngest by default
-		if (i == 0) {
+		if (i == 0 || getAge(opening_date) < newest.age) {
 			newest.brand_id = brand.brand_id;
 			newest.age = getAge(opening_date);
-			break;
-		}
-
-		
-
-		// Compare to see if brand location is newer
-		if (opening_date < newest.age) {
-
+			//break;
 		}
 
 	}
+
+	return newest;
 
 
 }
 
 // Get age of a particular store
 function getAge(date) {
+	
 	var today = new Date();	// now
-	var opening = Date.parse(date);	// opening
+	var opening = new Date(date);	// opening
 
 	var diff = today.getTime() - opening.getTime(); 
-	alert(diff / (1000*60*60*24)); // In days
+	var diffInDays = diff / (1000 * 60 * 60 * 24); // In days
 
-	return diff;
+	//console.log(diffInDays);
+	return diffInDays;
 
 }
 
