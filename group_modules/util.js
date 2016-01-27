@@ -287,7 +287,14 @@ function getNewestBrand(file, brands) {
 
 // Get age of a particular store
 function getAge(date) {
-	
+	var today = new Date();	// now
+	var opening = Date.parse(date);	// opening
+
+	var diff = today.getTime() - opening.getTime(); 
+	alert(diff / (1000*60*60*24)); // In days
+
+	return diff;
+
 }
 
 
