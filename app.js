@@ -149,11 +149,11 @@ app.get('/api/users/:uid/:file/:brandid', function(req, res) {
 
 // RECOMMENDER ROUTES
 app.get('/api/recommend/:uid/:location/:file', function(req, res) {
-	if (!check.isDefined([req.params.uid, req.params.file])) {
+	if (!check.isDefined([req.params.uid, req.params.file, req.params.location])) {
 		res.end(messages.not_recognised + " " + messages.id_not_recognised);
 	}
 
-	var recommended = calc.recommend(req.params.uid, req.params.file);
+	var recommended = calc.recommend(req.params.uid, req.params.file, req.params.location);
 	res.end(JSON.stringify(recommended));
 });
 

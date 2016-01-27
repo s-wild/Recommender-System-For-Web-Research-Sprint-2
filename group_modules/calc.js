@@ -99,34 +99,41 @@ function getServiceMatch(file, service, res) {
 }
 
 
-function getRecommendedEntities(uid, file) {
+function getRecommendedEntities(uid, file, location) {
 
-	// Look at user history
+	// (a) Look at user history
 	var history = info.userActivity(uid, file);
 
-	// Get list of frequencies (array with: brand id, count)
+	// ---------- GETTING HISTORY ----------
+	// (b) Get list of frequencies, pertaining to visited (array with: brand id, count)
 	var frequencyList = getAttendanceFrequency(history, uid, file);
 
-	// Get share of total visits (array with: brand id, count, share)
+	// (c) Get share of total visits for each brand (array with: brand id, count, share)
 	var visitShare = getTotalVisitShare(history.length, frequencyList);
 
-	// Get what user rated brand (if available) during each visit (array with: brand id, count, share, avg_rating)
+	// (d) Get what user rated each brand (if available) during each visit (array with: brand id, count, share, avg_rating)
 	var ratings = getAvUserRatings(history, visitShare, file);
 
-	// Check for any empty ratings
+	// (e) Rank brands based on share and average rating
 	var rankings = rankBrands(ratings); 
 
+	// (f) Loop through rankings, looking for common keywords
+	var commonKeywords = getCommonKeywords(rankings, file);
 
-	// Loop through rankings, looking for common keywords
-	var commonKeywords = [];
+	// ---------- RECOMMENDING ----------
+	// (g) Look at potential brands for specified location
+	var targetBrands = util.getBrandsByLocation(file, location);
+	
+	// (h) Get newest restaurant
+	var newest = util.getNewestBrand(file, targetBrands);
 
-	var freq = util.getFrequencyOfKeyword(file, "chips");
-
+	// TEST LOGS
 	//console.log(frequencyList);
 	//console.log(visitShare);
 	//console.log(ratings);
 	//console.log(newRatings);
-	console.log("Frequency of keyword %s is %d", "chips", freq);
+	//console.log(commonKeywords);
+	console.log(targetBrands);
 
 	// extra checks depending on file
 	/* 
@@ -275,6 +282,38 @@ function convertShareToStar(share) {
 	} else {
 		return 5;
 	}
+}
+
+// Get list of common keywords for specified restaurants
+function getCommonKeywords(rankedBrands, file) {
+	var commonKeywords = [];
+	var brandIDs = [];
+
+	// (a) Loop through visited brands, get brand ids
+	Object.keys(rankedBrands).forEach(function(brand) {
+		var brandID = rankedBrands[brand].brand_id;
+		brandIDs.push(brandID);
+	});
+	
+	var brands = util.getBrands(file);
+
+	// (b) Get frequency of similar keywords
+	Object.keys(brands).forEach(function(brandID) {
+		var brand = brands[brandID];
+
+		// If brand is one to search
+		if (brandIDs.indexOf(Number(brandID)) != -1) {
+			var keywords = brand.keywords;
+			keywords.forEach(function(word){
+				// Check frequency of keyword
+				if (util.getFrequencyOfKeyword(file, brandIDs, word) > 1 && commonKeywords.indexOf(word.toLowerCase()) == -1) {
+					commonKeywords.push(word.toLowerCase());
+				}
+			});
+		}
+	});
+
+	return commonKeywords;
 }
 
 

@@ -7,7 +7,10 @@ module.exports = {
 	listServiceTitles : listServiceTitles,
 	getUniqueBrands : getUniqueBrands,
 	getAverageRating : getAverageRating,
-	getFrequencyOfKeyword : getFrequencyOfKeyword
+	getBrands : getBrands,
+	getFrequencyOfKeyword : getFrequencyOfKeyword,
+	getBrandsByLocation : getBrandsByLocation,
+	getNewestBrand : getNewestBrand
 };
 
 // Data files
@@ -180,25 +183,78 @@ function getBrands(file) {
 
 
 // Get frequency of keyword
-function getFrequencyOfKeyword(file, keyword) {
+function getFrequencyOfKeyword(file, brandIDs, keyword) {
 	var brands = getBrands(file);
 	var count = 0;
 
-	Object.keys(brands).forEach(function(brandID) {
-		var brand = brands[brandID];
-		var keywords = brand.keywords;
 
-		// Get frequency
-		keywords.forEach(function(word) {
-			if (word.toLowerCase() == keyword.toLowerCase()) {
-				count += 1;
-				return;
-			}
-		});
-		console.log(brand.keywords);
+	Object.keys(brands).forEach(function(brandID) {
+		
+		if (brandIDs.indexOf(Number(brandID)) != -1) {
+			var brand = brands[brandID];
+			var keywords = brand.keywords;
+
+			// Get frequency
+			keywords.forEach(function(word) {
+				if (word.toLowerCase() == keyword.toLowerCase()) {
+					count += 1;
+					return;
+				}
+			});
+
+			//console.log(brand.keywords);
+		}
 	});
 
 	return count;
+}
+
+
+// Get brands that reside in a particular location
+function getBrandsByLocation(file, location) {
+
+	var brands = getBrands(file);
+
+	var localBrands = [];
+
+	Object.keys(brands).forEach(function(brandID) {
+
+		var brand = brands[brandID];
+		var lowercaseLocations = [];
+
+		// Convert all locations to lowercase, for comparison
+		brand.locations.forEach(function(word) {
+			lowercaseLocations.push(word.toLowerCase());
+		});
+
+		// If brand resides in location
+		if (lowercaseLocations.indexOf(location.toLowerCase()) != -1) {
+			brand.brand_id = brandID;	// Add brand id, so it can be used later on
+			localBrands.push(brand);
+		}
+
+	});
+
+	return localBrands;
+}
+
+// Get newest brand
+function getNewestBrand(file, brands) {
+
+	var newest = {};
+	for (var i = 0; i < brands.length; i++) {
+		var brand = brands[i];
+		// First is youngest by default
+		if (i == 0) {
+			newest.brand_id = brand.brand_id;
+			return;
+		}
+
+		
+
+	}
+
+
 }
 
 
