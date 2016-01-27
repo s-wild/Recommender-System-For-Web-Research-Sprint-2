@@ -9,6 +9,7 @@ module.exports = {
 	getAverageRating : getAverageRating,
 	getBrands : getBrands,
 	getFrequencyOfKeyword : getFrequencyOfKeyword,
+	getFrequencyOfKeywords : getFrequencyOfKeywords,
 	getBrandsByLocation : getBrandsByLocation,
 	getNewestBrand : getNewestBrand
 };
@@ -207,6 +208,29 @@ function getFrequencyOfKeyword(file, brandIDs, keyword) {
 	});
 
 	return count;
+}
+
+// Get frequency of keywords for a particular brand
+function getFrequencyOfKeywords(brand, keywords) {
+
+	var freq = 0;
+
+	var lowercaseWords = [];
+
+	// Convert all keywords to lowercase, for comparison
+	brand.keywords.forEach(function(word) {
+		lowercaseWords.push(word.toLowerCase());
+	});
+
+	// Check for match
+	keywords.forEach(function(word) {
+		if (lowercaseWords.indexOf(word.toLowerCase()) != -1) {
+			freq += 1;
+		}
+	});
+
+	return freq;
+
 }
 
 
