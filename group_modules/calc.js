@@ -125,10 +125,16 @@ function getRecommendedEntities(uid, file, location) {
 	var targetBrands = util.getBrandsByLocation(file, location);
 	
 	// (h) Get newest restaurant
-	var newest = util.getNewestBrand(file, targetBrands);
+	var newest = util.getNewestBrand(targetBrands);
 
-	// (e) Get rankings of brands to recommend
+	// (i) Get rankings of brands to recommend
 	var toRecommend = getRecommended(targetBrands, commonKeywords, newest);
+
+	// (j) Add newest to top of list
+	Array.prototype.insert = function (index, item) {
+  		this.splice(index, 0, item);
+	};
+	toRecommend.insert(0, newest);
 
 	// TEST LOGS
 	//console.log(frequencyList);
@@ -328,7 +334,7 @@ function getRecommended(targetBrands, commonKeywords, newest) {
 	
 	targetBrands.forEach(function(brand) {
 		// If newest is in this list, skip over
-		if (brand.brand_id == newest.brand_id) return;
+		if (brand.brand_id == newest.details.brand_id) return;
 
 		var keywordFreq = util.getFrequencyOfKeywords(brand, commonKeywords);
 		var avgRating = brand.avg_rating;

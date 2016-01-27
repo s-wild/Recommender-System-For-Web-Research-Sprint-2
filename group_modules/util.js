@@ -264,7 +264,7 @@ function getBrandsByLocation(file, location) {
 }
 
 // Get newest brand
-function getNewestBrand(file, brands) {
+function getNewestBrand(brands) {
 	
 	var newest = {};
 	for (var i = 0; i < brands.length; i++) {
@@ -273,7 +273,6 @@ function getNewestBrand(file, brands) {
 
 		// Get brand location
 		var brandLocation = brand.brand_location;
-		console.log(brand.locations);
 
 		// Get specific store opening time
 		var opening_date;
@@ -290,8 +289,8 @@ function getNewestBrand(file, brands) {
 
 		// First is youngest by default
 		if (i == 0 || getAge(opening_date) < newest.age) {
-			newest.brand_id = brand.brand_id;
 			newest.age = getAge(opening_date);
+			newest.details = brand;
 			//break;
 		}
 
