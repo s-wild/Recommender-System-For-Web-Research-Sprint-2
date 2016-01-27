@@ -2,7 +2,9 @@
   "types": {
     "1": "Adventurous",
     "2": "Thrill Seeker",
-    "3": "No Crowds"
+    "3": "No Crowds",
+    "4": "Chill",
+    "5": "Sport"
   },
   "services": {
     "1": "Supervised",
@@ -18,7 +20,8 @@
       "currency": "GBP",
       "age_range": "16-45",
       "min_age": "12",
-      "keywords": ["Snow","Cold","Active", "Speed"]
+      "locations": ["San Bernardino"],
+      "keywords": ["Sport", "Winter", "Speed", "Thrill", "Active", "Snow", "Outdoors"]
     },
     "2": {
       "name": "Jet Skiing",
@@ -29,7 +32,8 @@
       "currency": "GBP",
       "age_range": "16-45",
       "min_age": "12",
-      "keywords": ["Swim","Wet"]
+      "locations": ["Venice"],
+      "keywords": ["Water", "Speed", "Thrill", "Active", "Outdoors"]
     },
     "3": {
       "name": "Zip Lining",
@@ -40,7 +44,44 @@
       "currency": "GBP",
       "age_range": "16-45",
       "min_age": "12",
-      "keywords": ["Speed","Fast"]
+      "locations": ["San Bernardino"],
+      "keywords": ["Thrill","Height","Forest", "Trees", "Outdoors", "Beef", "Fried"]
+    },
+    "4": {
+      "name": "Jade's Health Spa",
+      "service_type": [4,3],
+      "type_id": [1],
+      "avg_rating": 4,
+      "avg_cost": "50",
+      "currency": "GBP",
+      "age_range": "18-65",
+      "min_age": "18",
+      "locations": ["San Bernardino"],
+      "keywords": ["Relax", "Message", "Health", "Deep Tissue", "Thai", "Back Massage"]
+    },
+    "5": {
+      "name": "Swede Health Spa",
+      "service_type": [4,3],
+      "type_id": [1],
+      "avg_rating": 4,
+      "avg_cost": "50",
+      "currency": "GBP",
+      "age_range": "18-65",
+      "min_age": "18",
+      "locations": ["San Bernardino"],
+      "keywords": ["Relax", "Message", "Health", "Swedish", "Hot Stone"]
+    },
+    "6": {
+      "name": "Awesome Golf",
+      "service_type": [3, 5],
+      "type_id": [1,2],
+      "avg_rating": 3,
+      "avg_cost": "30",
+      "currency": "GBP",
+      "age_range": "18-65",
+      "min_age": "18",
+      "locations": ["San Bernardino"],
+      "keywords": ["Golf", "Sport", "Relax", "Chill"]
     }
   }
 }

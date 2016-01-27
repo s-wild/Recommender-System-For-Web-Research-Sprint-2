@@ -17,6 +17,7 @@
       "avg_rating": 3.2,
       "avg_cost": "22",
       "currency": "GDP",
+      "locations": ["Venice"],
       "keywords": ["Local","Direct","Experience", "Flexible"]
     },
     "2": {
@@ -26,7 +27,8 @@
       "avg_rating": 3.2,
       "avg_cost": "17",
       "currency": "GDP",
-      "keywords": ["Crowded","Direct","Scheduled","Regular"]
+      "locations": ["Portsmouth"],
+      "keywords": ["Value", "Bus", "Coach", "Flexbible"]
     },
     "3": {
       "name": "Southern Rail",
@@ -35,7 +37,28 @@
       "avg_rating": 3.2,
       "avg_cost": "15",
       "currency": "GDP",
-      "keywords": ["Crowded","Scheduled","Regular"]
+      "locations": "Portsmouth",
+      "keywords": ["Crowds","Scheduled","Regular"]
+    },
+    "4": {
+      "name": "Venice Rail",
+      "service_type": [1],
+      "type_id": [4],
+      "avg_rating": 3.1,
+      "avg_cost": "18",
+      "currency": "GDP",
+      "locations": "Venice",
+      "keywords": ["Crowds","Scheduled","Regular"]
+    },
+    "5": {
+      "name": "Cali Rail",
+      "service_type": [1],
+      "type_id": [4],
+      "avg_rating": 3.1,
+      "avg_cost": "15",
+      "currency": "GDP",
+      "locations": "San Bernardino",
+      "keywords": ["Crowds","Scheduled","Regular"]
     }
   }
 }
