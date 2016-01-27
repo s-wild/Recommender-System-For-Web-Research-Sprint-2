@@ -56,7 +56,7 @@ function getUserActivityByType(uid, file) {
 	return matchedAttendenceItems;
 }
 
-function getAllEntities(file, res){
+function getAllEntities(file){
 	var object, dataFile;
 
 	switch(file){
