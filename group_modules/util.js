@@ -212,7 +212,7 @@ function getFrequencyOfKeyword(file, brandIDs, keyword) {
 
 // Get frequency of keywords for a particular brand
 function getFrequencyOfKeywords(brand, keywords) {
-
+	//console.log("Brand is %s and keywords to look for are %s", brand, keywords);
 	var freq = 0;
 
 	var lowercaseWords = [];
