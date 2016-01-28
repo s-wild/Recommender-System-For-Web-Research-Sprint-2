@@ -116,7 +116,7 @@ function getRecommendedEntities(uid, file, location) {
 
 	// (e) Rank brands based on share and average rating
 	var rankings = rankBrands(ratings);
-
+	
 	// (f) Loop through rankings, looking for common keywords
 	var commonKeywords = getCommonKeywords(rankings, file);
 
@@ -307,6 +307,19 @@ function getCommonKeywords(rankedBrands, file) {
 
 	var brands = util.getBrands(file);
 
+	// If only one brand has been visited (i.e. user has only visited one brand)
+	if (brandIDs.length == 1) {
+		var brand = brands[brandIDs[0]];
+
+		// Loop through all keywords for single brand
+		brand.keywords.forEach(function(word) {
+			commonKeywords.push(word);
+		});
+
+		return commonKeywords;
+	}
+
+
 	// (b) Get frequency of similar keywords
 	Object.keys(brands).forEach(function(brandID) {
 		var brand = brands[brandID];
@@ -341,7 +354,7 @@ function getRecommended(targetBrands, commonKeywords, newest) {
 
 		// Assign mean value
 		var mean_value = (((keywordFreq / commonKeywords.length) + (avgRating / 5)) / 2) * 100;
-		console.log(mean_value + "%");
+		//console.log(mean_value + "%");
 
 		recommended.push({ "mean_value": mean_value, "details": brand });
 
