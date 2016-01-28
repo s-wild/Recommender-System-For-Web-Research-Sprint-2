@@ -4,7 +4,8 @@
     "2": "American",
     "3": "Mexican",
     "4": "Chinese",
-    "5": "Tapas"
+    "5": "Tapas",
+    "6": "Portugese"
   },
   "services": {
     "1": "Takeaway",
@@ -73,7 +74,7 @@
           "name": "Yucaipa",
           "opening_date": "March 26, 2011"
         }],
-      "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomatoe"]
+      "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomato"]
     },
     "5": {
       "name": "The New Restaurant",
@@ -87,6 +88,19 @@
           "opening_date": "April 22, 2012"
         }],
       "keywords": ["Tapas"]
+    },
+    "6": {
+      "name": "Nandos",
+      "service_type": [1, 2],
+      "type_id": 6,
+      "avg_rating": 0,
+      "avg_cost": "13",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "May 20, 2010"
+        }],
+      "keywords": ["Chicken"]
     }
   }
 }

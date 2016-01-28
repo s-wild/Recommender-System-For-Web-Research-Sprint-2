@@ -84,6 +84,14 @@
       "brand_location": "Portsmouth",
       "rating": 0,
       "date": "1453304897795"
+    },
+    "11": {
+      "user_id": "3",
+      "origin": 1,
+      "brand_id": 6,
+      "brand_location": "Portsmouth",
+      "rating": 0,
+      "date": "1453304897795"
     }
   }
 }
