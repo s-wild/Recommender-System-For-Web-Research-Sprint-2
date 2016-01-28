@@ -115,7 +115,7 @@ function getRecommendedEntities(uid, file, location) {
 	var ratings = getAvUserRatings(history, visitShare, file);
 
 	// (e) Rank brands based on share and average rating
-	var rankings = rankBrands(ratings); 
+	var rankings = rankBrands(ratings);
 
 	// (f) Loop through rankings, looking for common keywords
 	var commonKeywords = getCommonKeywords(rankings, file);
@@ -123,7 +123,7 @@ function getRecommendedEntities(uid, file, location) {
 	// ---------- RECOMMENDING ----------
 	// (g) Look at potential brands for specified location
 	var targetBrands = util.getBrandsByLocation(file, location);
-	
+
 	// (h) Get newest restaurant
 	var newest = util.getNewestBrand(targetBrands);
 
@@ -304,7 +304,7 @@ function getCommonKeywords(rankedBrands, file) {
 		var brandID = rankedBrands[brand].brand_id;
 		brandIDs.push(brandID);
 	});
-	
+
 	var brands = util.getBrands(file);
 
 	// (b) Get frequency of similar keywords
@@ -331,14 +331,14 @@ function getCommonKeywords(rankedBrands, file) {
 function getRecommended(targetBrands, commonKeywords, newest) {
 
 	var recommended = [];
-	
+
 	targetBrands.forEach(function(brand) {
 		// If newest is in this list, skip over
 		if (brand.brand_id == newest.details.brand_id) return;
 
 		var keywordFreq = util.getFrequencyOfKeywords(brand, commonKeywords);
 		var avgRating = brand.avg_rating;
-		
+
 		// Assign mean value
 		var mean_value = (((keywordFreq / commonKeywords.length) + (avgRating / 5)) / 2) * 100;
 		console.log(mean_value + "%");
