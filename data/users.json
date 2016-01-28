@@ -12,8 +12,14 @@
       "first_name": "Samantha",
       "last_name": "Martin",
       "age": "22",
-      "gender": "female"
+      "gender": "Female"
+    },
+    "3": {
+      "user_id": "3",
+      "first_name": "Adam",
+      "last_name": "Piper",
+      "age": "20",
+      "gender": "Male"
     }
   }
 }
- 

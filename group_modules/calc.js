@@ -125,7 +125,16 @@ function getRecommendedEntities(uid, file, location) {
 	var targetBrands = util.getBrandsByLocation(file, location);
 	
 	// (h) Get newest restaurant
-	var newest = util.getNewestBrand(file, targetBrands);
+	var newest = util.getNewestBrand(targetBrands);
+
+	// (i) Get rankings of brands to recommend
+	var toRecommend = getRecommended(targetBrands, commonKeywords, newest);
+
+	// (j) Add newest to top of list
+	Array.prototype.insert = function (index, item) {
+  		this.splice(index, 0, item);
+	};
+	toRecommend.insert(0, newest);
 
 	// TEST LOGS
 	//console.log(frequencyList);
@@ -134,6 +143,7 @@ function getRecommendedEntities(uid, file, location) {
 	//console.log(newRatings);
 	//console.log(commonKeywords);
 	//console.log(targetBrands);
+	//console.log(newest);
 
 	// extra checks depending on file
 	/*
@@ -143,7 +153,7 @@ function getRecommendedEntities(uid, file, location) {
 	*/
 
 
-	return rankings;
+	return toRecommend;
 }
 
 // Gets list of frequencies for each brand within a sector
@@ -314,4 +324,34 @@ function getCommonKeywords(rankedBrands, file) {
 	});
 
 	return commonKeywords;
+}
+
+
+// Get recommended places
+function getRecommended(targetBrands, commonKeywords, newest) {
+
+	var recommended = [];
+	
+	targetBrands.forEach(function(brand) {
+		// If newest is in this list, skip over
+		if (brand.brand_id == newest.details.brand_id) return;
+
+		var keywordFreq = util.getFrequencyOfKeywords(brand, commonKeywords);
+		var avgRating = brand.avg_rating;
+		
+		// Assign mean value
+		var mean_value = (((keywordFreq / commonKeywords.length) + (avgRating / 5)) / 2) * 100;
+		console.log(mean_value + "%");
+
+		recommended.push({ "mean_value": mean_value, "details": brand });
+
+	});
+
+	// Sort array, put highest at top
+	recommended.sort(function(a, b) { return b.mean_value - a.mean_value; });
+
+
+	// Return top five, or however elements we have
+	if (recommended.length >= 6) return recommended.slice(0, 6);
+	return recommended;
 }

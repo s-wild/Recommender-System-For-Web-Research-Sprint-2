@@ -19,7 +19,7 @@
       "currency": "GDP",
       "locations": [{
           "name": "Venice",
-          "opening_date": "	1372496400"
+          "opening_date": "March 12, 2012"
         }],
       "keywords": ["Local","Direct","Experience", "Flexible"]
     },
@@ -32,7 +32,7 @@
       "currency": "GDP",
       "locations": [{
           "name": "Portsmouth",
-          "opening_date": "	1374483600"
+          "opening_date": "May 22, 2014"
         }],
       "keywords": ["Value", "Bus", "Coach", "Flexible"]
     },
@@ -45,7 +45,7 @@
       "currency": "GDP",
       "locations": [{
           "name": "Portsmouth",
-          "opening_date": "1372496400"
+          "opening_date": "March 23, 2012"
         }],
       "keywords": ["Crowds","Scheduled","Regular"]
     },
@@ -58,7 +58,7 @@
       "currency": "GDP",
       "locations": [{
           "name": "Venice",
-          "opening_date": "1374483600"
+          "opening_date": "March 25, 2012"
         }],
       "keywords": ["Crowds","Scheduled","Regular"]
     },
@@ -71,7 +71,7 @@
       "currency": "GDP",
       "locations": [{
           "name": "San Bernardino",
-          "opening_date": "1374483600"
+          "opening_date": "March 22, 2013"
         }],
       "keywords": ["Crowds","Scheduled","Regular"]
     }

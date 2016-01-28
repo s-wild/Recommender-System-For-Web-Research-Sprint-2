@@ -9,6 +9,7 @@ module.exports = {
 	getAverageRating : getAverageRating,
 	getBrands : getBrands,
 	getFrequencyOfKeyword : getFrequencyOfKeyword,
+	getFrequencyOfKeywords : getFrequencyOfKeywords,
 	getBrandsByLocation : getBrandsByLocation,
 	getNewestBrand : getNewestBrand
 };
@@ -209,6 +210,29 @@ function getFrequencyOfKeyword(file, brandIDs, keyword) {
 	return count;
 }
 
+// Get frequency of keywords for a particular brand
+function getFrequencyOfKeywords(brand, keywords) {
+
+	var freq = 0;
+
+	var lowercaseWords = [];
+
+	// Convert all keywords to lowercase, for comparison
+	brand.keywords.forEach(function(word) {
+		lowercaseWords.push(word.toLowerCase());
+	});
+
+	// Check for match
+	keywords.forEach(function(word) {
+		if (lowercaseWords.indexOf(word.toLowerCase()) != -1) {
+			freq += 1;
+		}
+	});
+
+	return freq;
+
+}
+
 
 // Get brands that reside in a particular location
 function getBrandsByLocation(file, location) {
@@ -240,7 +264,7 @@ function getBrandsByLocation(file, location) {
 }
 
 // Get newest brand
-function getNewestBrand(file, brands) {
+function getNewestBrand(brands) {
 	
 	var newest = {};
 	for (var i = 0; i < brands.length; i++) {
@@ -249,7 +273,6 @@ function getNewestBrand(file, brands) {
 
 		// Get brand location
 		var brandLocation = brand.brand_location;
-		console.log(brand.locations);
 
 		// Get specific store opening time
 		var opening_date;
@@ -264,23 +287,16 @@ function getNewestBrand(file, brands) {
 		});
 
 
-
-
 		// First is youngest by default
-		if (i == 0) {
-			newest.brand_id = brand.brand_id;
+		if (i == 0 || getAge(opening_date) < newest.age) {
 			newest.age = getAge(opening_date);
-			break;
-		}
-
-		
-
-		// Compare to see if brand location is newer
-		if (opening_date < newest.age) {
-
+			newest.details = brand;
+			//break;
 		}
 
 	}
+
+	return newest;
 
 
 }
@@ -288,6 +304,15 @@ function getNewestBrand(file, brands) {
 // Get age of a particular store
 function getAge(date) {
 	
+	var today = new Date();	// now
+	var opening = new Date(date);	// opening
+
+	var diff = today.getTime() - opening.getTime(); 
+	var diffInDays = diff / (1000 * 60 * 60 * 24); // In days
+
+	//console.log(diffInDays);
+	return diffInDays;
+
 }
 
 

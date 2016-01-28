@@ -22,7 +22,7 @@
       "min_age": "12",
       "locations": [{
           "name": "San Bernardino",
-          "opening_date": "1453539600"
+          "opening_date": "June 1, 2012"
         }],
       "keywords": ["Sport", "Winter", "Speed", "Thrill", "Active", "Snow", "Outdoors"]
     },
@@ -37,7 +37,7 @@
       "min_age": "12",
       "locations": [{
           "name": "Venice",
-          "opening_date": "1309165200"
+          "opening_date": "June 3, 2012"
         }],
       "keywords": ["Water", "Speed", "Thrill", "Active", "Outdoors"]
     },
@@ -52,7 +52,7 @@
       "min_age": "12",
       "locations": [{
           "name": "San Bernardino",
-          "opening_date": "1308646800"
+          "opening_date": "June 1, 2011"
         }],
       "keywords": ["Thrill","Height","Forest", "Trees", "Outdoors", "Beef", "Fried"]
     },
@@ -67,7 +67,7 @@
       "min_age": "18",
       "locations": [{
           "name": "San Bernardino",
-          "opening_date": "1309338000"
+          "opening_date": "June 1, 2014"
         }],
       "keywords": ["Relax", "Message", "Health", "Deep Tissue", "Thai", "Back Massage"]
     },
@@ -82,7 +82,7 @@
       "min_age": "18",
       "locations": [{
           "name": "San Bernardino",
-          "opening_date": "1371891600"
+          "opening_date": "June 1, 2012"
         }],
       "keywords": ["Relax", "Message", "Health", "Swedish", "Hot Stone"]
     },
@@ -97,7 +97,7 @@
       "min_age": "18",
       "locations": [{
           "name": "San Bernardino",
-          "opening_date": "1374483600"
+          "opening_date": "June 1, 2014"
         }],
       "keywords": ["Golf", "Sport", "Relax", "Chill"]
     }
