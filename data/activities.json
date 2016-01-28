@@ -100,6 +100,21 @@
           "opening_date": "June 1, 2014"
         }],
       "keywords": ["Golf", "Sport", "Relax", "Chill"]
+    },
+    "7": {
+      "name": "Go Ape",
+      "service_type": [3, 5],
+      "type_id": [1,2],
+      "avg_rating": 3,
+      "avg_cost": "30",
+      "currency": "GBP",
+      "age_range": "18-65",
+      "min_age": "18",
+      "locations": [{
+          "name": "Fareham",
+          "opening_date": "June 1, 2014"
+        }],
+      "keywords": ["Zip Lining", "Adventurous", "Forest", "Thrill"]
     }
   }
 }
