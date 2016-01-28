@@ -365,6 +365,6 @@ function getRecommended(targetBrands, commonKeywords, newest) {
 
 
 	// Return top five, or however elements we have
-	if (recommended.length >= 6) return recommended.slice(0, 6);
+	if (recommended.length >= 6) return recommended.slice(0, 5);
 	return recommended;
 }
