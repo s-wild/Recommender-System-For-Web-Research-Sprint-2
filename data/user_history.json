@@ -92,6 +92,70 @@
       "brand_location": "Portsmouth",
       "rating": 0,
       "date": "1453304897795"
+    },
+    "12": {
+      "user_id": "4",
+      "origin": 1,
+      "brand_id": 6,
+      "brand_location": "Portsmouth",
+      "rating": 3.5,
+      "date": "1453304897795"
+    },
+    "13": {
+      "user_id": "4",
+      "origin": 1,
+      "brand_id": 11,
+      "brand_location": "Portsmouth",
+      "rating": 3.2,
+      "date": "1453304897795"
+    },
+    "14": {
+      "user_id": "4",
+      "origin": 1,
+      "brand_id": 12,
+      "brand_location": "Portsmouth",
+      "rating": 4.5,
+      "date": "1453304897795"
+    },
+    "15": {
+      "user_id": "4",
+      "origin": 1,
+      "brand_id": 2,
+      "brand_location": "Portsmouth",
+      "rating": 4,
+      "date": "1453304897795"
+    },
+    "16": {
+      "user_id": "4",
+      "origin": 2,
+      "brand_id": 2,
+      "brand_location": "Venice",
+      "rating": 4,
+      "date": "1453304897795"
+    },
+    "17": {
+      "user_id": "4",
+      "origin": 2,
+      "brand_id": 2,
+      "brand_location": "Venice",
+      "rating": 4,
+      "date": "1453304897795"
+    },
+    "18": {
+      "user_id": "4",
+      "origin": 2,
+      "brand_id": 4,
+      "brand_location": "Venice",
+      "rating": 4,
+      "date": "1453304897795"
+    },
+    "19": {
+      "user_id": "4",
+      "origin": 2,
+      "brand_id": 4,
+      "brand_location": "Venice",
+      "rating": 4,
+      "date": "1453304897795"
     }
   }
 }

@@ -5,7 +5,10 @@
     "3": "Mexican",
     "4": "Chinese",
     "5": "Tapas",
-    "6": "Portugese"
+    "6": "Portugese",
+    "7": "Seafood",
+    "8": "Sushi",
+    "9": "Indian"
   },
   "services": {
     "1": "Takeaway",
@@ -71,7 +74,7 @@
       "avg_cost": "19",
       "currency": "GBP",
       "locations": [{
-          "name": "Yucaipa",
+          "name": "San Bernardino",
           "opening_date": "March 26, 2011"
         }],
       "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomato"]
@@ -80,7 +83,7 @@
       "name": "The New Restaurant",
       "service_type": [1, 2],
       "type_id": 3,
-      "avg_rating": 0,
+      "avg_rating": 2.5,
       "avg_cost": "19",
       "currency": "GBP",
       "locations": [{
@@ -93,14 +96,92 @@
       "name": "Nandos",
       "service_type": [1, 2],
       "type_id": 6,
-      "avg_rating": 3.4,
-      "avg_cost": "13",
+      "avg_rating": 3.8,
+      "avg_cost": "15",
       "currency": "GBP",
       "locations": [{
           "name": "Portsmouth",
           "opening_date": "May 20, 2010"
         }],
-      "keywords": ["Chicken"]
+      "keywords": ["Chicken", "fried"]
+    },
+    "7": {
+      "name": "Rubios",
+      "service_type": [1, 2],
+      "type_id": 3,
+      "avg_rating": 3.7,
+      "avg_cost": "20",
+      "currency": "GBP",
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "May 20, 2014"
+        }],
+      "keywords": ["taco", "authentic", "spicy", "beans", "enchiladas", "shrimp", "salad", "healthy", "burrito"]
+    },
+    "8": {
+      "name": "Crab Shack",
+      "service_type": [1, 2],
+      "type_id": 7,
+      "avg_rating": 4.8,
+      "avg_cost": "30",
+      "currency": "GBP",
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "January 1, 2015"
+        }],
+      "keywords": ["seafood", "shrimp", "crab", "lobster", "spicy"]
+    },
+    "9": {
+      "name": "Tuna Time",
+      "service_type": [1],
+      "type_id": 8,
+      "avg_rating": 4,
+      "avg_cost": "12",
+      "currency": "GBP",
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "January 4, 2015"
+        }],
+      "keywords": ["sushi", "rice", "fish", "seafood", "crab"]
+    },
+    "10": {
+      "name": "Magic Wok",
+      "service_type": [1],
+      "type_id": 4,
+      "avg_rating": 3.9,
+      "avg_cost": "8",
+      "currency": "GBP",
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "March 24, 2015"
+        }],
+      "keywords": ["chinese", "fried", "dumplings", "rice", "beef", "chicken"]
+    },
+    "11": {
+      "name": "Mumbai Spice",
+      "service_type": [1, 2],
+      "type_id": 9,
+      "avg_rating": 4.1,
+      "avg_cost": "10",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "April 24, 2013"
+        }],
+      "keywords": ["indian", "rice", "curry", "spicy", "beef", "chicken", "bread"]
+    },
+    "12": {
+      "name": "Jags",
+      "service_type": [1],
+      "type_id": 2,
+      "avg_rating": 3.9,
+      "avg_cost": "12",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "April 24, 2013"
+        }],
+      "keywords": ["burger", "beef", "chicken", "meat", "chips", "unhealthy"]
     }
   }
 }
