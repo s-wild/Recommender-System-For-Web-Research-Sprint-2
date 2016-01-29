@@ -4,6 +4,14 @@
 .full-width {
 	width: 100%;
 }
+.spacing {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+.icon-top {
+	padding-top: 1.5em;
+	padding-bottom: 1em;
+}
 
 /*
 * Font Styling
