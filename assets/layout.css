@@ -1,3 +1,19 @@
-.central-container {
-	margin: 0 auto;
+body{
+	display:flex;
+	display: -webkit-flex;
+	flex-direction:row;
+}
+
+.input-field{
+	height:100%;
+	display:flex;
+	align-items: center;
+	width:500px;
+}
+
+.central-container{
+	display:flex;
+	justify-content: center;
+	width:100%;
+
 }
