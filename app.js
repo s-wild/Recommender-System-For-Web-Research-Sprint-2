@@ -128,6 +128,7 @@ app.get('/api/users/:uid', function(req, res) {
 	res.end(JSON.stringify(info.getUser(uid)));
 });
 
+
 // GET USER ACTIVITY
 app.get('/api/users/:uid/:file', function(req, res) {
 	if (!check.isDefined([req.params.uid, req.params.file])) {
