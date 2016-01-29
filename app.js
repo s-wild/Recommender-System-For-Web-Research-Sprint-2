@@ -27,7 +27,9 @@ app.use("/assets", express.static(__dirname + '/assets'));
 // Our modules
 var calc = require('./group_modules/calc.js');
 var info = require('./group_modules/info.js');
-var check = require('./group_modules/check.js');var globals = require('./group_modules/globals.js');
+var check = require('./group_modules/check.js');
+var util = require('./group_modules/util.js');
+var globals = require('./group_modules/globals.js');
 
 // Data files
 var restaurants = require('./data/restaurants.json');
@@ -181,7 +183,17 @@ app.get('/api/recommend/:uid/:location/:file', function(req, res) {
 
 // CLIENT - UI
 app.get('/api/', function(req, res) {
-	res.render('test');
+	var users = info.getUsers();
+	var userList = [];
+	// Remove numeric keys from JSON, e.g. "1"
+	Object.keys(users).forEach(function(user) {
+		var u = users[user];
+		userList.push(u);
+	});
+
+	res.render('test', {
+		users: users
+	});
 });
 
 

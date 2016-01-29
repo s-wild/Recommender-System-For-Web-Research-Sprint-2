@@ -2,20 +2,31 @@
 <head>
 	<!-- Compiled and minified CSS -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" />
-  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
   	<!-- Compiled and minified JavaScript -->
+  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  	<script src="../assets/js/communicator.js"></script>
 </head>
 <body>
+
+
 	<div class="input-field col s12">
-	    <select class="browser-default">
-	      <option value="1">Option 1</option>
-	      <option value="2">Option 2</option>
-	      <option value="3">Option 3</option>
-	    </select>
-  	</div>
+    <select class="browser-default">
+	   <option value="1">Option 1</option>
+	   <option value="2">Option 2</option>
+	   <option value="3">Option 3</option>
+    </select>
+  </div>
 
-
+  <h2>{{{users.name}}}</h2>
+  <div class="input-field col s12">
+    <select class="browser-default">
+    {{#each users}}
+      <option>{{{this.first_name}}} ({{{this.user_id}}})</option>  
+    {{/each}}
+    </select>
+  </div>
 
 </body>
 </html>
