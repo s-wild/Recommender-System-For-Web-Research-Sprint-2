@@ -182,6 +182,36 @@
           "opening_date": "April 24, 2013"
         }],
       "keywords": ["burger", "beef", "chicken", "meat", "chips", "unhealthy"]
+    },
+    "13": {
+      "name": "Denny's",
+      "service_type": [1],
+      "type_id": 2,
+      "avg_rating": 3.9,
+      "avg_cost": "12",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "April 24, 2013"
+        }],
+      "keywords": ["burger", "beef", "chicken", "meat", "chips", "unhealthy", "breakfast", "waffles"]
+    },
+    "14": {
+      "name": "Burger King",
+      "service_type": [1],
+      "type_id": 2,
+      "avg_rating": 3.1,
+      "avg_cost": "7",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "April 24, 2013"
+        }, {
+          "name": "Orlando",
+          "opening_date": "June 18, 2015"
+        }],
+      "keywords": ["burger", "beef", "chicken", "meat", "chips", "unhealthy"]
     }
+
   }
 }

@@ -3,6 +3,26 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
+var exphbs = require('express-handlebars');
+
+// Templating options
+//app.engine('hbs', expressHbs({ extname:'hbs', defaultLayout:null }));
+
+app.set('views', './views');
+
+var hbs = exphbs.create({
+    // Specify helpers which are only registered on this instance.
+    helpers: {
+        foo: function () { return 'FOO!'; },
+        bar: function () { return 'BAR!'; }
+    }
+});
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+// Map URL, so it can be accessed from Jade file
+app.use("/assets", express.static(__dirname + '/assets'));
 
 // Our modules
 var calc = require('./group_modules/calc.js');
@@ -155,6 +175,12 @@ app.get('/api/recommend/:uid/:location/:file', function(req, res) {
 
 	var recommended = calc.recommend(req.params.uid, req.params.file, req.params.location);
 	res.end(JSON.stringify(recommended));
+});
+
+
+// CLIENT - UI
+app.get('/api/', function(req, res) {
+	res.render('test');
 });
 
 

@@ -156,6 +156,14 @@
       "brand_location": "Venice",
       "rating": 4,
       "date": "1453304897795"
+    },
+    "20": {
+      "user_id": "5",
+      "origin": 1,
+      "brand_id": 4,
+      "brand_location": "Portsmouth",
+      "rating": 3,
+      "date": "1453304897795"
     }
   }
 }
