@@ -3,7 +3,7 @@
 <div class="blue lighten-5">
   <div class="icon-top center"><a class="btn-floating btn-large waves-effect waves-light green darken-1"><i class="fa fa-cutlery"></i></a></div>
   <div class="row">
-    
+
     {{#each restaurants}}
       <div class="col l3">
         <div class="card">
@@ -118,6 +118,8 @@
         </div>
       </div>
 
+    {{else}}
+        <p class="center"> No restaurants could be found</p>
     {{/each}}
   </div>
 </div>
