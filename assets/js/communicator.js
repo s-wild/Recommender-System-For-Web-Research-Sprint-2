@@ -5,9 +5,6 @@ $(document).ready(function() {
 	// Event listeners
 	$("#getRecommBtn").click(getRecommendations);
 
-
-
-
 });
 
 
