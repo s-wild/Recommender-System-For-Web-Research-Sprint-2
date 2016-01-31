@@ -4,7 +4,11 @@
     "2": "Thrill Seeker",
     "3": "No Crowds",
     "4": "Chill",
-    "5": "Sport"
+    "5": "Sport",
+    "6": "Recreational",
+    "7": "Historical",
+    "8": "Landmark",
+    "9": "Racing"
   },
   "services": {
     "1": "Supervised",
@@ -115,6 +119,126 @@
           "opening_date": "June 1, 2014"
         }],
       "keywords": ["Zip Lining", "Adventurous", "Forest", "Thrill"]
+    },
+    "8": {
+      "name": "Scuba Divers Venice",
+      "service_type": [1, 6],
+      "type_id": [1,2],
+      "avg_rating": 4.5,
+      "avg_cost": "60",
+      "currency": "GBP",
+      "age_range": "18-65",
+      "min_age": "12",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "June 1, 2014"
+        }],
+      "keywords": ["Scuba", "Diving", "Sea", "Thrill", "Water", "outdoors", "active"]
+    },
+    "9": {
+      "name": "Chiesa di San Zaccaria",
+      "service_type": [7, 8],
+      "type_id": [1,2],
+      "avg_rating": 4.5,
+      "avg_cost": "1.5",
+      "currency": "GBP",
+      "age_range": "0-65",
+      "min_age": "5",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "June 1, 1800"
+        }],
+      "keywords": ["History", "Church", "Culture", "Crowded", "Cheap", "attraction", "tourist"]
+    },
+    "10": {
+      "name": "Saint Mark's Basilica",
+      "service_type": [7, 8],
+      "type_id": [1,2],
+      "avg_rating": 4.5,
+      "avg_cost": "1.5",
+      "currency": "GBP",
+      "age_range": "0-65",
+      "min_age": "5",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "February 1, 1810"
+        }],
+      "keywords": ["History", "Church", "Culture", "Crowded", "Cheap", "attraction", "tourist"]
+    },
+    "11": {
+      "name": "San Marco Campanile",
+      "service_type": [7, 8],
+      "type_id": [1,2],
+      "avg_rating": 4.5,
+      "avg_cost": "1.5",
+      "currency": "GBP",
+      "age_range": "0-65",
+      "min_age": "5",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "March 1, 1810"
+        }],
+      "keywords": ["History", "Tower", "Culture", "Heights", "Views", "attraction", "tourist"]
+    },
+    "12": {
+      "name": "San Bernardino National Forest",
+      "service_type": [1, 3, 5, 6],
+      "type_id": [1,2],
+      "avg_rating": 4.5,
+      "avg_cost": "6",
+      "currency": "GBP",
+      "age_range": "8-65",
+      "min_age": "5",
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "November 1, 1970"
+        }],
+      "keywords": ["Hiking", "Forest", "Nature", "Fitness", "Outdoors"]
+    },
+    "13": {
+      "name": "San Bernardino National Forest",
+      "service_type": [1, 3, 5, 6],
+      "type_id": [1,2],
+      "avg_rating": 4.5,
+      "avg_cost": "6",
+      "currency": "GBP",
+      "age_range": "8-65",
+      "min_age": "5",
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "November 1, 1970"
+        }],
+      "keywords": ["Hiking", "Forest", "Nature", "Fitness", "Outdoors"]
+    },
+    "14": {
+      "name": "San Manuel Stadium",
+      "service_type": [5],
+      "type_id": [2],
+      "avg_rating": 4.2,
+      "avg_cost": "25",
+      "currency": "GBP",
+      "age_range": "8-65",
+      "min_age": "5",
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "November 1, 1970"
+        }],
+      "keywords": ["Stadium", "Sport", "Football", "Spectator"]
+    },
+    "15": {
+      "name": "Glen Helen Raceway",
+      "service_type": [5, 2, 9],
+      "type_id": [2],
+      "avg_rating": 4.4,
+      "avg_cost": "25",
+      "currency": "GBP",
+      "age_range": "8-65",
+      "min_age": "5",
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "November 5, 1980"
+        }],
+      "keywords": ["Bikes", "Motorcross", "Spectator", "Motoring"]
     }
   }
 }

@@ -4,8 +4,6 @@
 .full-width {
 	width: 100%;
 }
-<<<<<<< HEAD
-=======
 .spacing {
 	margin-left: 1em;
 	margin-right: 1em;
@@ -14,8 +12,6 @@
 	padding-top: 1.5em;
 	padding-bottom: 1em;
 }
-
->>>>>>> 9ece3ec81f1d93204d3e2d5aa8b9d9cc2c0a0236
 /*
 * Font Styling
 */
@@ -50,10 +46,6 @@ label {
 * Materize Overrides
 */
 .card-image img {
-	min-height: 14em;
-<<<<<<< HEAD
-}
-=======
 	max-height: 14em; /* needed so divs stay in desired formation */
 }
 .card-content {
@@ -61,4 +53,3 @@ label {
 	max-height: 10em;
 	overflow: scroll;
 }
->>>>>>> 9ece3ec81f1d93204d3e2d5aa8b9d9cc2c0a0236
