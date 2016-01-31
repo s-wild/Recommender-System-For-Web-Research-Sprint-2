@@ -224,6 +224,11 @@ app.get('/api/recommend/all/:uid/:location/html', function(req, res) {
 	var recommendedTrans = calc.recommend(req.params.uid, 'transport', req.params.location);
 	var recommendedActiv = calc.recommend(req.params.uid, 'activities', req.params.location);
 
+	// Nullify arrays, so template engine will default to "else" when attempting "each"
+	if (Object.keys(recommendedRest[0]).length === 0) recommendedRest = null;
+	if (Object.keys(recommendedTrans[0]).length === 0) recommendedTrans = null;
+	if (Object.keys(recommendedActiv[0]).length === 0) recommendedActiv = null;
+
 	// Render recommendations partial
 	res.render('recommendations', {
 		restaurants: recommendedRest,
