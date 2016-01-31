@@ -42,4 +42,5 @@ label {
 */
 .card-image img {
 	min-height: 14em;
+	max-height: 14em; /* needed so divs stay in desired formation */
 }
