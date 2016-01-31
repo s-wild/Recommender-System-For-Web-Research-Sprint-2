@@ -48,6 +48,9 @@
               <img src="../assets/images/rubios.jpg">
             {{/equal}}
             <span class="card-title">{{{this.details.name}}}</span>
+            {{#if this.age}}
+              <span class="new badge new-store light-green"></span>
+            {{/if}}
           </div>
           <div class="card-content">
             <p>{{{this.details.info}}}</p>
