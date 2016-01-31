@@ -19,7 +19,7 @@
   <div class="row">
     <div class="grid-example col l6 offset-l3">
       <label>Please choose a user:</label>
-      <select class="browser-default">
+      <select class="browser-default" id="users">
         {{#each users}}
         <option>{{{this.first_name}}} ({{{this.user_id}}})</option>
         {{/each}}
@@ -30,7 +30,7 @@
   <div class="row">
     <div class="grid-example col l6 offset-l3">
       <label>Please choose a location:</label>
-      <select class="browser-default">
+      <select class="browser-default" id="locations">
         <option>Portsmouth</option>
         <option>Maidstone</option>
         <option>Venice</option>
@@ -41,55 +41,22 @@
 
   <div class="row">
     <div class="grid-example col l6 offset-l3">
-      <a class="waves-effect waves-light btn full-width">Get Recommendations</a>
+      <a class="waves-effect waves-light btn full-width" id="getRecommBtn">Get Recommendations</a>
     </div>
   </div>
 
-  <div class="blue lighten-5">
-    <div class="row">
-      <div class="col l3 offset-l3">
-        <div class="card">
-          <div class="card-image">
-            <img src="../assets/images/mcdonalds.jpg">
-            <span class="card-title">McDonalds</span>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-              <i class="fa fa-star rating"></i>
-              <i class="fa fa-star rating"></i>
-              <i class="fa fa-star rating"></i>
-              <i class="fa fa-star rating"></i>
-              <i class="fa fa-star-o"></i>
-            </div>
-            <div class="card-action">
-              <a href="#">Website</a>
-            </div>
-          </div>
-        </div>
+  <div class="row">
+    <div class="col l6 offset-l3 center">
+      <a class="btn-floating btn-large waves-effect waves-light green darken-1"><i class="fa fa-cutlery"></i></a>
+      <a class="btn-floating btn-large waves-effect waves-light light-blue darken-4 spacing"><i class="fa fa-subway"></i></a>
+      <a class="btn-floating btn-large waves-effect waves-light amber lighten-2"><i class="fa fa-binoculars"></i></a>
+    </div>
+  </div>
 
-        <div class="col l3">
-          <div class="card">
-            <div class="card-image">
-              <img src="../assets/images/kfc.jpg">
-              <span class="card-title">KFC</span>
-            </div>
-            <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-                <i class="fa fa-star rating"></i>
-                <i class="fa fa-star rating"></i>
-                <i class="fa fa-star rating"></i>
-                <i class="fa fa-star-o"></i>
-                <i class="fa fa-star-o"></i>
-              </div>
-              <div class="card-action">
-                <a href="#">Website</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- Recommendations will appear here -->
+  <div id="recommendations"></div>
+
+
 
 </body>
 </html>

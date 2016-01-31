@@ -13,8 +13,39 @@ app.set('views', './views');
 var hbs = exphbs.create({
     // Specify helpers which are only registered on this instance.
     helpers: {
-        foo: function () { return 'FOO!'; },
-        bar: function () { return 'BAR!'; }
+        equal: function(lvalue, rvalue, options) {
+	      if (arguments.length < 3)
+	          throw new Error("Handlebars Helper equal needs 2 parameters");
+	      if( lvalue!=rvalue ) {
+	          return options.inverse(this);
+	      } else {
+	          return options.fn(this);
+	      }
+		},
+        compare: function (v1, operator, v2, options) {
+        	if (arguments.length < 4)
+        		throw new Error("Handlebars Helper compare needs 3 parameters");
+        	
+        	switch(operator) {
+        		case ">=":
+        			return (v1 >= v2) ? options.fn(this) : options.inverse(this);
+        		case "<=":
+        			return (v1 <= v2) ? options.fn(this) : options.inverse(this);
+        	}
+        },
+        and: function (v1, v2) {
+        	return v1 && v2;
+    	},
+    	lt: function(v1, v2) {
+    		return v1 < v2;
+    	},
+    	lte: function (v1, v2) {
+        	return v1 <= v2;
+    	},
+    	mte: function(v1, v2) {
+    		return v1 >= v2;
+    	}
+
     }
 });
 
@@ -171,6 +202,7 @@ app.get('/api/users/:uid/:file/:brandid', function(req, res) {
 
 
 // RECOMMENDER ROUTES
+// (a) Recommend for specific sector
 app.get('/api/recommend/:uid/:location/:file', function(req, res) {
 	if (!check.isDefined([req.params.uid, req.params.file, req.params.location])) {
 		res.end(messages.not_recognised + " " + messages.id_not_recognised);
@@ -178,6 +210,28 @@ app.get('/api/recommend/:uid/:location/:file', function(req, res) {
 
 	var recommended = calc.recommend(req.params.uid, req.params.file, req.params.location);
 	res.end(JSON.stringify(recommended));
+});
+
+// (b) Recommend for all sectors
+app.get('/api/recommend/all/:uid/:location/html', function(req, res) {
+	if (!check.isDefined([req.params.uid, req.params.location])) {
+		res.end(messages.not_recognised + " " + messages.id_not_recognised);
+	}
+
+
+	// Get all recommendations
+	var recommendedRest = calc.recommend(req.params.uid, 'restaurants', req.params.location);
+	var recommendedTrans = calc.recommend(req.params.uid, 'transport', req.params.location);
+	var recommendedActiv = calc.recommend(req.params.uid, 'activities', req.params.location);
+
+	// Render recommendations partial
+	res.render('recommendations', {
+		restaurants: recommendedRest,
+		transport: recommendedTrans,
+		activities: recommendedActiv
+	});
+
+
 });
 
 
