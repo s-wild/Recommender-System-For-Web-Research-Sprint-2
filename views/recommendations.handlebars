@@ -47,6 +47,9 @@
             {{#equal this.details.name "Rubios"}}
               <img src="../assets/images/rubios.jpg">
             {{/equal}}
+            {{#equal this.details.name "Gam Gam"}}
+              <img src="../assets/images/gam_gam.jpg">
+            {{/equal}}
             <span class="card-title">{{{this.details.name}}}</span>
             {{#if this.age}}
               <span class="new badge new-store light-green"></span>
@@ -124,7 +127,223 @@
   </div>
 </div>
 <!-- Transport -->
+<div class="blue">
+  <div class="icon-top center"><a class="btn-floating btn-large waves-effect waves-light light-blue darken-4 spacing"><i class="fa fa-subway"></i></a></div>
+  <div class="row">
 
+    {{#each transport}}
+      <div class="col l3">
+        <div class="card">
+          <div class="card-image">
+            {{#equal this.details.name "National Express"}}
+              <img src="../assets/images/national_express.jpg">
+            {{/equal}}
+            {{#equal this.details.name "Southern Rail"}}
+              <img src="../assets/images/southern_rail.jpg">
+            {{/equal}}
+            {{#equal this.details.name "Enterprise"}}
+              <img src="../assets/images/enterprise.jpg">
+            {{/equal}}
+            {{#equal this.details.name "Mario's Gondolas"}}
+              <img src="../assets/images/marios_gondolas.jpg">
+            {{/equal}}
+            {{#equal this.details.name "Europa Car"}}
+              <img src="../assets/images/europa_car.jpg">
+            {{/equal}}
+            {{#equal this.details.name "John's Taxis"}}
+              <img src="../assets/images/johns_taxis.jpg">
+            {{/equal}}
+            {{#equal this.details.name "Venice Canal Bus Boats"}}
+              <img src="../assets/images/venice_canal_bus_boats.jpg">
+            {{/equal}}
+            {{#equal this.details.name "Venice Rail"}}
+              <img src="../assets/images/venice_rail.jpg">
+            {{/equal}}
+            {{#equal this.details.name "Hertz"}}
+              <img src="../assets/images/hertz.jpg">
+            {{/equal}}
+            {{#equal this.details.name "Cali Rail"}}
+              <img src="../assets/images/cali_rail.jpg">
+            {{/equal}}
+
+            <span class="card-title">{{{this.details.name}}}</span>
+            {{#if this.age}}
+              <span class="new badge new-store light-green"></span>
+            {{/if}}
+          </div>
+          <div class="card-content">
+            <p>{{{this.details.info}}}</p>
+
+            {{#if (and (mte this.details.avg_rating 1) (lt this.details.avg_rating 1.5)
+            )}}
+              <i class="fa fa-star rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 1.5) (lt this.details.avg_rating 2)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star-half-o rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 2) (lt this.details.avg_rating 2.5)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 2.5) (lt this.details.avg_rating 3)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star-half-o rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 3) (lt this.details.avg_rating 3.5)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 3.5) (lt this.details.avg_rating 4)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star-half-o rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 4) (lt this.details.avg_rating 4.5)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 4.5) (lt this.details.avg_rating 5)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star-half-o rating"></i>
+            {{/if}}
+            {{#equal this.details.avg_rating "5"}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+            {{/equal}}
+
+          </div>
+          <div class="card-action">
+            <a href="#">Website</a>
+          </div>  
+        </div>
+      </div>
+
+    {{else}}
+        <p class="center"> No transport could be found</p>
+    {{/each}}
+  </div>
+</div>
 
 <!-- Activities -->
+<div class="blue lighten-5">
+  <div class="icon-top center"><a class="btn-floating btn-large waves-effect waves-light amber lighten-2"><i class="fa fa-binoculars"></i></a></div>
+  <div class="row">
+
+    {{#each activities}}
+      <div class="col l3">
+        <div class="card">
+          <div class="card-image">
+            {{#equal this.details.name "Scuba Divers Venice"}}
+              <img src="../assets/images/scuba_divers_venice.jpg">
+            {{/equal}}
+            {{#equal this.details.name "Jet Skiing"}}
+              <img src="../assets/images/southern_rail.jpg">
+            {{/equal}}
+            {{#equal this.details.name "Chiesa di San Zaccaria"}}
+              <img src="../assets/images/chiesa_di_san_zaccaria.jpg">
+            {{/equal}}
+            {{#equal this.details.name "Saint Mark's Basilica"}}
+              <img src="../assets/images/southern_rail.jpg">
+            {{/equal}}
+            {{#equal this.details.name "San Marco Campanile"}}
+              <img src="../assets/images/san_marco_campanile.jpg">
+            {{/equal}}
+
+            <span class="card-title">{{{this.details.name}}}</span>
+            {{#if this.age}}
+              <span class="new badge new-store light-green"></span>
+            {{/if}}
+          </div>
+          <div class="card-content">
+            <p>{{{this.details.info}}}</p>
+
+            {{#if (and (mte this.details.avg_rating 1) (lt this.details.avg_rating 1.5)
+            )}}
+              <i class="fa fa-star rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 1.5) (lt this.details.avg_rating 2)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star-half-o rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 2) (lt this.details.avg_rating 2.5)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 2.5) (lt this.details.avg_rating 3)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star-half-o rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 3) (lt this.details.avg_rating 3.5)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 3.5) (lt this.details.avg_rating 4)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star-half-o rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 4) (lt this.details.avg_rating 4.5)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+            {{/if}}
+            {{#if (and (mte this.details.avg_rating 4.5) (lt this.details.avg_rating 5)
+            )}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star-half-o rating"></i>
+            {{/if}}
+            {{#equal this.details.avg_rating "5"}}
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+            {{/equal}}
+
+          </div>
+          <div class="card-action">
+            <a href="#">Website</a>
+          </div>  
+        </div>
+      </div>
+
+    {{else}}
+        <p class="center"> No activities could be found</p>
+    {{/each}}
+  </div>
+</div>
+
+
         
