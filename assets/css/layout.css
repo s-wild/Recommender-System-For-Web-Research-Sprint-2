@@ -1,0 +1,35 @@
+/*
+* Global Classes
+*/
+.full-width {
+	width: 100%;
+}
+/*
+* Font Styling
+*/
+label {
+	color: #fff;
+}
+
+/*
+* Custom Styling
+*/
+.central-container {
+	margin: 0 auto;
+}
+
+.rs-title-box {
+	text-align: center;
+	color: #fff;
+}
+
+.rating {
+	color: #FDB22B;
+}
+
+/*
+* Materize Overrides
+*/
+.card-image img {
+	min-height: 14em;
+}

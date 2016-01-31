@@ -1,21 +1,95 @@
 <html>
 <head>
 	<!-- Compiled and minified CSS -->
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" />
-  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  	<!-- Compiled and minified JavaScript -->
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" />
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+ <link rel="stylesheet" href="../assets/css/layout.css" />
+
+ <!-- Compiled and minified JavaScript -->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+ <script src="../assets/js/communicator.js"></script>
 </head>
-<body>
-	<div class="input-field col s12">
-	    <select class="browser-default">
-	      <option value="1">Option 1</option>
-	      <option value="2">Option 2</option>
-	      <option value="3">Option 3</option>
-	    </select>
-  	</div>
+<body class="blue lighten-1">
 
+  <div class="row rs-title-box">
+    <div class="grid-example col s12"><h2 class="flow-text">Recommender System</h2></div>
+  </div>
 
+  <div class="row">
+    <div class="grid-example col l6 offset-l3">
+      <label>Please choose a user:</label>
+      <select class="browser-default">
+        {{#each users}}
+        <option>{{{this.first_name}}} ({{{this.user_id}}})</option>
+        {{/each}}
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="grid-example col l6 offset-l3">
+      <label>Please choose a location:</label>
+      <select class="browser-default">
+        <option>Portsmouth</option>
+        <option>Maidstone</option>
+        <option>Venice</option>
+        <option>San Bernardino</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="grid-example col l6 offset-l3">
+      <a class="waves-effect waves-light btn full-width">Get Recommendations</a>
+    </div>
+  </div>
+
+  <div class="blue lighten-5">
+    <div class="row">
+      <div class="col l3 offset-l3">
+        <div class="card">
+          <div class="card-image">
+            <img src="../assets/images/mcdonalds.jpg">
+            <span class="card-title">McDonalds</span>
+          </div>
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star rating"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <div class="card-action">
+              <a href="#">Website</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col l3">
+          <div class="card">
+            <div class="card-image">
+              <img src="../assets/images/kfc.jpg">
+              <span class="card-title">KFC</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+                <i class="fa fa-star rating"></i>
+                <i class="fa fa-star rating"></i>
+                <i class="fa fa-star rating"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+              </div>
+              <div class="card-action">
+                <a href="#">Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 </body>
 </html>
