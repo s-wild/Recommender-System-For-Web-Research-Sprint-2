@@ -4,7 +4,8 @@
     "2": "Minibus",
     "3": "Coach",
     "4": "Train",
-    "5": "Boat"
+    "5": "Boat",
+    "6": "Taxis"
   },
   "services": {
     "1": "Public",
@@ -160,6 +161,48 @@
           }],
       "keywords": ["Rentals","Flexible", "Family", "Cars"],
       "filename": "enterprise.jpg"
+    },
+    "9": {
+      "name": "Aqua Cars",
+      "service_type": [2],
+      "type_id": [6],
+      "avg_rating": 4.1,
+      "avg_cost": "10",
+      "currency": "GDP",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "March 22, 2012"
+        }],
+      "keywords": ["Rentals","Flexible", "Family", "Cars"],
+      "filename": "aqua_cars.jpg"
+    },
+    "10": {
+      "name": "Andicars",
+      "service_type": [2],
+      "type_id": [6],
+      "avg_rating": 4.1,
+      "avg_cost": "10",
+      "currency": "GDP",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "March 20, 2012"
+        }],
+      "keywords": ["Rentals","Flexible", "Family", "Cars"],
+      "filename": "andicars.jpg"
+    },
+    "11": {
+      "name": "First Group Buses",
+      "service_type": [2],
+      "type_id": [2],
+      "avg_rating": 4.1,
+      "avg_cost": "5",
+      "currency": "GDP",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "March 20, 2012"
+        }],
+      "keywords": ["Buses","Bus", "Schedule"],
+      "filename": "first_group_buses.jpg"
     }
   }
 }

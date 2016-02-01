@@ -8,7 +8,9 @@
     "6": "Recreational",
     "7": "Historical",
     "8": "Landmark",
-    "9": "Racing"
+    "9": "Racing",
+    "10": "Shopping",
+    "11": "Museum"
   },
   "services": {
     "1": "Supervised",
@@ -238,6 +240,102 @@
         }],
       "keywords": ["Bikes", "Motorcross", "Spectator", "Motoring"],
       "filename": "san_manuel_stadium.jpg"
+    },
+    "15": {
+      "name": "Gunwharf Shopping Centre",
+      "service_type": [10],
+      "type_id": [2],
+      "avg_rating": 4.4,
+      "avg_cost": "25",
+      "currency": "GBP",
+      "age_range": "8-65",
+      "min_age": "5",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "November 5, 2005"
+        }],
+      "keywords": ["Shopping", "Clothes", "Commerical", "Centre", "Highstreet"],
+      "filename": "gunwharf_shopping_centre.jpg"
+    },
+    "16": {
+      "name": "Fratton Park Stadium",
+      "service_type": [5],
+      "type_id": [2],
+      "avg_rating": 4.2,
+      "avg_cost": "80",
+      "currency": "GBP",
+      "age_range": "8-65",
+      "min_age": "5",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "November 1, 1970"
+        }],
+      "keywords": ["Stadium", "Sport", "Football", "Spectator"],
+      "filename": "fratton_park_stadium.jpg"
+    },
+    "17": {
+      "name": "HMS Victory",
+      "service_type": [7, 8],
+      "type_id": [1, 2],
+      "avg_rating": 4.7,
+      "avg_cost": "10",
+      "currency": "GBP",
+      "age_range": "8-65",
+      "min_age": "5",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "November 1, 1970"
+        }],
+      "keywords": ["History", "Landmark", "Boat", "Navy"],
+      "filename": "hms_victory.jpg"
+    },
+    "18": {
+      "name": "Submarine Museum",
+      "service_type": [7, 8],
+      "type_id": [1, 2],
+      "avg_rating": 4.7,
+      "avg_cost": "10",
+      "currency": "GBP",
+      "age_range": "8-65",
+      "min_age": "5",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "November 1, 1970"
+        }],
+      "keywords": ["History", "Landmark", "Boat", "Navy"],
+      "filename": "submarine_museum.jpg"
+    },
+    "19": {
+      "name": "Blue Reef Aquarium",
+      "service_type": [7, 8],
+      "type_id": [1, 2],
+      "avg_rating": 4.7,
+      "avg_cost": "10",
+      "currency": "GBP",
+      "age_range": "8-65",
+      "min_age": "5",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "November 1, 1970"
+        }],
+      "keywords": ["Aquarium", "Nature", "Fish", "Tourist", "Tourist", "Sharks"],
+      "filename": "blue_reef_aquarium.jpg"
+    },
+    "19": {
+      "name": "Isle of Wight Day Trip",
+      "service_type": [11],
+      "type_id": [1, 2],
+      "avg_rating": 4.7,
+      "avg_cost": "10",
+      "currency": "GBP",
+      "age_range": "8-65",
+      "min_age": "5",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "November 1, 1980"
+        }],
+      "keywords": ["Island", "Hovercraft", "Travel", "Day", "Trip", "Active"],
+      "filename": "isle_of_wight_day_trip.jpg"
     }
   }
 }

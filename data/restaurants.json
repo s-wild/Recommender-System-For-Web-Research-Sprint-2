@@ -32,7 +32,11 @@
         }, {
           "name": "Maidstone",
           "opening_date": "March 19, 2012"
-        }],
+        }, {
+            "name": "Venice",
+            "opening_date": "June 25, 2015"
+        }
+      ],
       "keywords": ["Fast Food","Unhealthy","Burgers", "Fries", "Chips", "Beef", "Fried"],
       "filename": "mcdonalds.jpg"
     },
@@ -259,7 +263,8 @@
           "name": "Venice",
           "opening_date": "June 25, 2015"
         }],
-      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"]
+      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"],
+      "filename": "al_covo.jpg"
     },
     "17": {
       "name": "Osteria Antico Giardinetto",
@@ -273,6 +278,49 @@
           "opening_date": "June 25, 2015"
         }],
       "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"],
+      "filename": "osteria_antico_giardinetto.jpg"
+    },
+    "18": {
+      "name": "La Porta d'Acqua",
+      "service_type": [1],
+      "type_id": 2,
+      "avg_rating": 4.5,
+      "avg_cost": "23",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "June 25, 2015"
+        }],
+      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"],
+      "filename": "la_porta_d_acqua.jpg"
+    },
+    "19": {
+      "name": "Antica Trattoria Poste Vecie",
+      "service_type": [1],
+      "type_id": 2,
+      "avg_rating": 4.5,
+      "avg_cost": "23",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "June 25, 2015"
+        }],
+      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"],
+      "filename": "antica_trattoria_poste_vecie.jpg"
+    },
+    "20": {
+      "name": "Osteria Enoteca San Marco",
+      "service_type": [1],
+      "type_id": 2,
+      "avg_rating": 4.5,
+      "avg_cost": "23",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "June 25, 2015"
+        }],
+      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"]
+      "filename": "antica_trattoria_poste_vecie.jpg"
     }
   }
 }
