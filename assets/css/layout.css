@@ -55,3 +55,6 @@ label {
 	overflow-x: hidden;
 	overflow-y: auto;
 }
+.card-title {
+	text-shadow: 0 0 3px #000;
+}
