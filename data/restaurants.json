@@ -33,7 +33,8 @@
           "name": "Maidstone",
           "opening_date": "March 19, 2012"
         }],
-      "keywords": ["Fast Food","Unhealthy","Burgers", "Fries", "Chips", "Beef", "Fried"]
+      "keywords": ["Fast Food","Unhealthy","Burgers", "Fries", "Chips", "Beef", "Fried"],
+      "filename": "mcdonalds.jpg"
     },
     "2": {
       "name": "KFC",
@@ -53,7 +54,8 @@
           "name": "Cheltenham",
           "opening_date": "January 22, 2012"
         }],
-      "keywords": ["Fast Food","Unhealthy","Chicken", "Fries", "Chips", "Beef", "Fried"]
+      "keywords": ["Fast Food","Unhealthy","Chicken", "Fries", "Chips", "Beef", "Fried"],
+      "filename": "kfc.jpg"
     },
     "3": {
       "name": "Joe's Pizza",
@@ -67,7 +69,8 @@
           "name": "Portsmouth",
           "opening_date": "March 1, 2012"
         }],
-      "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomatoe"]
+      "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomatoe"],
+      "filename": "pizza.jpg"
     },
     "4": {
       "name": "Del Taco",
@@ -81,10 +84,12 @@
           "name": "San Bernardino",
           "opening_date": "March 26, 2011"
         }],
-      "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomato"]
+      "keywords": ["Authentic","Pizza","Pasta", "Ice Cream", "Gelato", "bread", "tomato"],
+      "filename": "deltaco.jpg"
     },
     "5": {
       "name": "The New Restaurant",
+      "info": "A new restaurant, offering Tapas food, meaning it will surely have everything for you and your fellow diners.",
       "service_type": [1, 2],
       "type_id": 3,
       "avg_rating": 2.5,
@@ -107,7 +112,8 @@
           "name": "Portsmouth",
           "opening_date": "May 20, 2010"
         }],
-      "keywords": ["Chicken", "fried"]
+      "keywords": ["Chicken", "fried"],
+      "filename": "nandos.jpg"
     },
     "7": {
       "name": "Rubios",
@@ -120,7 +126,8 @@
           "name": "San Bernardino",
           "opening_date": "May 20, 2014"
         }],
-      "keywords": ["taco", "authentic", "spicy", "beans", "enchiladas", "shrimp", "salad", "healthy", "burrito"]
+      "keywords": ["taco", "authentic", "spicy", "beans", "enchiladas", "shrimp", "salad", "healthy", "burrito"],
+      "filename": "rubios.jpg"
     },
     "8": {
       "name": "Crab Shack",
@@ -133,7 +140,8 @@
           "name": "San Bernardino",
           "opening_date": "January 1, 2015"
         }],
-      "keywords": ["seafood", "shrimp", "crab", "lobster", "spicy"]
+      "keywords": ["seafood", "shrimp", "crab", "lobster", "spicy"],
+      "filename": "crab_shack.jpg"
     },
     "9": {
       "name": "Tuna Time",
@@ -146,7 +154,8 @@
           "name": "San Bernardino",
           "opening_date": "January 4, 2015"
         }],
-      "keywords": ["sushi", "rice", "fish", "seafood", "crab"]
+      "keywords": ["sushi", "rice", "fish", "seafood", "crab"],
+      "filename": "tuna.jpg"
     },
     "10": {
       "name": "Magic Wok",
@@ -159,7 +168,8 @@
           "name": "San Bernardino",
           "opening_date": "March 24, 2015"
         }],
-      "keywords": ["chinese", "fried", "dumplings", "rice", "beef", "chicken"]
+      "keywords": ["chinese", "fried", "dumplings", "rice", "beef", "chicken"],
+      "filename": "wok.jpg"
     },
     "11": {
       "name": "Mumbai Spice",
@@ -172,7 +182,8 @@
           "name": "Portsmouth",
           "opening_date": "April 24, 2013"
         }],
-      "keywords": ["indian", "rice", "curry", "spicy", "beef", "chicken", "bread"]
+      "keywords": ["indian", "rice", "curry", "spicy", "beef", "chicken", "bread"],
+      "filename": "curry.jpg"
     },
     "12": {
       "name": "Jags",
@@ -185,7 +196,8 @@
           "name": "Portsmouth",
           "opening_date": "April 24, 2013"
         }],
-      "keywords": ["burger", "beef", "chicken", "meat", "chips", "unhealthy"]
+      "keywords": ["burger", "beef", "chicken", "meat", "chips", "unhealthy"],
+      "filename": "jags.jpg"
     },
     "13": {
       "name": "Denny's",
@@ -202,7 +214,8 @@
             "name": "San Bernardino",
             "opening_date": "April 21, 2011"
         }],
-      "keywords": ["burger", "beef", "chicken", "meat", "chips", "unhealthy", "breakfast", "waffles"]
+      "keywords": ["burger", "beef", "chicken", "meat", "chips", "unhealthy", "breakfast", "waffles"],
+      "filename": "dennys.jpg"
     },
     "14": {
       "name": "Burger King",
@@ -218,7 +231,8 @@
           "name": "Orlando",
           "opening_date": "June 18, 2015"
         }],
-      "keywords": ["burger", "beef", "chicken", "meat", "chips", "unhealthy"]
+      "keywords": ["burger", "beef", "chicken", "meat", "chips", "unhealthy"],
+      "filename": "bking.jpg"
     },
     "15": {
       "name": "Gam Gam",
@@ -231,7 +245,8 @@
           "name": "Venice",
           "opening_date": "June 30, 2015"
         }],
-      "keywords": ["pasta", "spagetti", "pizza", "gelato", "bread", "healthy"]
+      "keywords": ["pasta", "spagetti", "pizza", "gelato", "bread", "healthy"],
+      "filename": "gam_gam.jpg"
     },
     "16": {
       "name": "Al Covo",
@@ -257,7 +272,7 @@
           "name": "Venice",
           "opening_date": "June 25, 2015"
         }],
-      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"]
+      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"],
     }
   }
 }
