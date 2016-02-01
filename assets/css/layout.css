@@ -1,0 +1,57 @@
+/*
+* Global Classes
+*/
+.full-width {
+	width: 100%;
+}
+.spacing {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+.icon-top {
+	padding-top: 1.5em;
+	padding-bottom: 1em;
+}
+/*
+* Font Styling
+*/
+label {
+	color: #fff;
+}
+
+/*
+* Custom Styling
+*/
+.central-container {
+	margin: 0 auto;
+}
+
+.rs-title-box {
+	text-align: center;
+	color: #fff;
+}
+
+.rating {
+	color: #FDB22B;
+}
+
+.new-store {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+/*
+* Materize Overrides
+*/
+.card-image img {
+	min-height: 14em;
+	max-height: 14em; /* needed so divs stay in desired formation */
+}
+.card-content {
+	min-height: 10em;
+	max-height: 10em;
+	overflow-x: hidden;
+	overflow-y: auto;
+}

@@ -3,7 +3,8 @@
     "1": "Car",
     "2": "Minibus",
     "3": "Coach",
-    "4": "Train"
+    "4": "Train",
+    "5": "Boat"
   },
   "services": {
     "1": "Public",
@@ -74,6 +75,81 @@
           "opening_date": "March 22, 2013"
         }],
       "keywords": ["Crowds","Scheduled","Regular"]
+    },
+    "6": {
+      "name": "Mario's Gondolas",
+      "service_type": [1, 2],
+      "type_id": [5],
+      "avg_rating": 4.7,
+      "avg_cost": "50",
+      "currency": "GDP",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "March 22, 2013"
+        }],
+      "keywords": ["Relax","Culture","Scheduled", "Direct", "Flexible"]
+    },
+    "7": {
+      "name": "Venice Canal Bus Boats",
+      "service_type": [2],
+      "type_id": [5],
+      "avg_rating": 4.1,
+      "avg_cost": "10",
+      "currency": "GDP",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "March 22, 2011"
+        }],
+      "keywords": ["Busy","Value","Scheduled", "Cheap", "Budget"]
+    },
+    "8": {
+      "name": "Europa Car",
+      "service_type": [2],
+      "type_id": [5],
+      "avg_rating": 4.1,
+      "avg_cost": "10",
+      "currency": "GDP",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "March 22, 2012"
+        }],
+      "keywords": ["Rentals","Flexible", "Family", "Cars"]
+    },
+    "9": {
+      "name": "Hertz",
+      "service_type": [2],
+      "type_id": [5],
+      "avg_rating": 4.1,
+      "avg_cost": "10",
+      "currency": "GDP",
+      "locations": [{
+          "name": "San Bernardino",
+          "opening_date": "March 22, 2014"
+        }],
+      "keywords": ["Rentals","Flexible", "Family", "Cars"]
+    },
+    "10": {
+      "name": "Enterprise",
+      "service_type": [2],
+      "type_id": [5],
+      "avg_rating": 4.1,
+      "avg_cost": "10",
+      "currency": "GDP",
+      "locations":
+        [{
+            "name": "Portsmouth",
+            "opening_date": "March 22, 2012"
+          }, {
+            "name": "Maidstone",
+            "opening_date": "March 20, 2012"
+          }, {
+            "name": "San Bernardino",
+            "opening_date": "March 18, 2014"
+          }, {
+            "name": "Maidstone",
+            "opening_date": "March 19, 2012"
+          }],
+      "keywords": ["Rentals","Flexible", "Family", "Cars"]
     }
   }
 }

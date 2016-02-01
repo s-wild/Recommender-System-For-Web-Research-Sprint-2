@@ -17,6 +17,7 @@
   "brands": {
     "1": {
       "name": "McDonalds",
+      "info": "McDonalds is one of the most popular fast-food restaurants in the world. If you are looking for a place to eat high quality fast food, this is the place to go.",
       "service_type": [1, 2],
       "type_id": 2,
       "avg_rating": 3.4,
@@ -36,6 +37,7 @@
     },
     "2": {
       "name": "KFC",
+      "info": "If you want chicken, this is the place to go. With its famous 'bargain bucket', you are sure to find something for you.",
       "service_type": [2],
       "type_id": 2,
       "avg_rating": 3.5,
@@ -55,6 +57,7 @@
     },
     "3": {
       "name": "Joe's Pizza",
+      "info": "A family-run restaurant, offering authentic Italian cuisine, from stone baked Pizzas to fresh Pasta.",
       "service_type": [2],
       "type_id": 2,
       "avg_rating": 3.2,
@@ -69,6 +72,7 @@
     "4": {
       "name": "Del Taco",
       "service_type": [1, 2],
+      "info": "The taste of Mexico is brought to you, offering spicy Tacos, in addition to typical Mexican cuisine.",
       "type_id": 3,
       "avg_rating": 4,
       "avg_cost": "19",
@@ -211,7 +215,19 @@
           "opening_date": "June 18, 2015"
         }],
       "keywords": ["burger", "beef", "chicken", "meat", "chips", "unhealthy"]
+    },
+    "15": {
+      "name": "Gam Gam",
+      "service_type": [1],
+      "type_id": 2,
+      "avg_rating": 4.4,
+      "avg_cost": "23",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "June 30, 2015"
+        }],
+      "keywords": ["pasta", "spagetti", "pizza", "gelato", "bread", "healthy"]
     }
-
   }
 }
