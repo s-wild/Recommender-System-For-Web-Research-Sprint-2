@@ -6,6 +6,7 @@
   <div class="row">
 
     {{#each restaurants}}
+    {{#unless this.keywords_from_user_history}}
       <div class="col l3">
         <div class="card">
           <div class="card-image">
@@ -82,9 +83,11 @@
         </div>
       </div>
 
+    {{/unless}}
     {{else}}
         <p class="center"> No restaurants could be found</p>
     {{/each}}
+
   </div>
 </div>
 <!-- Transport -->
@@ -94,6 +97,7 @@
   <div class="row">
 
     {{#each transport}}
+    {{#unless this.keywords_from_user_history}}
       <div class="col l3">
         <div class="card">
           <div class="card-image">
@@ -169,7 +173,8 @@
           </div>
         </div>
       </div>
-
+    
+    {{/unless}}
     {{else}}
         <p class="center"> No transport could be found</p>
     {{/each}}
@@ -183,6 +188,7 @@
   <div class="row">
 
     {{#each activities}}
+    {{#unless this.keywords_from_user_history}}
       <div class="col l3">
         <div class="card">
           <div class="card-image">
@@ -259,6 +265,7 @@
         </div>
       </div>
 
+    {{/unless}}
     {{else}}
         <p class="center"> No activities could be found</p>
     {{/each}}
