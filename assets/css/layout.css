@@ -52,5 +52,6 @@ label {
 .card-content {
 	min-height: 10em;
 	max-height: 10em;
-	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
