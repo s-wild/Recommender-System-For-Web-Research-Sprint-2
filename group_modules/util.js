@@ -115,15 +115,6 @@ function objectLength(obj) {
   return result;
 }
 
-
-function getEntityByOrigin(origin) {
-
-	var file = null;
-
-
-
-}
-
 function getUniqueBrands(history) {
 
 	var brandIDs = [];
@@ -223,7 +214,9 @@ function getFrequencyOfKeywords(brand, keywords) {
 	});
 
 	// Check for match
-	keywords.forEach(function(word) {
+	Object.keys(keywords).forEach(function(key) {
+		var word = keywords[key].word;
+		
 		if (lowercaseWords.indexOf(word.toLowerCase()) != -1) {
 			freq += 1;
 		}

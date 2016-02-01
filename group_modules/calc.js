@@ -135,6 +135,7 @@ function getRecommendedEntities(uid, file, location) {
   		this.splice(index, 0, item);
 	};
 	toRecommend.insert(0, newest);
+	toRecommend.insert(0, { "keywords_from_user_history": commonKeywords });
 
 	// TEST LOGS
 	//console.log(frequencyList);
@@ -313,7 +314,7 @@ function getCommonKeywords(rankedBrands, file) {
 
 		// Loop through all keywords for single brand
 		brand.keywords.forEach(function(word) {
-			commonKeywords.push(word);
+			commonKeywords.push({ "word": word.toLowerCase(), "count": util.getFrequencyOfKeyword(file, brandIDs, word) });
 		});
 
 		return commonKeywords;
@@ -327,10 +328,13 @@ function getCommonKeywords(rankedBrands, file) {
 		// If brand is one to search
 		if (brandIDs.indexOf(Number(brandID)) != -1) {
 			var keywords = brand.keywords;
+
 			keywords.forEach(function(word){
+				var keywordFound = commonKeywords.map(function(e) { return e.word; }).indexOf(word.toLowerCase());
+
 				// Check frequency of keyword
-				if (util.getFrequencyOfKeyword(file, brandIDs, word) > 1 && commonKeywords.indexOf(word.toLowerCase()) == -1) {
-					commonKeywords.push(word.toLowerCase());
+				if (util.getFrequencyOfKeyword(file, brandIDs, word) > 1 ) {
+					commonKeywords.push({ "word": word.toLowerCase(), "count": util.getFrequencyOfKeyword(file, brandIDs, word) });
 				}
 			});
 		}
