@@ -277,6 +277,7 @@
           "name": "Venice",
           "opening_date": "June 25, 2015"
         }],
+<<<<<<< Updated upstream
       "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"],
       "filename": "osteria_antico_giardinetto.jpg"
     },
@@ -321,6 +322,9 @@
         }],
       "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"],
       "filename": "antica_trattoria_poste_vecie.jpg"
+=======
+      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"]
+>>>>>>> Stashed changes
     }
   }
 }
