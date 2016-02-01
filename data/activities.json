@@ -28,7 +28,8 @@
           "name": "San Bernardino",
           "opening_date": "June 1, 2012"
         }],
-      "keywords": ["Sport", "Winter", "Speed", "Thrill", "Active", "Snow", "Outdoors"]
+      "keywords": ["Sport", "Winter", "Speed", "Thrill", "Active", "Snow", "Outdoors"],
+      "filename": "skidders_skiing_resort.jpg"
     },
     "2": {
       "name": "Jet Skiing",
@@ -43,7 +44,8 @@
           "name": "Venice",
           "opening_date": "June 3, 2012"
         }],
-      "keywords": ["Water", "Speed", "Thrill", "Active", "Outdoors"]
+      "keywords": ["Water", "Speed", "Thrill", "Active", "Outdoors"],
+      "filename": "jet_skiing.jpg"
     },
     "3": {
       "name": "Zip Lining",
@@ -58,7 +60,8 @@
           "name": "San Bernardino",
           "opening_date": "June 1, 2011"
         }],
-      "keywords": ["Thrill","Height","Forest", "Trees", "Outdoors", "Beef", "Fried"]
+      "keywords": ["Thrill","Height","Forest", "Trees", "Outdoors", "Beef", "Fried"],
+      "filename": "zip_lining.jpg"
     },
     "4": {
       "name": "Jade's Health Spa",
@@ -73,7 +76,8 @@
           "name": "San Bernardino",
           "opening_date": "June 1, 2014"
         }],
-      "keywords": ["Relax", "Message", "Health", "Deep Tissue", "Thai", "Back Massage"]
+      "keywords": ["Relax", "Message", "Health", "Deep Tissue", "Thai", "Back Massage"],
+      "filename": "jades_health_spa.jpg"
     },
     "5": {
       "name": "Swede Health Spa",
@@ -88,7 +92,8 @@
           "name": "San Bernardino",
           "opening_date": "June 1, 2012"
         }],
-      "keywords": ["Relax", "Message", "Health", "Swedish", "Hot Stone"]
+      "keywords": ["Relax", "Message", "Health", "Swedish", "Hot Stone"],
+      "filename": "swede_health_spa.jpg"
     },
     "6": {
       "name": "Awesome Golf",
@@ -103,7 +108,8 @@
           "name": "San Bernardino",
           "opening_date": "June 1, 2014"
         }],
-      "keywords": ["Golf", "Sport", "Relax", "Chill"]
+      "keywords": ["Golf", "Sport", "Relax", "Chill"],
+      "filename": "awesome_golf.jpg"
     },
     "7": {
       "name": "Go Ape",
@@ -118,7 +124,8 @@
           "name": "Portsmouth",
           "opening_date": "June 1, 2014"
         }],
-      "keywords": ["Zip Lining", "Adventurous", "Forest", "Thrill"]
+      "keywords": ["Zip Lining", "Adventurous", "Forest", "Thrill"],
+      "filename": "go_ape.jpg"
     },
     "8": {
       "name": "Scuba Divers Venice",
@@ -133,7 +140,8 @@
           "name": "Venice",
           "opening_date": "June 1, 2014"
         }],
-      "keywords": ["Scuba", "Diving", "Sea", "Thrill", "Water", "outdoors", "active"]
+      "keywords": ["Scuba", "Diving", "Sea", "Thrill", "Water", "outdoors", "active"],
+      "filename": "scuba_divers_venice.jpg"
     },
     "9": {
       "name": "Chiesa di San Zaccaria",
@@ -148,7 +156,8 @@
           "name": "Venice",
           "opening_date": "June 1, 1800"
         }],
-      "keywords": ["History", "Church", "Culture", "Crowded", "Cheap", "attraction", "tourist"]
+      "keywords": ["History", "Church", "Culture", "Crowded", "Cheap", "attraction", "tourist"],
+      "filename": "chiesa_di_san_zaccaria.jpg"
     },
     "10": {
       "name": "Saint Mark's Basilica",
@@ -163,7 +172,8 @@
           "name": "Venice",
           "opening_date": "February 1, 1810"
         }],
-      "keywords": ["History", "Church", "Culture", "Crowded", "Cheap", "attraction", "tourist"]
+      "keywords": ["History", "Church", "Culture", "Crowded", "Cheap", "attraction", "tourist"],
+      "filename": "saint_marks_basilica.jpg"
     },
     "11": {
       "name": "San Marco Campanile",
@@ -178,7 +188,8 @@
           "name": "Venice",
           "opening_date": "March 1, 1810"
         }],
-      "keywords": ["History", "Tower", "Culture", "Heights", "Views", "attraction", "tourist"]
+      "keywords": ["History", "Tower", "Culture", "Heights", "Views", "attraction", "tourist"],
+      "filename": "san_marco_campanile.jpg"
     },
     "12": {
       "name": "San Bernardino National Forest",
@@ -193,7 +204,8 @@
           "name": "San Bernardino",
           "opening_date": "November 1, 1970"
         }],
-      "keywords": ["Hiking", "Forest", "Nature", "Fitness", "Outdoors"]
+      "keywords": ["Hiking", "Forest", "Nature", "Fitness", "Outdoors"],
+      "filename": "san_bernardino_national_forest.jpg"
     },
     "13": {
       "name": "San Manuel Stadium",
@@ -208,7 +220,8 @@
           "name": "San Bernardino",
           "opening_date": "November 1, 1970"
         }],
-      "keywords": ["Stadium", "Sport", "Football", "Spectator"]
+      "keywords": ["Stadium", "Sport", "Football", "Spectator"],
+      "filename": "glen_helen_raceway.jpg"
     },
     "14": {
       "name": "Glen Helen Raceway",
@@ -223,7 +236,8 @@
           "name": "San Bernardino",
           "opening_date": "November 5, 1980"
         }],
-      "keywords": ["Bikes", "Motorcross", "Spectator", "Motoring"]
+      "keywords": ["Bikes", "Motorcross", "Spectator", "Motoring"],
+      "filename": "san_manuel_stadium.jpg"
     }
   }
 }
