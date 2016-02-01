@@ -195,8 +195,12 @@
       "avg_cost": "12",
       "currency": "GBP",
       "locations": [{
-          "name": "Portsmouth",
+          "name": "Orlando",
           "opening_date": "April 24, 2013"
+        },
+        {
+            "name": "San Bernardino",
+            "opening_date": "April 21, 2011"
         }],
       "keywords": ["burger", "beef", "chicken", "meat", "chips", "unhealthy", "breakfast", "waffles"]
     },
@@ -228,6 +232,32 @@
           "opening_date": "June 30, 2015"
         }],
       "keywords": ["pasta", "spagetti", "pizza", "gelato", "bread", "healthy"]
+    },
+    "16": {
+      "name": "Al Covo",
+      "service_type": [1],
+      "type_id": 2,
+      "avg_rating": 4.7,
+      "avg_cost": "15",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "June 25, 2015"
+        }],
+      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"]
+    },
+    "17": {
+      "name": "Al Covo",
+      "service_type": [1],
+      "type_id": 2,
+      "avg_rating": 4.5,
+      "avg_cost": "23",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Venice",
+          "opening_date": "June 25, 2015"
+        }],
+      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"]
     }
   }
 }
