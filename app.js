@@ -218,7 +218,6 @@ app.get('/api/recommend/all/:uid/:location/html', function(req, res) {
 		res.end(messages.not_recognised + " " + messages.id_not_recognised);
 	}
 
-
 	// Get all recommendations
 	var recommendedRest = calc.recommend(req.params.uid, 'restaurants', req.params.location);
 	var recommendedTrans = calc.recommend(req.params.uid, 'transport', req.params.location);
