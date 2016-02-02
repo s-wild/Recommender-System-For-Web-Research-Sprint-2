@@ -14,6 +14,7 @@ var hbs = exphbs.create({
     // Specify helpers which are only registered on this instance.
     helpers: {
         toLower: function(str) {
+        	if (typeof(str) == 'undefined') return false;
         	return str.toLowerCase();
         },
         eq: function(v1, v2) {

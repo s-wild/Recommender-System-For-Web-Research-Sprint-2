@@ -4,9 +4,6 @@
 <div class="blue lighten-5">
   <div class="icon-top center"><a class="btn-floating btn-large waves-effect waves-light green darken-1"><i class="fa fa-cutlery"></i></a></div>
   <div class="row">
-    {{#each restaurants.[0].keywords_from_user_history}}
-      <p>{{this.word}}</p>
-    {{/each}}
     {{#each restaurants}}
     {{#unless this.keywords_from_user_history}}
       <div class="col l3">
@@ -173,13 +170,22 @@
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star-half-o rating"></i>
             {{/if}}
-            {{#eq this.details.avg_rating "5"}}
+            {{#if (eq this.details.avg_rating "5")}}
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
-            {{/eq}}
+            {{/if}}
+
+            {{! Showing matching of keywords from user history visually }}
+            {{#each ../transport.[0].keywords_from_user_history}}
+              {{#if (inArray ../this.details.keywords (toLower this.word))}}
+                <p class="light-green">{{this.word}}</p>
+                {{else}}
+                  <p class="red accent-3">{{this.word}}</p>
+              {{/if}}
+            {{/each}}
 
           </div>
           <div class="card-action">
@@ -266,13 +272,22 @@
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star-half-o rating"></i>
             {{/if}}
-            {{#eq this.details.avg_rating "5"}}
+            {{#if (eq this.details.avg_rating "5")}}
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
-            {{/eq}}
+            {{/if}}
+
+            {{! Showing matching of keywords from user history visually }}
+            {{#each ../activities.[0].keywords_from_user_history}}
+              {{#if (inArray ../this.details.keywords (toLower this.word))}}
+                <p class="light-green">{{this.word}}</p>
+                {{else}}
+                  <p class="red accent-3">{{this.word}}</p>
+              {{/if}}
+            {{/each}}
 
           </div>
           <div class="card-action">
