@@ -216,6 +216,7 @@ function getFrequencyOfKeywords(brand, keywords) {
 	// Check for match
 	Object.keys(keywords).forEach(function(key) {
 		var word = keywords[key].word;
+		if (word == null) return;	// if no history, return
 		
 		if (lowercaseWords.indexOf(word.toLowerCase()) != -1) {
 			freq += 1;

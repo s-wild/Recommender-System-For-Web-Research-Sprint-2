@@ -300,6 +300,9 @@ function getCommonKeywords(rankedBrands, file) {
 	var commonKeywords = [];
 	var brandIDs = [];
 
+	// Return something that won't throw errors, but that handlebars will recognise as a non-empty array
+	if (!rankedBrands.length) return [{"no_history": "N/A"}];
+
 	// (a) Loop through visited brands, get brand ids
 	Object.keys(rankedBrands).forEach(function(brand) {
 		var brandID = rankedBrands[brand].brand_id;
@@ -331,9 +334,9 @@ function getCommonKeywords(rankedBrands, file) {
 
 			keywords.forEach(function(word){
 				var keywordFound = commonKeywords.map(function(e) { return e.word; }).indexOf(word.toLowerCase());
-
+				
 				// Check frequency of keyword
-				if (util.getFrequencyOfKeyword(file, brandIDs, word) > 1 ) {
+				if (util.getFrequencyOfKeyword(file, brandIDs, word) > 1 && keywordFound == -1) {
 					commonKeywords.push({ "word": word.toLowerCase(), "count": util.getFrequencyOfKeyword(file, brandIDs, word) });
 				}
 			});
