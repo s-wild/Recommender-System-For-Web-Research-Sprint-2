@@ -41,6 +41,10 @@ label {
 	left: 0;
 	width: 100%;
 }
+.keywords {
+	display: inline;
+	padding: 0 0.2em;
+}
 
 /*
 * Materize Overrides

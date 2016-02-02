@@ -78,13 +78,15 @@
             {{/if}}
 
             {{! Showing matching of keywords from user history visually }}
+            <div>
             {{#each ../restaurants.[0].keywords_from_user_history}}
               {{#if (inArray ../this.details.keywords (toLower this.word))}}
-                <p class="light-green">{{this.word}}</p>
+                <p class="light-green keywords">{{this.word}}</p>
                 {{else}}
-                  <p class="red accent-3">{{this.word}}</p>
+                  <p class="red accent-3 keywords">{{this.word}}</p>
               {{/if}}
             {{/each}}
+            </div>
           </div>
           <div class="card-action">
             <a href="#">Website</a>
@@ -193,7 +195,7 @@
           </div>
         </div>
       </div>
-    
+
     {{/unless}}
     {{else}}
         <p class="center"> No transport could be found</p>
