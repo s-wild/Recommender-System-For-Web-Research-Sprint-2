@@ -4,7 +4,9 @@
 <div class="blue lighten-5">
   <div class="icon-top center"><a class="btn-floating btn-large waves-effect waves-light green darken-1"><i class="fa fa-cutlery"></i></a></div>
   <div class="row">
-
+    {{#each restaurants.[0].keywords_from_user_history}}
+      <p>{{this.word}}</p>
+    {{/each}}
     {{#each restaurants}}
     {{#unless this.keywords_from_user_history}}
       <div class="col l3">
@@ -19,6 +21,8 @@
           </div>
           <div class="card-content">
             <p>{{{this.details.info}}}</p>
+
+            {{! Star rating conditionals }}
 
             {{#if (and (mte this.details.avg_rating 1) (lt this.details.avg_rating 1.5)
             )}}
@@ -68,14 +72,22 @@
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star-half-o rating"></i>
             {{/if}}
-            {{#equal this.details.avg_rating "5"}}
+            {{#if (eq this.details.avg_rating "5")}}
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
-            {{/equal}}
+            {{/if}}
 
+            {{! Showing matching of keywords from user history visually }}
+            {{#each ../restaurants.[0].keywords_from_user_history}}
+              {{#if (inArray ../this.details.keywords (toLower this.word))}}
+                <p class="light-green">{{this.word}}</p>
+                {{else}}
+                  <p class="red accent-3">{{this.word}}</p>
+              {{/if}}
+            {{/each}}
           </div>
           <div class="card-action">
             <a href="#">Website</a>
@@ -111,6 +123,8 @@
           <div class="card-content">
             <p>{{{this.details.info}}}</p>
 
+            {{! Star rating conditionals }}
+
             {{#if (and (mte this.details.avg_rating 1) (lt this.details.avg_rating 1.5)
             )}}
               <i class="fa fa-star rating"></i>
@@ -159,13 +173,13 @@
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star-half-o rating"></i>
             {{/if}}
-            {{#equal this.details.avg_rating "5"}}
+            {{#eq this.details.avg_rating "5"}}
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
-            {{/equal}}
+            {{/eq}}
 
           </div>
           <div class="card-action">
@@ -202,6 +216,8 @@
           <div class="card-content">
             <p>{{{this.details.info}}}</p>
 
+            {{! Star rating conditionals }}
+
             {{#if (and (mte this.details.avg_rating 1) (lt this.details.avg_rating 1.5)
             )}}
               <i class="fa fa-star rating"></i>
@@ -250,13 +266,13 @@
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star-half-o rating"></i>
             {{/if}}
-            {{#equal this.details.avg_rating "5"}}
+            {{#eq this.details.avg_rating "5"}}
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
-            {{/equal}}
+            {{/eq}}
 
           </div>
           <div class="card-action">

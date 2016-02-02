@@ -13,25 +13,11 @@ app.set('views', './views');
 var hbs = exphbs.create({
     // Specify helpers which are only registered on this instance.
     helpers: {
-        equal: function(lvalue, rvalue, options) {
-	      if (arguments.length < 3)
-	          throw new Error("Handlebars Helper equal needs 2 parameters");
-	      if( lvalue!=rvalue ) {
-	          return options.inverse(this);
-	      } else {
-	          return options.fn(this);
-	      }
-		},
-        compare: function (v1, operator, v2, options) {
-        	if (arguments.length < 4)
-        		throw new Error("Handlebars Helper compare needs 3 parameters");
-        	
-        	switch(operator) {
-        		case ">=":
-        			return (v1 >= v2) ? options.fn(this) : options.inverse(this);
-        		case "<=":
-        			return (v1 <= v2) ? options.fn(this) : options.inverse(this);
-        	}
+        toLower: function(str) {
+        	return str.toLowerCase();
+        },
+        eq: function(v1, v2) {
+        	return v1 == v2;
         },
         and: function (v1, v2) {
         	return v1 && v2;
@@ -44,6 +30,13 @@ var hbs = exphbs.create({
     	},
     	mte: function(v1, v2) {
     		return v1 >= v2;
+    	},
+    	inArray: function(array, val) {
+    		var isFound = false;
+    		array.forEach(function(word) {
+    			if (word.toLowerCase() == val) isFound = true;
+    		});
+    		return isFound;
     	}
 
     }
