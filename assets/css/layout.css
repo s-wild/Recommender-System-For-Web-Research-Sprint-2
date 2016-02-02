@@ -12,6 +12,14 @@
 	padding-top: 1.5em;
 	padding-bottom: 1em;
 }
+.ellipsis {
+	display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+	height: 2.9em;
+	overflow: hidden;
+}
+
 /*
 * Font Styling
 */

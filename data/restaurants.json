@@ -107,6 +107,7 @@
     },
     "6": {
       "name": "Nandos",
+      "info": "Afro-Portuguese chain restaurant serving flame-grilled chicken in spicy chilli sauce.",
       "service_type": [1, 2],
       "type_id": 6,
       "avg_rating": 3.8,
@@ -121,6 +122,7 @@
     },
     "7": {
       "name": "Rubios",
+      "info":"At Rubio’s, it’s our mission to serve coastal food that not only tastes great, but that you can feel great about eating. It’s why we only source, slice and sizzle quality ingredients and have for years.",
       "service_type": [1, 2],
       "type_id": 3,
       "avg_rating": 3.7,
@@ -135,6 +137,7 @@
     },
     "8": {
       "name": "Crab Shack",
+      "info":"We bring the shore to you.",
       "service_type": [1, 2],
       "type_id": 7,
       "avg_rating": 4.8,
@@ -149,6 +152,7 @@
     },
     "9": {
       "name": "Tuna Time",
+      "info": "Modern Japanese restaurant group with two high profile restaurants in Southern California, Joe sushi serves inventive Japanese cuisine ranging from sushi, roll and creative salads. Tune time sushi also provides private party and lounges and a vibrant bar scene at most locations.",
       "service_type": [1],
       "type_id": 8,
       "avg_rating": 4,
@@ -163,6 +167,7 @@
     },
     "10": {
       "name": "Magic Wok",
+      "info": "Magic Wok is a cornerstone in the Sunnyvale community and has been recognized for its outstanding Chinese cuisine, excellent service and friendly staff.",
       "service_type": [1],
       "type_id": 4,
       "avg_rating": 3.9,
@@ -177,6 +182,7 @@
     },
     "11": {
       "name": "Mumbai Spice",
+      "info": "Order delicious Indian takeaway from Mumbai Spice Fusion in Portsmouth; sit back, relax and enjoy your food delivered to your door.",
       "service_type": [1, 2],
       "type_id": 9,
       "avg_rating": 4.1,
@@ -191,6 +197,7 @@
     },
     "12": {
       "name": "Jags",
+      "info": "JAGS@119 follows in its predecessors footsteps of keeping Portsmouth dwellers happy with the tastes of ‘Muricaaa.",
       "service_type": [1],
       "type_id": 2,
       "avg_rating": 3.9,
@@ -223,6 +230,7 @@
     },
     "14": {
       "name": "Burger King",
+      "info": "Burger King, often abbreviated as BK, is an American global chain of hamburger fast food restaurants.",
       "service_type": [1],
       "type_id": 2,
       "avg_rating": 3.1,
@@ -240,6 +248,7 @@
     },
     "15": {
       "name": "Gam Gam",
+      "info":"Relaxed, canalfront restaurant in the former Jewish ghetto, providing imaginative Kosher dishes.",
       "service_type": [1],
       "type_id": 2,
       "avg_rating": 4.4,
@@ -254,6 +263,7 @@
     },
     "16": {
       "name": "Al Covo",
+      "info":"Refined, updated Venetian classics in a charming, rustic-style restaurant, with outside tables.",
       "service_type": [1],
       "type_id": 2,
       "avg_rating": 4.7,
@@ -268,6 +278,7 @@
     },
     "17": {
       "name": "Osteria Antico Giardinetto",
+      "info": "Cozy, family-run restaurant with a rustic interior & a fish-centric menu of Med/Venetian dishes.",
       "service_type": [1],
       "type_id": 2,
       "avg_rating": 4.5,
@@ -282,6 +293,7 @@
     },
     "18": {
       "name": "La Porta d'Acqua",
+      "info": "Cozy, family-run restaurant with a rustic interior & a fish-centric menu of Med/Venetian dishes.",
       "service_type": [1],
       "type_id": 2,
       "avg_rating": 4.5,
@@ -296,6 +308,7 @@
     },
     "19": {
       "name": "Antica Trattoria Poste Vecie",
+      "info":"Family-run restaurant with a rustic interior & a fish-centric menu of Med/Venetian dishes.",
       "service_type": [1],
       "type_id": 2,
       "avg_rating": 4.5,
@@ -310,6 +323,7 @@
     },
     "20": {
       "name": "Osteria Enoteca San Marco",
+      "info": "Cozy, family-run restaurant with a rustic interior & a fish-centric menu of Med/Venetian dishes.",
       "service_type": [1],
       "type_id": 2,
       "avg_rating": 4.5,

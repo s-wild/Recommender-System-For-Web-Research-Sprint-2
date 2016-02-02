@@ -19,13 +19,8 @@ $(document).ready(function() {
 	      }
 	    }
 	  });
+	});
 });
-
-});
-
-
-
-
 
 function getRecommendations() {
 

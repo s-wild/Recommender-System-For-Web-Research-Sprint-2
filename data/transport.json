@@ -14,6 +14,7 @@
   "brands": {
     "1": {
       "name": "John's Taxis",
+      "info": "Covers all your transport needs from taxi car hire, people carrier, minibus, coach hire, courier, executive and wedding cars.",
       "service_type": [1, 2],
       "type_id": [2],
       "avg_rating": 3.2,
@@ -28,6 +29,7 @@
     },
     "2": {
       "name": "National Express",
+      "info": "National Express is an intercity coach operator providing services throughout England, Scotland and Wales. It is a subsidiary of the National Express Group.",
       "service_type": [1],
       "type_id": [3],
       "avg_rating": 3.2,
@@ -42,6 +44,7 @@
     },
     "3": {
       "name": "Southern Rail",
+      "info": "Visit Southern to purchase anytime, anytime day, off-peak, Off-Peak day, super off-peak day, advance tickets and take advantage of the train ticket offers",
       "service_type": [1],
       "type_id": [4],
       "avg_rating": 3.2,
@@ -56,6 +59,7 @@
     },
     "4": {
       "name": "Venice Rail",
+      "info":"Visit Venice Rail to purchase anytime, anytime day, off-peak, Off-Peak day, super off-peak day, advance tickets and take advantage of the train ticket offers",
       "service_type": [1],
       "type_id": [4],
       "avg_rating": 3.1,
@@ -70,6 +74,7 @@
     },
     "5": {
       "name": "Cali Rail",
+      "info":"Visit Venice Rail to purchase anytime, anytime day, off-peak, Off-Peak day, super off-peak day, advance tickets and take advantage of the train ticket offers",
       "service_type": [1],
       "type_id": [4],
       "avg_rating": 3.1,
@@ -84,6 +89,7 @@
     },
     "6": {
       "name": "Mario's Gondolas",
+      "info": "The city of Venice sets official rates for gondola rides, which started at €80 for 40 minutes the last time we checked.",
       "service_type": [1, 2],
       "type_id": [5],
       "avg_rating": 4.7,
@@ -98,6 +104,7 @@
     },
     "7": {
       "name": "Venice Canal Bus Boats",
+      "info": "For the visitor to Venice you have 2 options to get around, walk or by water. If you don't want to walk the water bus service is the affordable way to get around.",
       "service_type": [2],
       "type_id": [5],
       "avg_rating": 4.1,
@@ -112,6 +119,7 @@
     },
     "8": {
       "name": "Europa Car",
+      "info": "Book car hire from £13 a day. Choose from a range of comfortable and reliable hire cars and vans with Europcar.",
       "service_type": [2],
       "type_id": [5],
       "avg_rating": 4.1,
@@ -126,6 +134,7 @@
     },
     "9": {
       "name": "Hertz",
+      "info": "Book car hire and van hire across the UK and worldwide with Hertz. Our Best Rates Guarantee assures you receive the best rates when you book directly",
       "service_type": [2],
       "type_id": [5],
       "avg_rating": 4.1,
@@ -140,6 +149,7 @@
     },
     "10": {
       "name": "Enterprise",
+      "info": "Book car hire and van hire across the UK and worldwide with Hertz. Our Best Rates Guarantee assures you receive the best rates when you book directly",
       "service_type": [2],
       "type_id": [5],
       "avg_rating": 4.1,
@@ -164,6 +174,7 @@
     },
     "9": {
       "name": "Aqua Cars",
+      "info": "Portsmouth's largest taxi and private car hire company. Aqua Cars the Driving Force in Portsmouth.",
       "service_type": [2],
       "type_id": [6],
       "avg_rating": 4.1,
@@ -178,6 +189,7 @@
     },
     "10": {
       "name": "Andicars",
+      "info": "The largest Minicab, corporate & Airport Transfer firm in Havant and Waterlooville area, also serving Portsmouth. Up to 40% cheaper than a hackney Taxi.",
       "service_type": [2],
       "type_id": [6],
       "avg_rating": 4.1,
@@ -192,6 +204,7 @@
     },
     "11": {
       "name": "First Group Buses",
+      "info":"We have bus routes serving 40 of the UK's largest towns and cities providing great value public transport for students, commuters",
       "service_type": [2],
       "type_id": [2],
       "avg_rating": 4.1,

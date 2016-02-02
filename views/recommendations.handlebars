@@ -17,7 +17,7 @@
             {{/if}}
           </div>
           <div class="card-content">
-            <p>{{{this.details.info}}}</p>
+            <p class="ellipsis multiline">{{{this.details.info}}}</p>
 
             {{! Star rating conditionals }}
 
@@ -81,7 +81,7 @@
             <div>
             {{#each ../restaurants.[0].keywords_from_user_history}}
               {{#if (inArray ../this.details.keywords (toLower this.word))}}
-                <p class="light-green keywords">{{this.word}}</p>
+                <p class="light-green keywords ellipsis multiline">{{this.word}}</p>
                 {{else}}
                   <p class="red accent-3 keywords">{{this.word}}</p>
               {{/if}}
@@ -120,7 +120,7 @@
             {{/if}}
           </div>
           <div class="card-content">
-            <p>{{{this.details.info}}}</p>
+            <p class="ellipsis multiline">{{{this.details.info}}}</p>
 
             {{! Star rating conditionals }}
 
@@ -181,13 +181,16 @@
             {{/if}}
 
             {{! Showing matching of keywords from user history visually }}
+            <div>
             {{#each ../transport.[0].keywords_from_user_history}}
               {{#if (inArray ../this.details.keywords (toLower this.word))}}
-                <p class="light-green">{{this.word}}</p>
+
+                <p class="light-green keywords ellipsis multiline">{{this.word}}</p>
                 {{else}}
-                  <p class="red accent-3">{{this.word}}</p>
+                  <p class="red accent-3 keywords">{{this.word}}</p>
               {{/if}}
             {{/each}}
+            </div>
 
           </div>
           <div class="card-action">
@@ -222,10 +225,9 @@
             {{/if}}
           </div>
           <div class="card-content">
-            <p>{{{this.details.info}}}</p>
+            <p class="ellipsis multiline">{{{this.details.info}}}</p>
 
             {{! Star rating conditionals }}
-
             {{#if (and (mte this.details.avg_rating 1) (lt this.details.avg_rating 1.5)
             )}}
               <i class="fa fa-star rating"></i>
@@ -281,15 +283,16 @@
               <i class="fa fa-star rating"></i>
               <i class="fa fa-star rating"></i>
             {{/if}}
-
             {{! Showing matching of keywords from user history visually }}
+            <div>
             {{#each ../activities.[0].keywords_from_user_history}}
               {{#if (inArray ../this.details.keywords (toLower this.word))}}
-                <p class="light-green">{{this.word}}</p>
+                <p class="light-green keywords">{{this.word}}</p>
                 {{else}}
-                  <p class="red accent-3">{{this.word}}</p>
+                  <p class="red accent-3 keywords">{{this.word}}</p>
               {{/if}}
             {{/each}}
+            </div>
 
           </div>
           <div class="card-action">

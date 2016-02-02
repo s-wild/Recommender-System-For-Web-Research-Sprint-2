@@ -18,7 +18,8 @@
   },
   "brands": {
     "1": {
-      "name": "Skidder's Skiing Resort",
+      "name": "Ski Big Bear",
+      "info":"Ski Big Bear is a skiing and snowboarding resort located in Lackawaxen Township, Pike County, Pennsylvania.",
       "service_type": [1,2],
       "type_id": [1,2],
       "avg_rating": 4.4,
@@ -35,6 +36,7 @@
     },
     "2": {
       "name": "Jet Skiing",
+      "info":"Jetski Safaris brings all the exhilaration of jetskiing to a wider audience in a safe environment. Under the guidance of a Personal Watercraft Instructor jetski hire is now possible.",
       "service_type": [3],
       "type_id": [1,2],
       "avg_rating": 4.4,
@@ -51,6 +53,7 @@
     },
     "3": {
       "name": "Zip Lining",
+      "info":"Guinness World Records has Declared Screaming Eagle at Banning Mills (us) The Longest & Largest Zip line Canopy Tour in the World!! No Kidding !!",
       "service_type": [1,2],
       "type_id": [1,2],
       "avg_rating": 4.4,
@@ -67,6 +70,7 @@
     },
     "4": {
       "name": "Jade's Health Spa",
+      "info":"Spas blend pure luxury with leading-edge health and fitness breaks. We have four country health spa hotels",
       "service_type": [4,3],
       "type_id": [1],
       "avg_rating": 4,
@@ -83,6 +87,7 @@
     },
     "5": {
       "name": "Swede Health Spa",
+      "info":"The best spas and spa breaks in or near San Bernardino. Select from a range of top luxury spas and health spas ",
       "service_type": [4,3],
       "type_id": [1],
       "avg_rating": 4,
@@ -98,7 +103,8 @@
       "filename": "swede_health_spa.jpg"
     },
     "6": {
-      "name": "Awesome Golf",
+      "name": "Frank Hillpot Golf",
+      "info":"Frank Hillpot, our golf professional, is available for individual or group lessons and Ron Stockton is available by advanced appointment for individual lessons.",
       "service_type": [3, 5],
       "type_id": [1,2],
       "avg_rating": 3,
@@ -115,6 +121,7 @@
     },
     "7": {
       "name": "Go Ape",
+      "info":"Days out with friends. Outdoor adventure activities in the most beautiful forests in the UK.",
       "service_type": [3, 5],
       "type_id": [1,2],
       "avg_rating": 3,
@@ -131,6 +138,7 @@
     },
     "8": {
       "name": "Scuba Divers Venice",
+      "info":"Scuba diving is a mode of underwater diving in which a scuba diver uses a self-contained underwater breathing apparatus (scuba) to breathe underwater.",
       "service_type": [1, 6],
       "type_id": [1,2],
       "avg_rating": 4.5,
@@ -147,6 +155,7 @@
     },
     "9": {
       "name": "Chiesa di San Zaccaria",
+      "info":"The Church of San Zaccaria is a 15th-century former monastic church in central Venice, Italy. It is a large edifice, located in the Campo San Zaccaria",
       "service_type": [7, 8],
       "type_id": [1,2],
       "avg_rating": 4.5,
@@ -163,6 +172,7 @@
     },
     "10": {
       "name": "Saint Mark's Basilica",
+      "info":"The Patriarchal Cathedral Basilica of Saint Mark is the cathedral church of the Roman Catholic Archdiocese of Venice, northern Italy. ",
       "service_type": [7, 8],
       "type_id": [1,2],
       "avg_rating": 4.5,
@@ -179,6 +189,7 @@
     },
     "11": {
       "name": "San Marco Campanile",
+      "info":"St Mark's Campanile is the bell tower of St Mark's Basilica in Venice, Italy, located in the Piazza San Marco. It is one of the most recognizable symbols of the city.",
       "service_type": [7, 8],
       "type_id": [1,2],
       "avg_rating": 4.5,
@@ -195,6 +206,7 @@
     },
     "12": {
       "name": "San Bernardino National Forest",
+      "info":"The San Bernardino National Forest is a federally managed forest encompassing 823,816 acres of which 677,982 acres are federal.",
       "service_type": [1, 3, 5, 6],
       "type_id": [1,2],
       "avg_rating": 4.5,
@@ -211,6 +223,7 @@
     },
     "13": {
       "name": "San Manuel Stadium",
+      "info":"San Manuel Stadium is an open-air ballpark in downtown San Bernardino, California, USA. It opened in 1996, replacing Fiscalini Field as the home park of Minor League Baseball's Inland Empire 66ers of San Bernardino.",
       "service_type": [5],
       "type_id": [2],
       "avg_rating": 4.2,
@@ -227,6 +240,7 @@
     },
     "14": {
       "name": "Glen Helen Raceway",
+      "info": "High-flying, 256-acre motocross track with grandstand seating for up to 3,000 people.",
       "service_type": [5, 2, 9],
       "type_id": [2],
       "avg_rating": 4.4,
@@ -243,6 +257,7 @@
     },
     "15": {
       "name": "Gunwharf Shopping Centre",
+      "info":"Gunwharf Quays is an outlet retail destination with 90 outlet stores and 30 restaurants, bars and cafés located in Portsmouth, UK. It was constructed in the early 21st century on the site of what had once been HM Gunwharf, Portsmouth.",
       "service_type": [10],
       "type_id": [2],
       "avg_rating": 4.4,
@@ -259,6 +274,7 @@
     },
     "16": {
       "name": "Fratton Park Stadium",
+      "info":"Fratton Park is a football stadium in the English city-port of Portsmouth. It has been the home of professional club Portsmouth F.C. since its construction in 1898.",
       "service_type": [5],
       "type_id": [2],
       "avg_rating": 4.2,
@@ -275,6 +291,7 @@
     },
     "17": {
       "name": "HMS Victory",
+      "info":"Museum within the world's oldest commissioned warship which gained fame at the Battle of Trafalgar.",
       "service_type": [7, 8],
       "type_id": [1, 2],
       "avg_rating": 4.7,
@@ -291,6 +308,7 @@
     },
     "18": {
       "name": "Submarine Museum",
+      "info":"The Royal Navy Submarine Museum at Gosport is a museum tracing the international history of submarine development from the age of Alexander the Great to the present day.",
       "service_type": [7, 8],
       "type_id": [1, 2],
       "avg_rating": 4.7,
@@ -307,6 +325,7 @@
     },
     "19": {
       "name": "Blue Reef Aquarium",
+      "info": "Local fish, sharks and rays, tropical species in an ocean display, plus underwater viewing tunnel.",
       "service_type": [7, 8],
       "type_id": [1, 2],
       "avg_rating": 4.7,
@@ -323,6 +342,7 @@
     },
     "20": {
       "name": "Isle of Wight Day Trip",
+      "info": "The Isle of Wight /ˈaɪl əv ˈwaɪt/ is a county and the largest and second most populous island in England. It is located in the English Channel, about 4 mi off the coast of Hampshire and is separated from mainland Great Britain by the Solent.",
       "service_type": [11],
       "type_id": [1, 2],
       "avg_rating": 4.7,
