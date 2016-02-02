@@ -25,7 +25,7 @@ var hbs = exphbs.create({
         compare: function (v1, operator, v2, options) {
         	if (arguments.length < 4)
         		throw new Error("Handlebars Helper compare needs 3 parameters");
-        	
+
         	switch(operator) {
         		case ">=":
         			return (v1 >= v2) ? options.fn(this) : options.inverse(this);
@@ -257,7 +257,7 @@ app.get('/api/', function(req, res) {
 
 
 // Start server
-var server = app.listen(3000, function() {
+var server = app.listen(3000, function() { 
 	var host = server.address().address;
 	var port = server.address().port;
 
