@@ -193,6 +193,9 @@ app.get('/api/users/:uid/:file/:brandid', function(req, res) {
 	}
 });
 
+// Get frequency of keywords from user history
+
+
 
 
 // RECOMMENDER ROUTES

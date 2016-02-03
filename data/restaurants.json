@@ -339,6 +339,7 @@
     },
     "21": {
       "name": "The Mermaid",
+      "info": "A sea side restaurant that serves sea food from around the Gower.",
       "service_type": [1],
       "type_id": 10,
       "avg_rating": 4.5,
@@ -356,8 +357,9 @@
     },
     "22": {
       "name": "Strada",
+      "info": "Offering high quality, fresh Italian cuisine, you are sure to find something on the menu.",
       "service_type": [1],
-      "type_id": 10,
+      "type_id": 1,
       "avg_rating": 4.5,
       "avg_cost": "23",
       "currency": "GBP",
@@ -373,6 +375,7 @@
     },
     "23": {
       "name": "The Links Tavern",
+      "info": "A little tavern, situated near one of the main attractions of the area - the golf course! It has seating inside and out, so you can find somewhere to enjoy the delicious food, no matter the weather.",
       "service_type": [1],
       "type_id": 10,
       "avg_rating": 4.2,

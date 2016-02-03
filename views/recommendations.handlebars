@@ -81,9 +81,13 @@
             <div>
             {{#each ../restaurants.[0].keywords_from_user_history}}
               {{#if (inArray ../this.details.keywords (toLower this.word))}}
-                <p class="light-green keywords ellipsis multiline">{{this.word}}</p>
-                {{else}}
-                  <p class="red accent-3 keywords">{{this.word}}</p>
+                <div class="chip light-green chip-keyword">
+                  {{this.word}}
+                </div>
+              {{else}}
+                <div class="chip red accent-3 chip-keyword">
+                  {{this.word}}
+                </div>
               {{/if}}
             {{/each}}
             </div>
@@ -184,10 +188,13 @@
             <div>
             {{#each ../transport.[0].keywords_from_user_history}}
               {{#if (inArray ../this.details.keywords (toLower this.word))}}
-
-                <p class="light-green keywords ellipsis multiline">{{this.word}}</p>
-                {{else}}
-                  <p class="red accent-3 keywords">{{this.word}}</p>
+                <div class="chip light-green chip-keyword">
+                  {{this.word}}
+                </div>
+              {{else}}
+                <div class="chip red accent-3 chip-keyword">
+                  {{this.word}}
+                </div>
               {{/if}}
             {{/each}}
             </div>
@@ -287,9 +294,13 @@
             <div>
             {{#each ../activities.[0].keywords_from_user_history}}
               {{#if (inArray ../this.details.keywords (toLower this.word))}}
-                <p class="light-green keywords">{{this.word}}</p>
-                {{else}}
-                  <p class="red accent-3 keywords">{{this.word}}</p>
+                <div class="chip light-green chip-keyword">
+                  {{this.word}}
+                </div>
+              {{else}}
+                <div class="chip red accent-3 chip-keyword">
+                  {{this.word}}
+                </div>
               {{/if}}
             {{/each}}
             </div>

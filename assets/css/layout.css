@@ -53,6 +53,9 @@ label {
 	display: inline;
 	padding: 0 0.2em;
 }
+.chip-keyword {
+	margin-top: 1em;
+}
 
 /*
 * Materize Overrides
