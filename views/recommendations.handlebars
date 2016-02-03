@@ -15,6 +15,9 @@
             {{#if this.age}}
               <span class="new badge new-store light-green"></span>
             {{/if}}
+            {{#if this.mean_value }}
+              <a class="btn-floating btn-large waves-effect waves-light yellow darken-2 match-indicator">{{{round this.mean_value }}}%</a>
+            {{/if}}
           </div>
           <div class="card-content">
             <p class="ellipsis multiline">{{{this.details.info}}}</p>
@@ -121,6 +124,9 @@
             <span class="card-title">{{{this.details.name}}}</span>
             {{#if this.age}}
               <span class="new badge new-store light-green"></span>
+            {{/if}}
+            {{#if this.mean_value }}
+              <a class="btn-floating btn-large waves-effect waves-light yellow darken-2 match-indicator">{{{round this.mean_value }}}%</a>
             {{/if}}
           </div>
           <div class="card-content">
@@ -229,6 +235,9 @@
             <span class="card-title">{{{this.details.name}}}</span>
             {{#if this.age}}
               <span class="new badge new-store light-green"></span>
+            {{/if}}
+            {{#if this.mean_value }}
+              <a class="btn-floating btn-large waves-effect waves-light yellow darken-2 match-indicator">{{{round this.mean_value }}}%</a>
             {{/if}}
           </div>
           <div class="card-content">

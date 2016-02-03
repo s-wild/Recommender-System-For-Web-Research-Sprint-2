@@ -20,6 +20,9 @@ var hbs = exphbs.create({
         eq: function(v1, v2) {
         	return v1 == v2;
         },
+        neq: function(v1, v2) {
+        	return v1 != v2;
+        },
         and: function (v1, v2) {
         	return v1 && v2;
     	},
@@ -28,6 +31,9 @@ var hbs = exphbs.create({
     	},
     	lte: function (v1, v2) {
         	return v1 <= v2;
+    	},
+    	mt: function (v1, v2) {
+    		return v1 >= v2;
     	},
     	mte: function(v1, v2) {
     		return v1 >= v2;
@@ -38,6 +44,10 @@ var hbs = exphbs.create({
     			if (word.toLowerCase() == val) isFound = true;
     		});
     		return isFound;
+    	},
+    	round: function(val) {
+    		var rounded = Math.round(val * 100) / 100;
+    		return rounded;
     	}
 
     }
