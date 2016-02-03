@@ -213,12 +213,10 @@ app.get('/api/frequencyofkeywords/:uid', function(req, res) {
 		freqOfKeywords[sector] = commonKeywords;
 	});
 
-	//console.log(freqOfKeywords);
-
 	// Simon - replace file name with your own handlebars file
-	// res.render('handlebarsfile', {
-	// 	keywordFreq: freqOfKeywords
-	// });
+	res.render('wordcloud', {
+	   keywordFreq: freqOfKeywords
+	});
 
 	res.send('Thank you');
 
