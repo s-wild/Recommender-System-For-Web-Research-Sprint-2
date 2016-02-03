@@ -8,7 +8,8 @@
     "6": "Portugese",
     "7": "Seafood",
     "8": "Sushi",
-    "9": "Indian"
+    "9": "Indian",
+    "10": "British"
   },
   "services": {
     "1": "Takeaway",
@@ -335,6 +336,54 @@
         }],
       "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"],
       "filename": "antica_trattoria_poste_vecie.jpg"
+    },
+    "21": {
+      "name": "The Mermaid",
+      "service_type": [1],
+      "type_id": 10,
+      "avg_rating": 4.5,
+      "avg_cost": "23",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "June 25, 2015"
+        }, {
+          "name": "Swansea",
+          "opening_date": "June 12, 2009"
+        }],
+      "keywords": ["steak", "seafood", "fish", "chips"],
+      "filename": "mermaid.jpg"
+    },
+    "22": {
+      "name": "Strada",
+      "service_type": [1],
+      "type_id": 10,
+      "avg_rating": 4.5,
+      "avg_cost": "23",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "February 25, 2015"
+        }, {
+          "name": "Cheltenham",
+          "opening_date": "June 12, 2009"
+        }],
+      "keywords": ["spaghetti", "pasta", "pizza"],
+      "filename": "strada.jpg"
+    },
+    "23": {
+      "name": "The Links Tavern",
+      "service_type": [1],
+      "type_id": 10,
+      "avg_rating": 4.2,
+      "avg_cost": "23",
+      "currency": "GBP",
+      "locations": [{
+          "name": "Portsmouth",
+          "opening_date": "March 14, 2011"
+        }],
+      "keywords": ["steak", "fried", "chips", "golf"],
+      "filename": "links_tavern.jpg"
     }
   }
 }
