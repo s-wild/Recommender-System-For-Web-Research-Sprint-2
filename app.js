@@ -238,11 +238,12 @@ app.get('/api/frequencyofkeywords/:uid', function(req, res) {
 		freqOfKeywords[sector] = commonKeywords;
     allKeyWords = freqOfKeywords.restaurants;
 
+
     restKeywords = [];
     Object.keys(allKeyWords).forEach(function(key) {
   		var word = allKeyWords[key].word;
       var count = allKeyWords[key].count;
-      restKeywords.push([word, " "+count]);
+      restKeywords.push([word, count]);
   	});
 
     console.log("restKeywords",restKeywords);
