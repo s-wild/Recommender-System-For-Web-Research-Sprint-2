@@ -9,9 +9,20 @@
  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
  <script src="../assets/js/communicator.js"></script>
+
+ <!-- Load wordcloud -->
+ <script src="../assets/js/wordcloud2.js"></script>
+
 </head>
 <body class="blue lighten-1">
-  
+
+  <!-- Word cloud will appear here -->
+  <div class="row">
+    <div class="grid-example col l6 offset-l3">
+      <canvas id="wordCloud" width=600 height=200></canvas>
+    </div>
+  </div>
+
   <div class="row rs-title-box">
     <div class="grid-example col s12"><h2 class="flow-text">Recommender System</h2></div>
   </div>

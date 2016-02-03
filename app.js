@@ -209,18 +209,42 @@ app.get('/api/frequencyofkeywords/:uid', function(req, res) {
 
 		// Loop through rankings, looking for common keywords
 		var commonKeywords = calc.getCommonKeywords(history, file);
+    Array.prototype.contains = function(v) {
+    for(var i = 0; i < this.length; i++) {
+        if(this[i] === v) return true;
+    }
+    return false;
+    };
 
+    Array.prototype.unique = function() {
+        var arr = [];
+        for(var i = 0; i < this.length; i++) {
+            if(!arr.contains(this[i])) {
+                arr.push(this[i]);
+            }
+        }
+        return arr;
+    }
 		freqOfKeywords[sector] = commonKeywords;
+    allKeyWords = freqOfKeywords.restaurants;
+
+    restKeywords = [];
+    Object.keys(allKeyWords).forEach(function(key) {
+  		var word = allKeyWords[key].word;
+      word = word.toString().replace(/"/g, '\\"')
+      var count = allKeyWords[key].count;
+  		if (word == null) return;
+      restKeywords.push([word, " "+count]);
+  	});
+
+    //console.log("restKeywords",restKeywords);
+
 	});
 
-	//console.log(freqOfKeywords);
-
 	// Simon - replace file name with your own handlebars file
-	// res.render('handlebarsfile', {
-	// 	keywordFreq: freqOfKeywords
-	// });
+	res.end(JSON.stringify(restKeywords));
 
-	res.send('Thank you');
+  //res.send(JSON.stringify(freqOfKeywords));
 
 });
 

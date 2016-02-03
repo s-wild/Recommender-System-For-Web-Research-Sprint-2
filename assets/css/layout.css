@@ -56,7 +56,16 @@ label {
 .chip-keyword {
 	margin-top: 1em;
 }
-
+/* Word Cloud */
+div#wordCloud {
+	width: 500px;
+	margin: 0 auto;
+}
+canvas#wordCloud {
+	border: 1px solid black;
+	background-color: #fff;
+	margin: 0 auto;
+}
 /*
 * Materize Overrides
 */
