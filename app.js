@@ -194,7 +194,35 @@ app.get('/api/users/:uid/:file/:brandid', function(req, res) {
 });
 
 // Get frequency of keywords from user history
+app.get('/api/frequencyofkeywords/:uid', function(req, res) {
 
+	var uid = req.params.uid;
+	var sectors = ['restaurants', 'transport', 'activities'];
+	var freqOfKeywords = new Object();
+
+	// Compile object that has common keywords in each sector
+	sectors.forEach(function(sector) {
+		var file = sector;
+
+		// Look at user history
+		var history = info.userActivity(uid, file);
+
+		// Loop through rankings, looking for common keywords
+		var commonKeywords = calc.getCommonKeywords(history, file);
+
+		freqOfKeywords[sector] = commonKeywords;
+	});
+
+	//console.log(freqOfKeywords);
+
+	// Simon - replace file name with your own handlebars file
+	// res.render('handlebarsfile', {
+	// 	keywordFreq: freqOfKeywords
+	// });
+
+	res.send('Thank you');
+
+});
 
 
 

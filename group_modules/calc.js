@@ -2,7 +2,8 @@ module.exports = {
 	cheapest : getCheapest,
 	service_match: getServiceMatch,
 	recommend : getRecommendedEntities,
-	getBrandCount: getBrandCount
+	getBrandCount: getBrandCount,
+	getCommonKeywords: getCommonKeywords
 };
 
 // Data files
@@ -138,7 +139,7 @@ function getRecommendedEntities(uid, file, location) {
 	toRecommend.insert(0, { "keywords_from_user_history": commonKeywords });
 
 	// TEST LOGS
-	//console.log(frequencyList);
+	console.log(frequencyList);
 	//console.log(visitShare);
 	//console.log(ratings);
 	//console.log(newRatings);
@@ -306,7 +307,10 @@ function getCommonKeywords(rankedBrands, file) {
 	// (a) Loop through visited brands, get brand ids
 	Object.keys(rankedBrands).forEach(function(brand) {
 		var brandID = rankedBrands[brand].brand_id;
-		brandIDs.push(brandID);
+		// Needed, for duplicate brand visits
+		if (brandIDs.indexOf(brandID) == -1) 
+			brandIDs.push(brandID);
+		
 	});
 
 	var brands = util.getBrands(file);
