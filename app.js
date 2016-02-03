@@ -231,13 +231,11 @@ app.get('/api/frequencyofkeywords/:uid', function(req, res) {
     restKeywords = [];
     Object.keys(allKeyWords).forEach(function(key) {
   		var word = allKeyWords[key].word;
-      word = word.toString().replace(/"/g, '\\"')
       var count = allKeyWords[key].count;
-  		if (word == null) return;
       restKeywords.push([word, " "+count]);
   	});
 
-    //console.log("restKeywords",restKeywords);
+    console.log("restKeywords",restKeywords);
 
 	});
 
