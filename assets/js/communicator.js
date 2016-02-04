@@ -48,10 +48,15 @@ function getRecommendations() {
 	  		url: "http://localhost:3000/api/frequencyofkeywords/" + userId
 		})
 	  	.done(function( dataWords ) {
+				// Show cloud and sector buttons when there are recommendations.
 				$("#wordCloudWrapper").show();
 				$("sectorButtons").show();
+
+				// Adjust display to show word cloud.
 				$("#userSelect").removeClass("offset-l4");
 				$("#userSelect").addClass("offset-l2");
+
+				// Parse JSON, seperate by sector.
 				var dataWordParse = JSON.parse(dataWords);
 				var restaurantsData = dataWordParse.restaurants;
 				var activitiesData = dataWordParse.activities;
@@ -60,6 +65,8 @@ function getRecommendations() {
 				var activitiesKeywords = [];
 				var transportKeywords = [];
 				var allKeywords = [];
+
+				// Adjusts the font size of word cloud.
 				var fontCloudSize = 20;
 
 				// Check there is user history for activities, if so, add values to array.
@@ -87,7 +94,7 @@ function getRecommendations() {
 				}
 				else {
 				    // does exist
-						console.log("restaurantsData not exist.");
+						console.log("restaurantsData does not exist.");
 				}
 
 				// Check there is user history for activities, if so, add values to array.
@@ -104,8 +111,8 @@ function getRecommendations() {
 						console.log("activitiesData does not exist.");
 				}
 
+				// Initialise word cloud and assign all keywords that exist.
 				WordCloud(document.getElementById('wordCloud'), { list: allKeywords } );
-				//WordCloud(document.getElementById('wordCloud'), { list: [["foo", 12], ["bar", 6], ["bar", 6]] } );
 	  	});
 
 }
