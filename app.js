@@ -236,22 +236,11 @@ app.get('/api/frequencyofkeywords/:uid', function(req, res) {
         return arr;
     }
 		freqOfKeywords[sector] = commonKeywords;
-    allKeyWords = freqOfKeywords.restaurants;
-
-
-    restKeywords = [];
-    Object.keys(allKeyWords).forEach(function(key) {
-  		var word = allKeyWords[key].word;
-      var count = allKeyWords[key].count;
-      restKeywords.push([word, count]);
-  	});
-
-    console.log("restKeywords",restKeywords);
 
 	});
 
 	// Simon - replace file name with your own handlebars file
-	res.end(JSON.stringify(restKeywords));
+	res.end(JSON.stringify(freqOfKeywords));
 
   //res.send(JSON.stringify(freqOfKeywords));
 

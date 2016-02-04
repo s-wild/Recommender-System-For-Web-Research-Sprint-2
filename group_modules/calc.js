@@ -302,7 +302,7 @@ function getCommonKeywords(rankedBrands, file) {
 	var brandIDs = [];
 
 	// Return something that won't throw errors, but that handlebars will recognise as a non-empty array
-	if (!rankedBrands.length) return [{"no_history": "N/A"}];
+	if (!rankedBrands.length) return [];
 
 	// (a) Loop through visited brands, get brand ids
 	Object.keys(rankedBrands).forEach(function(brand) {
