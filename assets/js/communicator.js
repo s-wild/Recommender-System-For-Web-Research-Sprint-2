@@ -44,7 +44,7 @@ function getRecommendations() {
 
 	// Send query to URL
 	$.ajax({
-  		url: "http://localhost:3000/api/recommend/all/" + userId + "/" + location + "/html"
+  		url: "http://178.62.11.22/:3000/api/recommend/all/" + userId + "/" + location + "/html"
 	})
   	.done(function( data ) {
     	//alert(data);
@@ -70,7 +70,7 @@ function getUserHistory() {
 
 	// Send query to URL for wordcloud
 	$.ajax({
-			url: "http://localhost:3000/api/frequencyofkeywords/" + userId
+			url: "http://178.62.11.22/:3000/api/frequencyofkeywords/" + userId
 	})
 		.done(function( dataWords ) {
 
