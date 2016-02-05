@@ -324,6 +324,54 @@
       "brand_location": "San Bernardino",
       "rating": 4.7,
       "date": "1453304897795"
+    },
+    "41": {
+      "user_id": "1",
+      "origin": 3,
+      "brand_id": 6,
+      "brand_location": "Venice",
+      "rating": 4,
+      "date": "1453304897795"
+    },
+    "42": {
+      "user_id": "1",
+      "origin": 3,
+      "brand_id": 7,
+      "brand_location": "Venice",
+      "rating": 2,
+      "date": "1453304897795"
+    },
+    "43": {
+      "user_id": "1",
+      "origin": 2,
+      "brand_id": 1,
+      "brand_location": "San Bernardino",
+      "rating": 4,
+      "date": "1453304897795"
+    },
+    "44": {
+      "user_id": "1",
+      "origin": 2,
+      "brand_id": 3,
+      "brand_location": "San Bernardino",
+      "rating": 4,
+      "date": "1453304897795"
+    },
+    "45": {
+      "user_id": "2",
+      "origin": 2,
+      "brand_id": 4,
+      "brand_location": "San Bernardino",
+      "rating": 4,
+      "date": "1453304897795"
+    },
+    "46": {
+      "user_id": "2",
+      "origin": 2,
+      "brand_id": 5,
+      "brand_location": "San Bernardino",
+      "rating": 3.5,
+      "date": "1453304897795"
     }
   }
 }
