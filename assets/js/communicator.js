@@ -8,6 +8,7 @@ $(document).ready(function() {
 	// Hide word on load.
 	$("#wordCloudWrapper").hide();
 	$("#sectorButtons").hide();
+	$("#keyDescription").hide();
 
 	// Event listeners
 	$("#getRecommBtn").click(getRecommendations);
@@ -47,6 +48,8 @@ function getRecommendations() {
   		url: "http://localhost:3000/api/recommend/all/" + userId + "/" + location + "/html"
 	})
   	.done(function( data ) {
+			// Show key
+			$("#keyDescription").show();
     	//alert(data);
     	// Put recommendations on page
     	$("#recommendations").html(data);
