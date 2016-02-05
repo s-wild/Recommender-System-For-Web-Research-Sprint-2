@@ -90,7 +90,7 @@ function getUserHistory() {
 			var allKeywords = [];
 
 			// Adjusts the font size of word cloud.
-			var fontCloudSize = 20;
+			var fontCloudSize = 15;
 
 			// Check there is user history for activities, if so, add values to array.
 			if(transportData[0] !== undefined && typeof(transportData[0].no_history) == 'undefined') {

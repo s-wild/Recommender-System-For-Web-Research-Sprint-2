@@ -22,7 +22,7 @@
 
   <div class="row">
     <div class="grid-example col s12 text-center"><h1 class="flow-text page-title">Recommender System</h1></div>
-    <div id="userSelect" class="grid-example col l4 offset-l4">
+    <div id="userSelect" class="grid-example col l4 offset-l1">
       <label>Please choose a user:</label>
       <select class="browser-default" id="users">
         {{#each users}}
@@ -40,38 +40,35 @@
 
       <a class="waves-effect waves-light btn full-width" id="getRecommBtn">Get Recommendations</a>
 
-    </div>
-    <!-- Word cloud will appear here -->
-    <div id="wordCloudWrapper" class="grid-example col l4">
-      <label>User History Word Cloud:</label>
-      <canvas id="wordCloud" width=400 height=175></canvas>
-    </div>
-  </div>
+      <div id="sectorButtons" class="center">
+          <a class="btn-floating btn-large waves-effect waves-light green darken-1" href="#restaurants"><i class="fa fa-cutlery"></i></a>
+          <a class="btn-floating btn-large waves-effect waves-light light-blue darken-4 spacing" href="#transport"><i class="fa fa-subway"></i></a>
+          <a class="btn-floating btn-large waves-effect waves-light amber lighten-2" href="#activities"><i class="fa fa-binoculars"></i></a>
+      </div>
 
-  <div id="sectorButtons" class="row">
-    <div class="col l6 offset-l3 center">
-      <a class="btn-floating btn-large waves-effect waves-light green darken-1" href="#restaurants"><i class="fa fa-cutlery"></i></a>
-      <a class="btn-floating btn-large waves-effect waves-light light-blue darken-4 spacing" href="#transport"><i class="fa fa-subway"></i></a>
-      <a class="btn-floating btn-large waves-effect waves-light amber lighten-2" href="#activities"><i class="fa fa-binoculars"></i></a>
-    </div>
-  </div>
-
-  <div id="keyDescription">
-    <div class="row">
-        <div class="col l4 offset-l4 center">
-          <div class="innerWrapper well">
-          <h2 class="font-small">Key Descriptions:</h2>
-          <p>These tags will display when a keyword does or does not match another keyword from the user history.</p>
-          <div class="chip light-green chip-keyword">
-            Keyword Match
-          </div>
-          <div class="chip red chip-keyword">
-            No Keyword Match
+      <div id="keyDescription">
+          <div class="center">
+            <div class="innerWrapper well">
+            <h2 class="font-small">Key Descriptions:</h2>
+            <p>These tags will display when a keyword does or does not match another keyword from the user history.</p>
+            <div class="chip light-green chip-keyword">
+              Keyword Match
+            </div>
+            <div class="chip red chip-keyword">
+              No Keyword Match
+            </div>
           </div>
         </div>
       </div>
+
+    </div>
+    <!-- Word cloud will appear here -->
+    <div id="wordCloudWrapper" class="grid-example col l6">
+      <label id="canvasLabel">User History Word Cloud:</label>
+      <canvas id="wordCloud" width=420 height=420></canvas>
     </div>
   </div>
+
 
   <!-- Recommendations will appear here -->
   <div id="recommendations"></div>
