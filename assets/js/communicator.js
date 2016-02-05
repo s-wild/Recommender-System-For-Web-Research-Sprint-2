@@ -93,8 +93,7 @@ function getUserHistory() {
 			var fontCloudSize = 20;
 
 			// Check there is user history for activities, if so, add values to array.
-			if(transportData[0] !== undefined || transportData.length !== 0) {
-					console.log("transportData exist.");
+			if(transportData[0] !== undefined && typeof(transportData[0].no_history) == 'undefined') {
 					Object.keys(transportData).forEach(function(key) {
 						var wordTransport = transportData[key].word;
 						var countTransport = transportData[key].count * fontCloudSize;
@@ -106,8 +105,7 @@ function getUserHistory() {
 			}
 
 			// Check there is user history for activities, if so, add values to array.
-			if(restaurantsData[0] !== undefined || restaurantsData.length !== 0) {
-					console.log("restaurantsData exist.");
+			if(restaurantsData[0] !== undefined &&  typeof(restaurantsData[0].no_history) == 'undefined') {
 					Object.keys(restaurantsData).forEach(function(key) {
 						var wordsRestaurant = restaurantsData[key].word;
 						var countRestaurant = restaurantsData[key].count * fontCloudSize;
@@ -119,8 +117,7 @@ function getUserHistory() {
 			}
 
 			// Check there is user history for activities, if so, add values to array.
-			if(activitiesData[0] !== undefined || activitiesData.length !== 0) {
-					console.log("activitiesData exist.");
+			if(activitiesData[0] !== undefined && typeof(activitiesData[0].no_history) == 'undefined') {
 					Object.keys(activitiesData).forEach(function(key) {
 						var wordsActivities = activitiesData[key].word;
 						var countActivities = activitiesData[key].count * fontCloudSize;

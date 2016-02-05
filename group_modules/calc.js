@@ -327,7 +327,6 @@ function getCommonKeywords(rankedBrands, file) {
 		return commonKeywords;
 	}
 
-
 	// (b) Get frequency of similar keywords
 	Object.keys(brands).forEach(function(brandID) {
 		var brand = brands[brandID];
