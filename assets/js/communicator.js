@@ -90,6 +90,7 @@ function getUserHistory() {
 			var allKeywords = [];
 
 			// Adjusts the font size of word cloud.
+			//var fontCloudSize = restaurantsData.length + activitiesData.length + transportData.length;
 			var fontCloudSize = 15;
 
 			// Check there is user history for activities, if so, add values to array.
