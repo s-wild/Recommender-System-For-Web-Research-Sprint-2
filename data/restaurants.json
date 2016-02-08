@@ -21,7 +21,7 @@
       "info": "McDonalds is one of the most popular fast-food restaurants in the world. If you are looking for a place to eat high quality fast food, this is the place to go.",
       "service_type": [1, 2],
       "type_id": 2,
-      "avg_rating": 3.4,
+      "avg_rating": 3.5,
       "avg_cost": "14",
       "currency": "GBP",
       "locations": [{
@@ -378,7 +378,7 @@
       "info": "A little tavern, situated near one of the main attractions of the area - the golf course! It has seating inside and out, so you can find somewhere to enjoy the delicious food, no matter the weather.",
       "service_type": [1],
       "type_id": 10,
-      "avg_rating": 4.2,
+      "avg_rating": 4.5,
       "avg_cost": "23",
       "currency": "GBP",
       "locations": [{
