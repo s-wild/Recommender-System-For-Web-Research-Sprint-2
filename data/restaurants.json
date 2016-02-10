@@ -259,7 +259,7 @@
           "name": "Venice",
           "opening_date": "June 30, 2015"
         }],
-      "keywords": ["pasta", "spagetti", "pizza", "gelato", "bread", "healthy"],
+      "keywords": ["pasta", "spagetti", "pizza", "gelato", "bread", "healthy", "kosher"],
       "filename": "gam_gam.jpg"
     },
     "16": {
@@ -274,7 +274,7 @@
           "name": "Venice",
           "opening_date": "June 25, 2015"
         }],
-      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"],
+      "keywords": ["steak", "beef", "spagetti", "bread", "eggplant", "ravioli", "sandwich", "soup", "fish", "pasta", "seafood"],
       "filename": "al_covo.jpg"
     },
     "17": {
@@ -289,8 +289,8 @@
           "name": "Venice",
           "opening_date": "June 25, 2015"
         }],
-      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"],
-      "filename": "osteria_antico_giardinetto.jpg"
+      "keywords": ["steak", "sandwich", "shellfish", "seafood", "pasta", "beef", "chocolate", "panna cotta"],
+      "filename": "gam_gam.jpg"
     },
     "18": {
       "name": "La Porta d'Acqua",
@@ -304,7 +304,7 @@
           "name": "Venice",
           "opening_date": "June 25, 2015"
         }],
-      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"],
+      "keywords": ["seafood", "spaghetti", "tagliatelle", "pasta", "vegetables", "wine"],
       "filename": "la_porta_d_acqua.jpg"
     },
     "19": {
@@ -319,7 +319,7 @@
           "name": "Venice",
           "opening_date": "June 25, 2015"
         }],
-      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"],
+      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "ravioli", "sandwich"],
       "filename": "antica_trattoria_poste_vecie.jpg"
     },
     "20": {
@@ -334,7 +334,7 @@
           "name": "Venice",
           "opening_date": "June 25, 2015"
         }],
-      "keywords": ["steak", "spagetti", "pizza", "gelato", "bread", "eggplant", "raviolo", "sandwich"],
+      "keywords": ["steak", "spagetti", "bread", "eggplant", "ravioli", "seafood", "cheese", "wine"],
       "filename": "antica_trattoria_poste_vecie.jpg"
     },
     "21": {
