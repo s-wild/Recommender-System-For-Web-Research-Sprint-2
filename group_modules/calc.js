@@ -110,13 +110,13 @@ function getRecommendedEntities(uid, file, location) {
 	var frequencyList = getAttendanceFrequency(history, uid, file);
 
 	// (c) Get share of total visits for each brand (array with: brand id, count, share)
-	var visitShare = getTotalVisitShare(history.length, frequencyList);
+	var visitShare = getTotalVisitShare(history.length, frequencyList); 
 
 	// (d) Get what user rated each brand (if available) during each visit (array with: brand id, count, share, avg_rating)
 	var ratings = getAvUserRatings(history, visitShare, file);
 
 	// (e) Rank brands based on share and average rating
-	var rankings = rankBrands(ratings);
+	var rankings = rankBrands(ratings); 
 
 	// (f) Loop through rankings, looking for common keywords
 	var commonKeywords = getCommonKeywords(rankings, file);
@@ -308,7 +308,7 @@ function getCommonKeywords(rankedBrands, file) {
 	Object.keys(rankedBrands).forEach(function(brand) {
 		var brandID = rankedBrands[brand].brand_id;
 		// Needed, for duplicate brand visits
-		if (brandIDs.indexOf(brandID) == -1)
+		//if (brandIDs.indexOf(brandID) == -1)
 			brandIDs.push(brandID);
 
 	});
@@ -326,21 +326,22 @@ function getCommonKeywords(rankedBrands, file) {
 
 		return commonKeywords;
 	}
-
+	
 	// (b) Get frequency of similar keywords
 	Object.keys(brands).forEach(function(brandID) {
 		var brand = brands[brandID];
-
 		// If brand is one to search
 		if (brandIDs.indexOf(Number(brandID)) != -1) {
 			var keywords = brand.keywords;
-
+			//console.log("index of brand id: " + brandID + " " + brandIDs.indexOf(Number(brandID)));
 			keywords.forEach(function(word){
 				var keywordFound = commonKeywords.map(function(e) { return e.word; }).indexOf(word.toLowerCase());
 
 				// Check frequency of keyword
-				if (util.getFrequencyOfKeyword(file, brandIDs, word) > 1 && keywordFound == -1) {
-					commonKeywords.push({ "word": word.toLowerCase(), "count": util.getFrequencyOfKeyword(file, brandIDs, word) });
+				if ( (util.getFrequencyOfKeyword(file, brandIDs, word) > 1 && keywordFound == -1) || brandIDs.indexOf(Number(brandID)) > 1 ) {
+					// If keyword is not already in list, add it
+					if (keywordFound == -1)
+						commonKeywords.push({ "word": word.toLowerCase(), "count": util.getFrequencyOfKeyword(file, brandIDs, word) });
 				}
 			});
 		}
