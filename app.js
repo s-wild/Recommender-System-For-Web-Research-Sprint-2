@@ -301,6 +301,10 @@ app.get('/api/', function(req, res) {
 	});
 });
 
+// ERD
+app.get('/erd/', function(req, res) {
+  res.render('erd');
+});
 
 // Start server
 var server = app.listen(3000, function() {
