@@ -85,14 +85,7 @@
       "rating": 0,
       "date": "1453304897795"
     },
-    "11": {
-      "user_id": "3",
-      "origin": 1,
-      "brand_id": 6,
-      "brand_location": "Portsmouth",
-      "rating": 0,
-      "date": "1453304897795"
-    },
+
     "12": {
       "user_id": "4",
       "origin": 1,
@@ -197,14 +190,7 @@
       "rating": 3.9,
       "date": "1453304897795"
     },
-    "25": {
-      "user_id": "3",
-      "origin": 3,
-      "brand_id": 5,
-      "brand_location": "San Bernardino",
-      "rating": 4.2,
-      "date": "1453304897795"
-    },
+
     "26": {
       "user_id": "2",
       "origin": 3,
@@ -245,14 +231,7 @@
       "rating": 3.9,
       "date": "1453304897795"
     },
-    "31": {
-      "user_id": "3",
-      "origin": 2,
-      "brand_id": 7,
-      "brand_location": "Portsmouth",
-      "rating": 3.6,
-      "date": "1453304897795"
-    },
+
     "32": {
       "user_id": "4",
       "origin": 3,
